@@ -31,8 +31,8 @@
   "resourceVersion":"2.0",
   "solid":false,
   "spriteId":{
-    "name":"spr_ltocha",
-    "path":"sprites/spr_ltocha/spr_ltocha.yy",
+    "name":"spr_tdano",
+    "path":"sprites/spr_tdano/spr_tdano.yy",
   },
   "spriteMaskId":null,
   "visible":true,

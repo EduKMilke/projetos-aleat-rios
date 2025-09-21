@@ -5,3 +5,8 @@ spdx=0
 spdy=0
 image_speed=1
 a=1
+b=1
+layer_sequence_create("luz",room_width/2,room_height/2,"seq_2")
+global.anda_p=false
+alarm[2]=room_speed*1
+tiro=true
