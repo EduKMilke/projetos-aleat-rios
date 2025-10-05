@@ -1,0 +1,49 @@
+[gd_scene load_steps=6 format=3 uid="uid://bqcwdol1b2sh4"]
+
+[ext_resource type="Script" uid="uid://dxq0ttts2o60c" path="res://script/peixe.gd" id="1_5gys2"]
+[ext_resource type="Script" uid="uid://drrl1jctso6q6" path="res://script/cabeca.gd" id="1_evbt0"]
+[ext_resource type="Texture2D" uid="uid://cndvsg0ksgikb" path="res://assets/player.png" id="2_5gys2"]
+[ext_resource type="Texture2D" uid="uid://y6s7gnbm20hw" path="res://icon.svg" id="4_b7efc"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_b7efc"]
+size = Vector2(18, 16)
+
+[node name="Node2D" type="Node2D"]
+script = ExtResource("1_5gys2")
+
+[node name="cabeca" type="CharacterBody2D" parent="."]
+position = Vector2(196, 89)
+rotation = -1.579921
+script = ExtResource("1_evbt0")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="cabeca"]
+shape = SubResource("RectangleShape2D_b7efc")
+
+[node name="Sprite2D" type="Sprite2D" parent="cabeca"]
+rotation = 1.5651722
+scale = Vector2(0.2925597, 0.25928992)
+texture = ExtResource("2_5gys2")
+
+[node name="meio" type="CharacterBody2D" parent="."]
+position = Vector2(174, 89)
+collision_layer = 2
+collision_mask = 2
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="meio"]
+shape = SubResource("RectangleShape2D_b7efc")
+
+[node name="Sprite2D" type="Sprite2D" parent="meio"]
+scale = Vector2(0.13225637, 0.12848394)
+texture = ExtResource("4_b7efc")
+
+[node name="fim" type="CharacterBody2D" parent="."]
+position = Vector2(152, 89)
+collision_layer = 2
+collision_mask = 2
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="fim"]
+shape = SubResource("RectangleShape2D_b7efc")
+
+[node name="Sprite2D" type="Sprite2D" parent="fim"]
+scale = Vector2(0.12633274, 0.11494829)
+texture = ExtResource("4_b7efc")
