@@ -1,0 +1,6 @@
+[gd_scene load_steps=2 format=3 uid="uid://c1tlvj7cngrf7"]
+
+[ext_resource type="Script" uid="uid://6x6atisvhyaw" path="res://script/gera_bolha.gd" id="1_it8ma"]
+
+[node name="Node2D" type="Node2D"]
+script = ExtResource("1_it8ma")

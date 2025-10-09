@@ -1,3 +1,11 @@
-[gd_scene format=3 uid="uid://dxba4lcggh5o7"]
+[gd_scene load_steps=3 format=3 uid="uid://dxba4lcggh5o7"]
+
+[ext_resource type="PackedScene" uid="uid://bqcwdol1b2sh4" path="res://obj/peixe.tscn" id="2_2afjo"]
+[ext_resource type="PackedScene" uid="uid://c1tlvj7cngrf7" path="res://obj/gera_bolha.tscn" id="2_32vai"]
 
 [node name="Jogo" type="Node2D"]
+
+[node name="Node2D" parent="." instance=ExtResource("2_2afjo")]
+position = Vector2(4, 11)
+
+[node name="Node2D2" parent="." instance=ExtResource("2_32vai")]

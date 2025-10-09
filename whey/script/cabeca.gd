@@ -1,8 +1,9 @@
 extends CharacterBody2D
 
 
-const SPEED = 300.0
+const SPEED = 75.0
 const JUMP_VELOCITY = -400.0
+const rota = 0.1
 
 func _physics_process(_delta: float) -> void:
 	var input := int(Input.is_action_pressed("ui_up"))
@@ -13,7 +14,7 @@ func _physics_process(_delta: float) -> void:
 		velocity = velocity.move_toward(Vector2.ZERO, SPEED)
 
 	if Input.is_action_pressed("ui_right"):
-		rotation += 0.2
+		rotation += rota
 	if Input.is_action_pressed("ui_left"):
-		rotation -= 0.2
+		rotation -= rota
 	move_and_slide()
