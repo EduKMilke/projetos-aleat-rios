@@ -10,11 +10,11 @@ var spd_m = spd_m2
 var l_tela = 0.0
 var al_tela = 0.0
 var alvo = Vector2.ZERO 
-
+@onready var spr=$AnimatedSprite2D
 
 func _ready() -> void:
 	randomize()
-	
+	spr.play("default")
 	l_tela = get_viewport_rect().size.x
 	al_tela = get_viewport_rect().size.y
 	
@@ -59,8 +59,10 @@ func _physics_process(delta: float) -> void:
 		velocity = velocity.move_toward(direction * spd_m, ACCELERATION * delta)
 		spd_m-=1
 		if spd_m<=0:
+
 			await get_tree().create_timer(0.2).timeout
 			spd_m=spd_m2
+
 		look_at(alvo) 
 		move_and_slide()
 	else:

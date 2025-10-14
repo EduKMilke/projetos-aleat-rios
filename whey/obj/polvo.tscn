@@ -1,10 +1,61 @@
-[gd_scene load_steps=4 format=3 uid="uid://bmlxr20aa0653"]
+[gd_scene load_steps=11 format=3 uid="uid://bmlxr20aa0653"]
 
 [ext_resource type="Script" uid="uid://cc4x1n74ehbny" path="res://script/polvo.gd" id="1_uj5m4"]
-[ext_resource type="Texture2D" uid="uid://y6s7gnbm20hw" path="res://icon.svg" id="2_f4j55"]
+[ext_resource type="Texture2D" uid="uid://cweul2sdseqiv" path="res://assets/povo.png" id="2_f4j55"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_f4j55"]
 size = Vector2(32, 20)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_sl6ar"]
+atlas = ExtResource("2_f4j55")
+region = Rect2(0, 0, 16, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_e1eni"]
+atlas = ExtResource("2_f4j55")
+region = Rect2(16, 0, 16, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_g5aed"]
+atlas = ExtResource("2_f4j55")
+region = Rect2(32, 0, 16, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_hmi4d"]
+atlas = ExtResource("2_f4j55")
+region = Rect2(48, 0, 16, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_au3pg"]
+atlas = ExtResource("2_f4j55")
+region = Rect2(64, 0, 16, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_jdss2"]
+atlas = ExtResource("2_f4j55")
+region = Rect2(80, 0, 16, 32)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_jhxwk"]
+resource_local_to_scene = true
+animations = [{
+"frames": [{
+"duration": 1.31,
+"texture": SubResource("AtlasTexture_sl6ar")
+}, {
+"duration": 1.31,
+"texture": SubResource("AtlasTexture_e1eni")
+}, {
+"duration": 1.31,
+"texture": SubResource("AtlasTexture_g5aed")
+}, {
+"duration": 1.31,
+"texture": SubResource("AtlasTexture_hmi4d")
+}, {
+"duration": 1.31,
+"texture": SubResource("AtlasTexture_au3pg")
+}, {
+"duration": 1.31,
+"texture": SubResource("AtlasTexture_jdss2")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
 
 [node name="CharacterBody2D" type="CharacterBody2D"]
 position = Vector2(186, 106)
@@ -15,7 +66,7 @@ script = ExtResource("1_uj5m4")
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 shape = SubResource("RectangleShape2D_f4j55")
 
-[node name="Sprite2D" type="Sprite2D" parent="."]
-position = Vector2(0.49999428, 0.5000019)
-scale = Vector2(0.2734374, 0.17968754)
-texture = ExtResource("2_f4j55")
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+rotation = 1.5726072
+sprite_frames = SubResource("SpriteFrames_jhxwk")
+frame_progress = 0.7143732
