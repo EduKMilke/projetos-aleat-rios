@@ -25,9 +25,8 @@ func _physics_process(_delta: float) -> void:
 	position.y-=vel_b
 	position.x= position.x+sin(a*dis_b)*lat_b
 	a-=1
-	
-
-
+	if position.y<-4:
+		queue_free()
 func _on_area_2d_input_event(_viewport: Node, event: InputEvent, _shape_idx: int) -> void:
 	if event is InputEventMouseButton:
 		queue_free()
