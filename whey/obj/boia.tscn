@@ -13,6 +13,10 @@ collision_mask = 2
 script = ExtResource("2_vnsh1")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
+light_mask = 512
+visibility_layer = 512
+position = Vector2(0, -1)
+scale = Vector2(1, 0.875)
 texture = ExtResource("3_ebq6l")
 
 [node name="Area2D" type="Area2D" parent="."]

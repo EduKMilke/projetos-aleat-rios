@@ -1,7 +1,7 @@
 [gd_scene load_steps=7 format=3 uid="uid://bqcwdol1b2sh4"]
 
-[ext_resource type="Script" path="res://script/peixe.gd" id="1_5gys2"]
-[ext_resource type="Script" path="res://script/cabeca.gd" id="1_evbt0"]
+[ext_resource type="Script" uid="uid://dxq0ttts2o60c" path="res://script/peixe.gd" id="1_5gys2"]
+[ext_resource type="Script" uid="uid://drrl1jctso6q6" path="res://script/cabeca.gd" id="1_evbt0"]
 [ext_resource type="Texture2D" uid="uid://dt0wv88ne68wc" path="res://assets/pexe/pexe1.png" id="3_c42tw"]
 [ext_resource type="Texture2D" uid="uid://dxt8egl8q6ht0" path="res://assets/pexe/pexe2.png" id="4_2i2fb"]
 [ext_resource type="Texture2D" uid="uid://r1evwwqb1hkj" path="res://assets/pexe/pexe3.png" id="5_f0iud"]
