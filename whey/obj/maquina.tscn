@@ -1,0 +1,16 @@
+[gd_scene load_steps=2 format=3 uid="uid://di7jtaucob547"]
+
+[ext_resource type="Script" uid="uid://buhhi0evudug5" path="res://script/maquina.gd" id="1_pokhh"]
+
+[node name="Node2D" type="Node2D"]
+script = ExtResource("1_pokhh")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+
+[node name="Button" type="Button" parent="."]
+offset_left = -8.0
+offset_top = 8.0
+offset_right = 8.0
+offset_bottom = 16.0
+
+[connection signal="pressed" from="Button" to="." method="_on_button_pressed"]

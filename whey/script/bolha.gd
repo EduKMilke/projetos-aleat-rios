@@ -29,4 +29,5 @@ func _physics_process(_delta: float) -> void:
 		queue_free()
 func _on_area_2d_input_event(_viewport: Node, event: InputEvent, _shape_idx: int) -> void:
 	if event is InputEventMouseButton:
+		Global.din+=1
 		queue_free()

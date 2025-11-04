@@ -15,6 +15,10 @@ run/main_scene="uid://dxba4lcggh5o7"
 config/features=PackedStringArray("4.5", "Forward Plus")
 config/icon="res://icon.svg"
 
+[autoload]
+
+Global="*res://script/global.gd"
+
 [display]
 
 window/size/viewport_width=500
@@ -22,7 +26,7 @@ window/size/viewport_height=200
 window/size/transparent=true
 window/size/window_width_override=1152
 window/size/window_height_override=648
-window/stretch/scale=4.05
+window/stretch/scale=2.35
 window/per_pixel_transparency/allowed=true
 
 [input]

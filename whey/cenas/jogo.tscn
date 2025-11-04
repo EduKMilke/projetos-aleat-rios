@@ -1,7 +1,8 @@
-[gd_scene load_steps=3 format=3 uid="uid://dxba4lcggh5o7"]
+[gd_scene load_steps=4 format=3 uid="uid://dxba4lcggh5o7"]
 
 [ext_resource type="PackedScene" uid="uid://bqcwdol1b2sh4" path="res://obj/peixe.tscn" id="2_2afjo"]
 [ext_resource type="PackedScene" uid="uid://c1tlvj7cngrf7" path="res://obj/gera_bolha.tscn" id="2_32vai"]
+[ext_resource type="PackedScene" uid="uid://coavfl2r4g620" path="res://obj/loja.tscn" id="3_1frua"]
 
 [node name="Jogo" type="Node2D"]
 
@@ -9,3 +10,5 @@
 position = Vector2(-1, 0)
 
 [node name="Node2D2" parent="." instance=ExtResource("2_32vai")]
+
+[node name="Node2D3" parent="." instance=ExtResource("3_1frua")]

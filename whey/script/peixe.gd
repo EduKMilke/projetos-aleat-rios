@@ -3,7 +3,9 @@ extends Node2D
 @onready var cab = $cabeca
 @onready var meio = $meio
 @onready var fim = $fim
-
+@onready var s_cab=$cabeca/Sprite2D
+var lin=Global.comum.size()
+var col=Global.comum[0].size()
 const dist := 10.0
 const desloc = 0.35
 
@@ -16,3 +18,4 @@ func _process(_delta: float) -> void:
 	var loc2 = Vector2(dist, 0).rotated(meio.rotation)
 	fim.position = lerp(fim.position,meio.position + loc2,desloc*1.2)
 	fim.rotation = lerp_angle(fim.rotation,meio.rotation,0.22)
+	
