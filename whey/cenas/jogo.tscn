@@ -6,9 +6,9 @@
 
 [node name="Jogo" type="Node2D"]
 
-[node name="Node2D" parent="." instance=ExtResource("2_2afjo")]
+[node name="peixe" parent="." instance=ExtResource("2_2afjo")]
 position = Vector2(-1, 0)
 
-[node name="Node2D2" parent="." instance=ExtResource("2_32vai")]
+[node name="gera" parent="." instance=ExtResource("2_32vai")]
 
-[node name="Node2D3" parent="." instance=ExtResource("3_1frua")]
+[node name="loja" parent="." instance=ExtResource("3_1frua")]

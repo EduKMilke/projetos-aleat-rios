@@ -10,19 +10,16 @@ script = ExtResource("1_smvdb")
 texture = ExtResource("2_bnejn")
 
 [node name="Sprite2D2" type="Sprite2D" parent="."]
-modulate = Color(0, 0, 0, 1)
 position = Vector2(-40, -7.999999)
 scale = Vector2(0.31249997, 0.3125)
 texture = ExtResource("2_bnejn")
 
 [node name="Sprite2D3" type="Sprite2D" parent="."]
-modulate = Color(0, 0, 0, 1)
 position = Vector2(7.6293945e-06, -8)
 scale = Vector2(0.3125, 0.3125)
 texture = ExtResource("2_bnejn")
 
 [node name="Sprite2D4" type="Sprite2D" parent="."]
-modulate = Color(0, 0, 0, 1)
 position = Vector2(40, -8)
 scale = Vector2(0.3125, 0.3125)
 texture = ExtResource("2_bnejn")
@@ -47,3 +44,4 @@ offset_bottom = 4.0
 
 [connection signal="pressed" from="Button" to="." method="_on_button_pressed"]
 [connection signal="pressed" from="Button2" to="." method="_on_button_2_pressed"]
+[connection signal="pressed" from="Button3" to="." method="_on_button_3_pressed"]

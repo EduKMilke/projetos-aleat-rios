@@ -6,10 +6,10 @@ var aparece =-1
 @onready var l_din=$Label
 @onready var maquina = preload("res://obj/maquina.tscn")
 @onready var invent= preload("res://obj/inventario.tscn")
+
 var _imaq=null
 var _iinv=null
 func _ready() -> void:
-
 	b_compra.position.x=get_viewport_rect().size.x /2-70
 	b_invt.position.x=get_viewport_rect().size.x /2+10
 	b_compra.position.y=get_viewport_rect().size.y /4
@@ -17,7 +17,6 @@ func _ready() -> void:
 	l_din.position.x=0
 	l_din.position.y=0
 	b_ini.position.x=get_viewport_rect().size.x/1.02
-	
 func _process(_delta: float) -> void:
 	if aparece==1:
 		b_compra.visible=true
