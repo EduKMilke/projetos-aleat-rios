@@ -4,6 +4,8 @@ extends Node2D
 @onready var meio=$Sprite2D3
 @onready var fim=$Sprite2D4
 
+signal skin_selecionada(ini_tex: Texture2D, meio_tex: Texture2D, fim_tex: Texture2D, status: int)
+
 var linc=Global.comum.size()
 var lini=Global.incomum.size()
 var linr=Global.raro.size()
@@ -16,14 +18,11 @@ var _glin: int = 0
 var _gcol: int = 0
 
 enum Categoria {COMUM, INCOMUM, RARO, LENDARIO}
-
 var cate_atual: Categoria = Categoria.COMUM
 
 func _ready() -> void:
-
 	_troca_categoria(Categoria.COMUM)
 func atlz_tex() -> void:
-
 	if _glin == 0:
 		ini.texture = null
 		meio.texture = null
@@ -33,7 +32,6 @@ func atlz_tex() -> void:
 		tm = 0
 	var skin = atur[tm]
 	if _gcol >= 4:
-
 		ini.texture = skin[2]
 		meio.texture = skin[1]
 		fim.texture = skin[0] 
@@ -99,8 +97,9 @@ func _on_button_pressed() -> void:
 	if _gcol >= 4:
 		ini.texture = skin[2]
 		meio.texture = skin[1]
-		fim.texture = skin[0] 
-
+		fim.texture = skin[0]
+		var status = skin[_gcol - 1]
+		emit_signal("skin_selecionada", skin[2], skin[1], skin[0], status)
 func _on_button_2_pressed() -> void:
 	var proxima_categoria: Categoria
 	match cate_atual:
