@@ -1,13 +1,21 @@
-[gd_scene load_steps=2 format=3 uid="uid://coavfl2r4g620"]
+[gd_scene load_steps=4 format=3 uid="uid://coavfl2r4g620"]
 
 [ext_resource type="Script" uid="uid://c1mdydmtnsafc" path="res://script/loja.gd" id="1_pap7e"]
+[ext_resource type="Texture2D" uid="uid://c3abj3xxtm6m2" path="res://assets/loja.png" id="2_cofdb"]
+[ext_resource type="Texture2D" uid="uid://dnrpv6iva04ui" path="res://assets/mochila (2).png" id="3_6s425"]
 
 [node name="Node2D" type="Node2D"]
 script = ExtResource("1_pap7e")
 
 [node name="inicio" type="Button" parent="."]
+modulate = Color(1, 1, 1, 0.76862746)
 offset_right = 8.0
 offset_bottom = 8.0
+
+[node name="Sprite2D" type="Sprite2D" parent="inicio"]
+position = Vector2(4, 4)
+scale = Vector2(0.6, 0.6)
+texture = ExtResource("2_cofdb")
 
 [node name="Button2" type="Button" parent="."]
 offset_left = 128.0
@@ -23,11 +31,16 @@ offset_right = 328.0
 offset_bottom = 112.0
 pivot_offset = Vector2(32, 48)
 
+[node name="Sprite2D" type="Sprite2D" parent="Button3"]
+position = Vector2(31.500002, 48.5)
+scale = Vector2(0.22909093, 0.32758626)
+texture = ExtResource("3_6s425")
+
 [node name="Label" type="Label" parent="."]
-offset_left = 72.0
-offset_top = 8.0
-offset_right = 111.0
-offset_bottom = 31.0
+offset_left = 209.0
+offset_top = 116.0
+offset_right = 248.0
+offset_bottom = 139.0
 theme_override_font_sizes/font_size = 11
 text = "hjikh"
 

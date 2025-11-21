@@ -1,5 +1,5 @@
 extends Node
-var din:int=10000000000
+var din:int=15
 
 var comum= [
 	[preload("res://assets/pexe/cabeças/pexe1.png"), preload("res://assets/pexe/meio/pexe1.png"),preload("res://assets/pexe/cauda/pexe1.png"),1]
@@ -12,5 +12,5 @@ var raro = [
 	[preload("res://assets/pexe/cabeças/pexe2.png"),preload("res://assets/pexe/meio/pexe2.png"),preload("res://assets/pexe/cauda/pexe2.png"),0]
 ]
 var lendario=[
-	[preload("res://icon.svg"), preload("res://icon.svg"),preload("res://icon.svg"),0]
+	[preload("res://assets/pexe/cabeças/pexe4.png"), preload("res://assets/pexe/meio/pexe4.png"),preload("res://assets/pexe/cauda/pexe4.png"),0]
 ]

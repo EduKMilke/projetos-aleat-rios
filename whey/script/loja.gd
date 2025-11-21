@@ -7,6 +7,7 @@ var aparece =-1
 @onready var maquina = preload("res://obj/maquina.tscn")
 @onready var invent= preload("res://obj/inventario.tscn")
 @onready var peixe = $"../peixe"
+@onready var spr_bot=$inicio/Sprite2D
 var skin_selecionada_do_inventario: Dictionary = {}
 
 var _imaq=null
@@ -23,10 +24,13 @@ func _process(_delta: float) -> void:
 	if aparece==1:
 		b_compra.visible=true
 		b_invt.visible=true
+		spr_bot.texture=preload("res://assets/lojan.png")
 	else:
+		spr_bot.texture=preload("res://assets/loja.png")
 		b_compra.visible=false
 		b_invt.visible=false
-	
+	if _imaq!=null or _iinv!=null:
+			spr_bot.texture=preload("res://assets/lojan.png")
 	l_din.text="dinheiro:"+str(Global.din)
 	if aparece==1 and _imaq!=null:
 		_imaq.queue_free()
