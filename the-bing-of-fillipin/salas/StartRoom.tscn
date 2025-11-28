@@ -1,0 +1,52 @@
+[gd_scene load_steps=7 format=3 uid="uid://gtannni0u53u"]
+
+[ext_resource type="Script" uid="uid://c6j0ephf70t1q" path="res://scripts/salas.gd" id="1_arwcn"]
+[ext_resource type="PackedScene" uid="uid://643s4rtev5p1" path="res://portas/DoorTop.tscn" id="2_a5qxy"]
+[ext_resource type="PackedScene" uid="uid://dxu5h0cme75pe" path="res://portas/DoorLeft.tscn" id="3_xc34v"]
+[ext_resource type="PackedScene" uid="uid://bksq8hwoo4m3a" path="res://portas/DooRight.tscn" id="4_tgwtk"]
+[ext_resource type="PackedScene" uid="uid://b6f0y8p2ixml8" path="res://portas/DoorBottom.tscn" id="5_fd3ad"]
+[ext_resource type="Texture2D" uid="uid://cre1ewllecbax" path="res://icon.svg" id="6_a5qxy"]
+
+[node name="Node2D" type="Node2D" node_paths=PackedStringArray("door_top", "door_bottom", "door_left", "door_right", "spawn_top", "spawn_bottom", "spawn_left", "spawn_right")]
+position = Vector2(1, -2)
+script = ExtResource("1_arwcn")
+door_top = NodePath("Doors/DoorTop")
+door_bottom = NodePath("Doors/DoorBottom")
+door_left = NodePath("Doors/DoorLeft")
+door_right = NodePath("Doors/DoorRight")
+spawn_top = NodePath("Spawns/SpawnTop")
+spawn_bottom = NodePath("Spawns/SpawnBottom")
+spawn_left = NodePath("Spawns/SpawnLeft")
+spawn_right = NodePath("Spawns/SpawnRight")
+
+[node name="Doors" type="Node2D" parent="."]
+
+[node name="DoorTop" parent="Doors" instance=ExtResource("2_a5qxy")]
+position = Vector2(437, 17)
+
+[node name="DoorBottom" parent="Doors" instance=ExtResource("3_xc34v")]
+position = Vector2(468, 477)
+
+[node name="DoorLeft" parent="Doors" instance=ExtResource("4_tgwtk")]
+position = Vector2(15, 250)
+
+[node name="DoorRight" parent="Doors" instance=ExtResource("5_fd3ad")]
+position = Vector2(869, 249)
+
+[node name="Spawns" type="Node2D" parent="."]
+
+[node name="SpawnTop" type="Marker2D" parent="Spawns"]
+position = Vector2(438, 85)
+
+[node name="SpawnBottom" type="Marker2D" parent="Spawns"]
+position = Vector2(468, 415)
+
+[node name="SpawnLeft" type="Marker2D" parent="Spawns"]
+position = Vector2(94, 250)
+
+[node name="SpawnRight" type="Marker2D" parent="Spawns"]
+position = Vector2(793, 253)
+
+[node name="Icon" type="Sprite2D" parent="."]
+position = Vector2(211, 434)
+texture = ExtResource("6_a5qxy")

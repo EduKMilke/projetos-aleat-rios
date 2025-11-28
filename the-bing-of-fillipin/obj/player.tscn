@@ -1,0 +1,32 @@
+[gd_scene load_steps=5 format=3 uid="uid://cdojeb1effneq"]
+
+[ext_resource type="Script" uid="uid://dpvt7q77gtsed" path="res://scripts/jogador/fillipin.gd" id="1_g3svd"]
+[ext_resource type="Texture2D" uid="uid://etjdwaxkuun8" path="res://assets/fillipin/player.png" id="2_rhfbe"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_hqtel"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_rhfbe")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_xnc2w"]
+size = Vector2(15, 31)
+
+[node name="player" type="Node2D"]
+
+[node name="CharacterBody2D" type="CharacterBody2D" parent="." groups=["player"]]
+script = ExtResource("1_g3svd")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="CharacterBody2D"]
+sprite_frames = SubResource("SpriteFrames_hqtel")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="CharacterBody2D"]
+position = Vector2(-0.5, 8.5)
+shape = SubResource("RectangleShape2D_xnc2w")
+
+[node name="Camera2D" type="Camera2D" parent="CharacterBody2D"]

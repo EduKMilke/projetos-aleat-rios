@@ -1,0 +1,13 @@
+[gd_scene load_steps=5 format=3 uid="uid://dlgijy3ydurgi"]
+
+[ext_resource type="Script" uid="uid://cglkajhp2bo74" path="res://scripts/MapGeneration.gd" id="1_ho8sn"]
+[ext_resource type="PackedScene" uid="uid://gtannni0u53u" path="res://salas/StartRoom.tscn" id="2_e42ii"]
+[ext_resource type="PackedScene" uid="uid://b05gd4v6vyec0" path="res://salas/sala1.tscn" id="3_ti8fr"]
+[ext_resource type="PackedScene" uid="uid://cdojeb1effneq" path="res://obj/player.tscn" id="4_ltf1h"]
+
+[node name="World" type="Node2D"]
+script = ExtResource("1_ho8sn")
+start_room_scene = ExtResource("2_e42ii")
+boss_room_scene = ExtResource("3_ti8fr")
+item_room_scene = ExtResource("3_ti8fr")
+player_scene = ExtResource("4_ltf1h")
