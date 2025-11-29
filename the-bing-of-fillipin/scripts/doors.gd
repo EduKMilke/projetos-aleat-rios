@@ -1,28 +1,33 @@
 extends Node2D
-class_name DungeonDoor # Define o tipo globalmente
+class_name DungeonDoor # Isso permite que o script da Sala reconheça o tipo "DungeonDoor"
 
-# Sinal que avisa a sala que o player entrou
+# Sinal que avisa a Sala que o player tocou na porta
 signal player_entered
 
-# O nó de colisão TEM que se chamar "Area2D" na cena da porta
+# Pega a referência automática do nó Area2D
+# Se o seu nó tiver outro nome, mude "$Area2D" para "$NomeDoSeuNo"
 @onready var area = $Area2D 
 
 func _ready():
 	if area:
-		# Conecta o sinal nativo da Godot
-		area.body_entered.connect(_on_body_entered)
+		# Conecta o sinal de colisão nativo da Godot
+		if not area.body_entered.is_connected(_on_body_entered):
+			area.body_entered.connect(_on_body_entered)
 	else:
-		print("ERRO CRÍTICO: Nó 'Area2D' não encontrado na porta: ", name)
+		print("ERRO CRÍTICO NA PORTA: Nó 'Area2D' não encontrado na cena: ", name)
 
 func _on_body_entered(body):
-	# Verifica o grupo (lembre de adicionar o grupo 'player' no seu personagem)
+	# Verifica se quem entrou foi o Player
+	# IMPORTANTE: Seu Player precisa estar no grupo "player" (minúsculo)
 	if body.is_in_group("player"):
-		emit_signal("player_entered")
+		# Só emite o sinal se a porta estiver visível/ativa
+		if visible:
+			emit_signal("player_entered")
 
-# Função visual para esconder portas que não levam a lugar nenhum
+# Função usada pela Sala para esconder/desativar esta porta
 func set_active(is_active: bool):
 	visible = is_active
 	if area:
-		# Desliga a colisão para o player não entrar numa porta falsa
+		# Desliga a física para o player não entrar numa porta invisível
 		area.monitoring = is_active
 		area.monitorable = is_active

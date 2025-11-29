@@ -1,0 +1,46 @@
+[gd_scene load_steps=6 format=3 uid="uid://dmi77cuqgf8bl"]
+
+[ext_resource type="Script" uid="uid://c6j0ephf70t1q" path="res://scripts/salas.gd" id="1_qfhxa"]
+[ext_resource type="PackedScene" uid="uid://dxu5h0cme75pe" path="res://portas/DoorLeft.tscn" id="2_r6ng0"]
+[ext_resource type="PackedScene" uid="uid://b6f0y8p2ixml8" path="res://portas/DoorBottom.tscn" id="3_gkcju"]
+[ext_resource type="PackedScene" uid="uid://bksq8hwoo4m3a" path="res://portas/DooRight.tscn" id="4_pxlsa"]
+[ext_resource type="PackedScene" uid="uid://643s4rtev5p1" path="res://portas/DoorTop.tscn" id="5_hgn8j"]
+
+[node name="Node2D" type="Node2D" node_paths=PackedStringArray("door_top", "door_bottom", "door_left", "door_right", "spawn_top", "spawn_bottom", "spawn_left", "spawn_right")]
+script = ExtResource("1_qfhxa")
+door_top = NodePath("Doors/DoorTop")
+door_bottom = NodePath("Doors/DoorBottom")
+door_left = NodePath("Doors/DoorLeft")
+door_right = NodePath("Doors/DooRight")
+spawn_top = NodePath("Spawns/SpawnTop")
+spawn_bottom = NodePath("Spawns/SpawnBottom")
+spawn_left = NodePath("Spawns/SpawnLeft")
+spawn_right = NodePath("Spawns/SpawnRight")
+
+[node name="Doors" type="Node2D" parent="."]
+
+[node name="DoorLeft" parent="Doors" instance=ExtResource("2_r6ng0")]
+position = Vector2(22, 250)
+
+[node name="DoorBottom" parent="Doors" instance=ExtResource("3_gkcju")]
+position = Vector2(440, 487)
+
+[node name="DooRight" parent="Doors" instance=ExtResource("4_pxlsa")]
+position = Vector2(866, 254)
+
+[node name="DoorTop" parent="Doors" instance=ExtResource("5_hgn8j")]
+position = Vector2(445, 27)
+
+[node name="Spawns" type="Node2D" parent="."]
+
+[node name="SpawnTop" type="Marker2D" parent="Spawns"]
+position = Vector2(448, 86)
+
+[node name="SpawnBottom" type="Marker2D" parent="Spawns"]
+position = Vector2(437, 447)
+
+[node name="SpawnLeft" type="Marker2D" parent="Spawns"]
+position = Vector2(90, 260)
+
+[node name="SpawnRight" type="Marker2D" parent="Spawns"]
+position = Vector2(765, 259)

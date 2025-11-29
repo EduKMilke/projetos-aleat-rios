@@ -1,21 +1,17 @@
-[gd_scene load_steps=7 format=3 uid="uid://b05gd4v6vyec0"]
+[gd_scene load_steps=6 format=3 uid="uid://bxevklwqj1ea6"]
 
-[ext_resource type="PackedScene" uid="uid://643s4rtev5p1" path="res://portas/DoorTop.tscn" id="1_p21xr"]
-[ext_resource type="Script" uid="uid://c6j0ephf70t1q" path="res://scripts/salas.gd" id="1_u7ufq"]
-[ext_resource type="PackedScene" uid="uid://dxu5h0cme75pe" path="res://portas/DoorLeft.tscn" id="2_u7ufq"]
-[ext_resource type="PackedScene" uid="uid://bksq8hwoo4m3a" path="res://portas/DooRight.tscn" id="3_1cmfh"]
-[ext_resource type="PackedScene" uid="uid://b6f0y8p2ixml8" path="res://portas/DoorBottom.tscn" id="4_6e6t2"]
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_u7ufq"]
-size = Vector2(16, 910.656)
+[ext_resource type="Script" uid="uid://c6j0ephf70t1q" path="res://scripts/salas.gd" id="1_hygdi"]
+[ext_resource type="PackedScene" uid="uid://dxu5h0cme75pe" path="res://portas/DoorLeft.tscn" id="2_bhmee"]
+[ext_resource type="PackedScene" uid="uid://b6f0y8p2ixml8" path="res://portas/DoorBottom.tscn" id="3_847p5"]
+[ext_resource type="PackedScene" uid="uid://bksq8hwoo4m3a" path="res://portas/DooRight.tscn" id="4_klf81"]
+[ext_resource type="PackedScene" uid="uid://643s4rtev5p1" path="res://portas/DoorTop.tscn" id="5_8jjqo"]
 
 [node name="Node2D" type="Node2D" node_paths=PackedStringArray("door_top", "door_bottom", "door_left", "door_right", "spawn_top", "spawn_bottom", "spawn_left", "spawn_right")]
-position = Vector2(-11, 1)
-script = ExtResource("1_u7ufq")
+script = ExtResource("1_hygdi")
 door_top = NodePath("Doors/DoorTop")
 door_bottom = NodePath("Doors/DoorBottom")
 door_left = NodePath("Doors/DoorLeft")
-door_right = NodePath("Doors/DoorRight")
+door_right = NodePath("Doors/DooRight")
 spawn_top = NodePath("Spawns/SpawnTop")
 spawn_bottom = NodePath("Spawns/SpawnBottom")
 spawn_left = NodePath("Spawns/SpawnLeft")
@@ -23,49 +19,28 @@ spawn_right = NodePath("Spawns/SpawnRight")
 
 [node name="Doors" type="Node2D" parent="."]
 
-[node name="DoorTop" parent="Doors" instance=ExtResource("1_p21xr")]
-position = Vector2(434, 30)
+[node name="DoorLeft" parent="Doors" instance=ExtResource("2_bhmee")]
+position = Vector2(16, 243)
 
-[node name="DoorBottom" parent="Doors" instance=ExtResource("2_u7ufq")]
-position = Vector2(456, 466)
+[node name="DoorBottom" parent="Doors" instance=ExtResource("3_847p5")]
+position = Vector2(435, 448)
 
-[node name="DoorLeft" parent="Doors" instance=ExtResource("3_1cmfh")]
-position = Vector2(25, 247)
+[node name="DooRight" parent="Doors" instance=ExtResource("4_klf81")]
+position = Vector2(866, 257)
 
-[node name="DoorRight" parent="Doors" instance=ExtResource("4_6e6t2")]
-position = Vector2(847, 240)
+[node name="DoorTop" parent="Doors" instance=ExtResource("5_8jjqo")]
+position = Vector2(434, 19)
 
 [node name="Spawns" type="Node2D" parent="."]
 
 [node name="SpawnTop" type="Marker2D" parent="Spawns"]
-position = Vector2(435, 61)
+position = Vector2(438, 86)
 
 [node name="SpawnBottom" type="Marker2D" parent="Spawns"]
-position = Vector2(452, 424)
+position = Vector2(432, 399)
 
 [node name="SpawnLeft" type="Marker2D" parent="Spawns"]
-position = Vector2(67, 248)
+position = Vector2(87, 244)
 
 [node name="SpawnRight" type="Marker2D" parent="Spawns"]
-position = Vector2(791, 248)
-
-[node name="StaticBody2D2" type="StaticBody2D" parent="."]
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D2"]
-position = Vector2(-6, 259)
-shape = SubResource("RectangleShape2D_u7ufq")
-
-[node name="CollisionShape2D2" type="CollisionShape2D" parent="StaticBody2D2"]
-position = Vector2(893, 246)
-shape = SubResource("RectangleShape2D_u7ufq")
-
-[node name="CollisionShape2D3" type="CollisionShape2D" parent="StaticBody2D2"]
-position = Vector2(440, -1.9999981)
-rotation = -1.5865043
-scale = Vector2(0.99999994, 0.99999994)
-shape = SubResource("RectangleShape2D_u7ufq")
-
-[node name="CollisionShape2D4" type="CollisionShape2D" parent="StaticBody2D2"]
-position = Vector2(451.00003, 496.00003)
-rotation = -1.5865043
-shape = SubResource("RectangleShape2D_u7ufq")
+position = Vector2(781, 265)
