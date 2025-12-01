@@ -4,16 +4,12 @@ var t_tiro = 1
 var tiro = preload("res://obj/tiro.tscn")
 var p_t = false
 var t_c = 0
-@onready var cam = $Camera2D
+
 
 func _ready() -> void:
-	# Reseta a câmera para garantir que ela não comece com offset maluco
-	if cam:
-		cam.position = Vector2.ZERO
-
+	pass
 func _physics_process(delta: float) -> void:
-	# --- REMOVI A LINHA DO LERP DA CÂMERA AQUI ---
-	# Deixe o MapGenerator controlar os limites da câmera.
+
 	
 	var direction2 := Input.get_axis("t_w", "t_s") 
 	var direction := Input.get_axis("t_a", "t_d") 
@@ -50,8 +46,7 @@ func _tiro() -> void:
 			var i_tiro = tiro.instantiate()
 			i_tiro.d_x = direc_t
 			i_tiro.d_y = direc_t2 
-			
-			# Lógica de spawn do tiro (mantida igual a sua)
+
 			if direc_t != 0:
 				var _loc_t = randi_range(int(global_position.y) + 10, int(global_position.y) - 10)
 				i_tiro.global_position.y = _loc_t
@@ -63,6 +58,4 @@ func _tiro() -> void:
 			
 			p_t = false
 			t_c = Global.tiroc
-			
-			# Adiciona na raiz da cena atual (importante para não mover com o player)
 			get_tree().current_scene.add_child(i_tiro)

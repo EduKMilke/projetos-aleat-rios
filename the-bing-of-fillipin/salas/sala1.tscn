@@ -1,10 +1,13 @@
-[gd_scene load_steps=6 format=3 uid="uid://bxevklwqj1ea6"]
+[gd_scene load_steps=7 format=3 uid="uid://bxevklwqj1ea6"]
 
 [ext_resource type="Script" uid="uid://c6j0ephf70t1q" path="res://scripts/salas.gd" id="1_hygdi"]
 [ext_resource type="PackedScene" uid="uid://dxu5h0cme75pe" path="res://portas/DoorLeft.tscn" id="2_bhmee"]
 [ext_resource type="PackedScene" uid="uid://b6f0y8p2ixml8" path="res://portas/DoorBottom.tscn" id="3_847p5"]
 [ext_resource type="PackedScene" uid="uid://bksq8hwoo4m3a" path="res://portas/DooRight.tscn" id="4_klf81"]
 [ext_resource type="PackedScene" uid="uid://643s4rtev5p1" path="res://portas/DoorTop.tscn" id="5_8jjqo"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_847p5"]
+size = Vector2(887, 496)
 
 [node name="Node2D" type="Node2D" node_paths=PackedStringArray("door_top", "door_bottom", "door_left", "door_right", "spawn_top", "spawn_bottom", "spawn_left", "spawn_right")]
 script = ExtResource("1_hygdi")
@@ -16,6 +19,9 @@ spawn_top = NodePath("Spawns/SpawnTop")
 spawn_bottom = NodePath("Spawns/SpawnBottom")
 spawn_left = NodePath("Spawns/SpawnLeft")
 spawn_right = NodePath("Spawns/SpawnRight")
+
+[node name="Camera2D" type="Camera2D" parent="."]
+position = Vector2(445, 250)
 
 [node name="Doors" type="Node2D" parent="."]
 
@@ -44,3 +50,9 @@ position = Vector2(87, 244)
 
 [node name="SpawnRight" type="Marker2D" parent="Spawns"]
 position = Vector2(781, 265)
+
+[node name="CameraZone" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="CameraZone"]
+position = Vector2(444.5, 251)
+shape = SubResource("RectangleShape2D_847p5")
