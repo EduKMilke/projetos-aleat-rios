@@ -1,7 +1,7 @@
 [gd_scene load_steps=4 format=3 uid="uid://dxu5h0cme75pe"]
 
 [ext_resource type="Texture2D" uid="uid://dlk4jsf6pla1i" path="res://assets/tiro/1bola.png" id="1_0r62m"]
-[ext_resource type="Script" uid="uid://gd6ft5r21cqf" path="res://scripts/doors.gd" id="1_fqhwx"]
+[ext_resource type="Script" uid="uid://gd6ft5r21cqf" path="res://scripts/mapa/doors.gd" id="1_fqhwx"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_fqhwx"]
 

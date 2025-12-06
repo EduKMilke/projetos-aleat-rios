@@ -1,11 +1,11 @@
 [gd_scene load_steps=8 format=3 uid="uid://dmi77cuqgf8bl"]
 
-[ext_resource type="Script" uid="uid://c6j0ephf70t1q" path="res://scripts/salas.gd" id="1_qfhxa"]
+[ext_resource type="Script" uid="uid://c6j0ephf70t1q" path="res://scripts/mapa/salas.gd" id="1_qfhxa"]
 [ext_resource type="PackedScene" uid="uid://dxu5h0cme75pe" path="res://portas/DoorLeft.tscn" id="2_r6ng0"]
 [ext_resource type="PackedScene" uid="uid://b6f0y8p2ixml8" path="res://portas/DoorBottom.tscn" id="3_gkcju"]
 [ext_resource type="PackedScene" uid="uid://bksq8hwoo4m3a" path="res://portas/DooRight.tscn" id="4_pxlsa"]
 [ext_resource type="PackedScene" uid="uid://643s4rtev5p1" path="res://portas/DoorTop.tscn" id="5_hgn8j"]
-[ext_resource type="Texture2D" uid="uid://cre1ewllecbax" path="res://icon.svg" id="6_r6ng0"]
+[ext_resource type="PackedScene" uid="uid://dodd2sd6blmtx" path="res://obj/inimigos/atirador.tscn" id="6_r6ng0"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_r6ng0"]
 size = Vector2(888, 499)
@@ -52,12 +52,11 @@ position = Vector2(90, 260)
 [node name="SpawnRight" type="Marker2D" parent="Spawns"]
 position = Vector2(765, 259)
 
-[node name="Icon" type="Sprite2D" parent="."]
-position = Vector2(216, 335)
-texture = ExtResource("6_r6ng0")
-
 [node name="CameraZone" type="Area2D" parent="."]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="CameraZone"]
 position = Vector2(445, 246.5)
 shape = SubResource("RectangleShape2D_r6ng0")
+
+[node name="Area2D" parent="." instance=ExtResource("6_r6ng0")]
+position = Vector2(321, 153)

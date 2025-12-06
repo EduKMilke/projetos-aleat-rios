@@ -1,7 +1,7 @@
 extends CharacterBody2D
 
 var t_tiro = 1
-var tiro = preload("res://obj/tiro.tscn")
+var tiro = preload("res://obj/player/tiro.tscn")
 var p_t = false
 var t_c = 0
 

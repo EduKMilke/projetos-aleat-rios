@@ -1,9 +1,9 @@
 [gd_scene load_steps=5 format=3 uid="uid://dlgijy3ydurgi"]
 
-[ext_resource type="Script" uid="uid://cglkajhp2bo74" path="res://scripts/MapGeneration.gd" id="1_ho8sn"]
+[ext_resource type="Script" uid="uid://cglkajhp2bo74" path="res://scripts/mapa/MapGeneration.gd" id="1_ho8sn"]
 [ext_resource type="PackedScene" uid="uid://dmi77cuqgf8bl" path="res://salas/Sala0.tscn" id="3_wxalf"]
 [ext_resource type="PackedScene" uid="uid://lq1l7cwo05jx" path="res://salas/Itemsala.tscn" id="4_ho8sn"]
-[ext_resource type="PackedScene" uid="uid://cdojeb1effneq" path="res://obj/player.tscn" id="4_ltf1h"]
+[ext_resource type="PackedScene" uid="uid://cdojeb1effneq" path="res://obj/player/player.tscn" id="4_ltf1h"]
 
 [node name="World" type="Node2D"]
 script = ExtResource("1_ho8sn")

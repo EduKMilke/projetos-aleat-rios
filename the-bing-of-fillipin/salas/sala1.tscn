@@ -1,6 +1,6 @@
 [gd_scene load_steps=7 format=3 uid="uid://bxevklwqj1ea6"]
 
-[ext_resource type="Script" uid="uid://c6j0ephf70t1q" path="res://scripts/salas.gd" id="1_hygdi"]
+[ext_resource type="Script" uid="uid://c6j0ephf70t1q" path="res://scripts/mapa/salas.gd" id="1_hygdi"]
 [ext_resource type="PackedScene" uid="uid://dxu5h0cme75pe" path="res://portas/DoorLeft.tscn" id="2_bhmee"]
 [ext_resource type="PackedScene" uid="uid://b6f0y8p2ixml8" path="res://portas/DoorBottom.tscn" id="3_847p5"]
 [ext_resource type="PackedScene" uid="uid://bksq8hwoo4m3a" path="res://portas/DooRight.tscn" id="4_klf81"]

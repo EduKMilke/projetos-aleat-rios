@@ -11,6 +11,10 @@ var salaboss:Array[PackedScene]=[
 var plaspd=300.00 #veloc do player
 var tiroc=0.5 #coldown do tiro
 
+var vida_maxv=3
+var vida_maxg=12
+var vida_v=3
+var vida_c=0
 #tiro
 var tirospd=300 #spd tiro
 var tiroext=2 #tempo de existencioa

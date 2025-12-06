@@ -16,13 +16,12 @@ signal player_entered_door(direction: Vector2)
 @export var spawn_left: Marker2D
 @export var spawn_right: Marker2D
 
-# --- REFERÊNCIAS INTERNAS (Automáticas) ---
-# A sala precisa ter um nó chamado "Camera2D" e um "CameraZone"
+
 @onready var room_camera: Camera2D = $Camera2D
 @onready var camera_zone: Area2D = $CameraZone
 
 func _ready():
-	# 1. Conecta as portas (Manteve igual)
+
 	if door_top and door_top.has_signal("player_entered"):
 		door_top.player_entered.connect(func(): _on_door_signal(Vector2.UP))
 	if door_bottom and door_bottom.has_signal("player_entered"):
@@ -32,29 +31,27 @@ func _ready():
 	if door_right and door_right.has_signal("player_entered"):
 		door_right.player_entered.connect(func(): _on_door_signal(Vector2.RIGHT))
 
-	# 2. Configura a Lógica da Câmera Própria
+
 	if room_camera:
 		room_camera.enabled = false # Começa desligada
 	else:
 		print("ERRO: Sala ", name, " não tem um nó 'Camera2D' dentro dela!")
 
 	if camera_zone:
-		# Conecta o sinal para detectar quando o player entra na sala
+
 		if not camera_zone.body_entered.is_connected(_on_camera_zone_entered):
 			camera_zone.body_entered.connect(_on_camera_zone_entered)
 	else:
 		print("ERRO: Sala ", name, " não tem um nó 'CameraZone' (Area2D)!")
 
-# --- QUANDO O PLAYER ENTRA NA ZONA DA SALA ---
+
 func _on_camera_zone_entered(body):
 	if body.is_in_group("player"):
-		# Ativa a câmera desta sala
-		# No Godot, ao ativar uma câmera, a anterior é desativada automaticamente
+
 		if room_camera:
 			room_camera.enabled = true
-			room_camera.make_current() # Garante que ela assuma o controle
+			room_camera.make_current() 
 
-# --- RESTO DO CÓDIGO (Portas e Spawns) ---
 func _on_door_signal(direction: Vector2):
 	emit_signal("player_entered_door", direction)
 

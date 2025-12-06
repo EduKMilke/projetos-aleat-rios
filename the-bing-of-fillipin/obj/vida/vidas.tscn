@@ -1,0 +1,6 @@
+[gd_scene load_steps=2 format=3 uid="uid://d3yxb5btjn8vq"]
+
+[ext_resource type="Texture2D" uid="uid://bmyj52cepdfmq" path="res://assets/vidas/vidaV_1.png" id="1_pan4q"]
+
+[node name="Sprite2D" type="Sprite2D"]
+texture = ExtResource("1_pan4q")
