@@ -9,4 +9,4 @@ func _ready() -> void:
 
 
 func _on_body_entered(_body: Node2D) -> void:
-	Global.vida_v-=1
+	Global.menos_vida()

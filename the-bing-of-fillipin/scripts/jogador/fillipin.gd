@@ -4,13 +4,12 @@ var t_tiro = 1
 var tiro = preload("res://obj/player/tiro.tscn")
 var p_t = false
 var t_c = 0
-
+@onready var spr=$AnimatedSprite2D
 
 func _ready() -> void:
 	pass
 func _physics_process(delta: float) -> void:
 
-	
 	var direction2 := Input.get_axis("t_w", "t_s") 
 	var direction := Input.get_axis("t_a", "t_d") 
 	var mov := Vector2(direction, direction2)
@@ -59,3 +58,8 @@ func _tiro() -> void:
 			p_t = false
 			t_c = Global.tiroc
 			get_tree().current_scene.add_child(i_tiro)
+	if Global.dano==false:
+		spr.play("dano")
+		await get_tree().create_timer(Global.t_dano).timeout
+		spr.play("default")
+		Global.dano=true

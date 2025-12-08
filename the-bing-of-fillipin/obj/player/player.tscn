@@ -1,11 +1,23 @@
-[gd_scene load_steps=6 format=3 uid="uid://cdojeb1effneq"]
+[gd_scene load_steps=7 format=3 uid="uid://cdojeb1effneq"]
 
 [ext_resource type="Script" uid="uid://dpvt7q77gtsed" path="res://scripts/jogador/fillipin.gd" id="1_g3svd"]
 [ext_resource type="Texture2D" uid="uid://etjdwaxkuun8" path="res://assets/fillipin/player.png" id="2_rhfbe"]
+[ext_resource type="Texture2D" uid="uid://7332iroq84tx" path="res://assets/vidas/vidaV_0.png" id="3_hle3s"]
 [ext_resource type="PackedScene" uid="uid://oo8vph4vtyhv" path="res://obj/vida/sis_vida.tscn" id="3_rhfbe"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_hqtel"]
 animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_rhfbe")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_hle3s")
+}],
+"loop": true,
+"name": &"dano",
+"speed": 5.0
+}, {
 "frames": [{
 "duration": 1.0,
 "texture": ExtResource("2_rhfbe")
@@ -23,6 +35,7 @@ script = ExtResource("1_g3svd")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 sprite_frames = SubResource("SpriteFrames_hqtel")
+animation = &"dano"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(-0.5, 8.5)
