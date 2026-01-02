@@ -1,0 +1,18 @@
+[gd_scene load_steps=4 format=3 uid="uid://b5yit3kjxc7my"]
+
+[ext_resource type="Script" uid="uid://wxq85i5xthpw" path="res://scripts/tiro_dano_player/tiro_quase_segue.gd" id="1_71m5a"]
+[ext_resource type="Texture2D" uid="uid://dlk4jsf6pla1i" path="res://assets/tiro/1bola.png" id="2_jqsmm"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_0evgd"]
+radius = 13.152946
+
+[node name="Area2D" type="Area2D"]
+script = ExtResource("1_71m5a")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CircleShape2D_0evgd")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(-0.5000006, -2.000001)
+scale = Vector2(0.825, 0.84000003)
+texture = ExtResource("2_jqsmm")

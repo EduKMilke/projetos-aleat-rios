@@ -13,7 +13,7 @@ func _physics_process(delta: float) -> void:
 	var direction2 := Input.get_axis("t_w", "t_s") 
 	var direction := Input.get_axis("t_a", "t_d") 
 	var mov := Vector2(direction, direction2)
-	var _mov2 = mov.normalized()
+	var _mov2 = mov.normalized()*delta
 
 	if direction != 0.0 or direction2 != 0.0:
 		velocity.x = _mov2.x * Global.plaspd

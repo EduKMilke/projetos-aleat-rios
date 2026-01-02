@@ -8,7 +8,7 @@ var salaboss:Array[PackedScene]=[
 	preload("res://salas/bosses/boss1.tscn")
 ]
 #player
-var plaspd=300.00 #veloc do player
+var plaspd=20000 #veloc do player
 var tiroc=0.5 #coldown do tiro
 
 var vida_maxv=3 #vida maxima vermelha
