@@ -1,15 +1,15 @@
-[gd_scene load_steps=3 format=3 uid="uid://bn6ontm0cxbpe"]
+[gd_scene load_steps=3 format=3 uid="uid://bm7nyfagyeu8k"]
 
-[ext_resource type="Texture2D" uid="uid://c75jrp57x4wfs" path="res://icon.svg" id="1_wm1ht"]
+[ext_resource type="Texture2D" uid="uid://c75jrp57x4wfs" path="res://icon.svg" id="1_v1x6i"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_ktsqt"]
-radius = 57.070133
+radius = 60.074955
 
 [node name="Area2D" type="Area2D"]
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
-modulate = Color(0.31518868, 0.4362827, 0.8836288, 1)
-texture = ExtResource("1_wm1ht")
+modulate = Color(1, 0, 0.05882353, 1)
+texture = ExtResource("1_v1x6i")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 shape = SubResource("CircleShape2D_ktsqt")

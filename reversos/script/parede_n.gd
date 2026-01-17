@@ -21,6 +21,6 @@ func _process(_delta: float) -> void:
 		spr.modulate="#00ffff45"
 	spr.scale=lerp(spr.scale,scale_spr,0.1)
 func _on_area_2d_body_entered(body: Node2D) -> void:
-	print(body)
+
 	if body is CharacterBody2D:  
 		body.morte()

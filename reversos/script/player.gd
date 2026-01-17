@@ -65,4 +65,4 @@ func morte() -> void:
 	velocity.y = JUMP_VELOCITY 
 	spr.play("pulo")
 	await get_tree().create_timer(2.0).timeout
-	queue_free()
+	get_tree().reload_current_scene()
