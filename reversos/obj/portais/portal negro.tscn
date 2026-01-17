@@ -1,0 +1,11 @@
+[gd_scene load_steps=3 format=3 uid="uid://bpl7w4psqdqij"]
+
+[ext_resource type="Script" uid="uid://k3jwt8s4va64" path="res://obj/portais/portal_negro.gd" id="1_nbskb"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_ktsqt"]
+
+[node name="Area2D" type="Area2D"]
+script = ExtResource("1_nbskb")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CircleShape2D_ktsqt")

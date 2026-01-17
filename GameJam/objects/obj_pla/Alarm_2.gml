@@ -1,1 +1,0 @@
-global.anda_p=true
