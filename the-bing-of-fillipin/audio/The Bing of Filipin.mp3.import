@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://dbtyljvl07nd1"
+path="res://.godot/imported/The Bing of Filipin.mp3-9c775bc775d1f52d117e7d3fa16cc5aa.mp3str"
+
+[deps]
+
+source_file="res://audio/The Bing of Filipin.mp3"
+dest_files=["res://.godot/imported/The Bing of Filipin.mp3-9c775bc775d1f52d117e7d3fa16cc5aa.mp3str"]
+
+[params]
+
+loop=true
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

@@ -10,6 +10,7 @@ extends Node2D
 @export var start_room_scene: PackedScene
 @export var item_room_scene: PackedScene
 
+
 var player_instance: CharacterBody2D 
 var map_grid = {} 
 var current_grid_pos = Vector2.ZERO

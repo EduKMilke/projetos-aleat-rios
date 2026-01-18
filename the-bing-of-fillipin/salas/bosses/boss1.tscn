@@ -5,12 +5,13 @@
 [ext_resource type="PackedScene" uid="uid://b6f0y8p2ixml8" path="res://portas/DoorBottom.tscn" id="3_42yvk"]
 [ext_resource type="PackedScene" uid="uid://bksq8hwoo4m3a" path="res://portas/DooRight.tscn" id="4_b6nb2"]
 [ext_resource type="PackedScene" uid="uid://643s4rtev5p1" path="res://portas/DoorTop.tscn" id="5_02td7"]
-[ext_resource type="Texture2D" uid="uid://cre1ewllecbax" path="res://icon.svg" id="6_kbo4g"]
+[ext_resource type="Texture2D" uid="uid://byfs6atp7vdtg" path="res://assets/Bosses/Vilson.jpeg" id="6_dfpoi"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_dfpoi"]
 size = Vector2(888, 499)
 
 [node name="Node2D" type="Node2D" node_paths=PackedStringArray("door_top", "door_bottom", "door_left", "door_right", "spawn_top", "spawn_bottom", "spawn_left", "spawn_right")]
+visible = false
 script = ExtResource("1_p6vmq")
 door_top = NodePath("Doors/DoorTop")
 door_bottom = NodePath("Doors/DoorBottom")
@@ -55,7 +56,7 @@ position = Vector2(765, 259)
 [node name="Icon" type="Sprite2D" parent="."]
 position = Vector2(548, 278)
 scale = Vector2(0.7265625, 1.0625)
-texture = ExtResource("6_kbo4g")
+texture = ExtResource("6_dfpoi")
 
 [node name="CameraZone" type="Area2D" parent="."]
 

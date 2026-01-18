@@ -20,8 +20,9 @@ signal player_entered_door(direction: Vector2)
 @onready var room_camera: Camera2D = $Camera2D
 @onready var camera_zone: Area2D = $CameraZone
 
-func _ready():
 
+func _ready():
+	
 	if door_top and door_top.has_signal("player_entered"):
 		door_top.player_entered.connect(func(): _on_door_signal(Vector2.UP))
 	if door_bottom and door_bottom.has_signal("player_entered"):

@@ -1,0 +1,19 @@
+[gd_scene load_steps=4 format=3 uid="uid://l2hbwy8aemny"]
+
+[ext_resource type="Script" uid="uid://b4age57pamjr" path="res://scripts/inimigos/atirador.gd" id="1_yhusn"]
+[ext_resource type="Texture2D" uid="uid://bdd181d4dxit7" path="res://assets/tiro/Tiro.jpeg" id="2_w577m"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_w1rqi"]
+size = Vector2(27, 22)
+
+[node name="Area2D" type="Area2D"]
+script = ExtResource("1_yhusn")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(4.7683716e-07, -2)
+scale = Vector2(0.11833335, 0.0938889)
+texture = ExtResource("2_w577m")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(-0.5, -2)
+shape = SubResource("RectangleShape2D_w1rqi")

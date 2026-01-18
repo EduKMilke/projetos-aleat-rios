@@ -1,4 +1,4 @@
-[gd_scene load_steps=8 format=3 uid="uid://dmi77cuqgf8bl"]
+[gd_scene load_steps=10 format=3 uid="uid://dmi77cuqgf8bl"]
 
 [ext_resource type="Script" uid="uid://c6j0ephf70t1q" path="res://scripts/mapa/salas.gd" id="1_qfhxa"]
 [ext_resource type="PackedScene" uid="uid://dxu5h0cme75pe" path="res://portas/DoorLeft.tscn" id="2_r6ng0"]
@@ -6,6 +6,8 @@
 [ext_resource type="PackedScene" uid="uid://bksq8hwoo4m3a" path="res://portas/DooRight.tscn" id="4_pxlsa"]
 [ext_resource type="PackedScene" uid="uid://643s4rtev5p1" path="res://portas/DoorTop.tscn" id="5_hgn8j"]
 [ext_resource type="PackedScene" uid="uid://b5yit3kjxc7my" path="res://obj/tiros_dano_player/tiro_quase_segue.tscn" id="7_gkcju"]
+[ext_resource type="AudioStream" uid="uid://dbtyljvl07nd1" path="res://audio/The Bing of Filipin.mp3" id="7_pxlsa"]
+[ext_resource type="PackedScene" uid="uid://cs6uyaxqj8fui" path="res://obj/tiros_dano_player/tiro_segue.tscn" id="8_pxlsa"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_r6ng0"]
 size = Vector2(888, 499)
@@ -58,8 +60,12 @@ position = Vector2(765, 259)
 position = Vector2(445, 246.5)
 shape = SubResource("RectangleShape2D_r6ng0")
 
-[node name="Area2D2" parent="." instance=ExtResource("7_gkcju")]
-position = Vector2(611, 347)
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("7_pxlsa")
+autoplay = true
 
 [node name="Area2D" parent="." instance=ExtResource("7_gkcju")]
-position = Vector2(261, 202)
+position = Vector2(377, 290)
+
+[node name="Area2D2" parent="." instance=ExtResource("8_pxlsa")]
+position = Vector2(396, 210)

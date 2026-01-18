@@ -1,0 +1,19 @@
+[remap]
+
+importer="oggvorbisstr"
+type="AudioStreamOggVorbis"
+uid="uid://b7ruefhbjw0h5"
+path="res://.godot/imported/Miojos do Abismo (online-audio-converter.com).ogg-908015100e0a9943f3fdcad7689952ae.oggvorbisstr"
+
+[deps]
+
+source_file="res://audio/Miojos do Abismo (online-audio-converter.com).ogg"
+dest_files=["res://.godot/imported/Miojos do Abismo (online-audio-converter.com).ogg-908015100e0a9943f3fdcad7689952ae.oggvorbisstr"]
+
+[params]
+
+loop=true
+loop_offset=0.0
+bpm=0.0
+beat_count=0
+bar_beats=4

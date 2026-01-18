@@ -1,0 +1,62 @@
+[gd_scene load_steps=8 format=3 uid="uid://dtc3iig7u1ms2"]
+
+[ext_resource type="Script" uid="uid://c6j0ephf70t1q" path="res://scripts/mapa/salas.gd" id="1_xb4vk"]
+[ext_resource type="PackedScene" uid="uid://dxu5h0cme75pe" path="res://portas/DoorLeft.tscn" id="2_0nm1u"]
+[ext_resource type="PackedScene" uid="uid://b6f0y8p2ixml8" path="res://portas/DoorBottom.tscn" id="3_v54sx"]
+[ext_resource type="PackedScene" uid="uid://bksq8hwoo4m3a" path="res://portas/DooRight.tscn" id="4_vi487"]
+[ext_resource type="PackedScene" uid="uid://643s4rtev5p1" path="res://portas/DoorTop.tscn" id="5_gl48t"]
+[ext_resource type="PackedScene" uid="uid://dodd2sd6blmtx" path="res://obj/inimigos/atirador.tscn" id="6_0nm1u"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_847p5"]
+size = Vector2(887, 496)
+
+[node name="Node2D" type="Node2D" node_paths=PackedStringArray("door_top", "door_bottom", "door_left", "door_right", "spawn_top", "spawn_bottom", "spawn_left", "spawn_right")]
+script = ExtResource("1_xb4vk")
+door_top = NodePath("Doors/DoorTop")
+door_bottom = NodePath("Doors/DoorBottom")
+door_left = NodePath("Doors/DoorLeft")
+door_right = NodePath("Doors/DooRight")
+spawn_top = NodePath("Spawns/SpawnTop")
+spawn_bottom = NodePath("Spawns/SpawnBottom")
+spawn_left = NodePath("Spawns/SpawnLeft")
+spawn_right = NodePath("Spawns/SpawnRight")
+
+[node name="Camera2D" type="Camera2D" parent="."]
+position = Vector2(445, 250)
+
+[node name="Doors" type="Node2D" parent="."]
+
+[node name="DoorLeft" parent="Doors" instance=ExtResource("2_0nm1u")]
+position = Vector2(16, 243)
+
+[node name="DoorBottom" parent="Doors" instance=ExtResource("3_v54sx")]
+position = Vector2(435, 448)
+
+[node name="DooRight" parent="Doors" instance=ExtResource("4_vi487")]
+position = Vector2(866, 257)
+
+[node name="DoorTop" parent="Doors" instance=ExtResource("5_gl48t")]
+position = Vector2(434, 19)
+
+[node name="Spawns" type="Node2D" parent="."]
+
+[node name="SpawnTop" type="Marker2D" parent="Spawns"]
+position = Vector2(438, 86)
+
+[node name="SpawnBottom" type="Marker2D" parent="Spawns"]
+position = Vector2(432, 399)
+
+[node name="SpawnLeft" type="Marker2D" parent="Spawns"]
+position = Vector2(87, 244)
+
+[node name="SpawnRight" type="Marker2D" parent="Spawns"]
+position = Vector2(781, 265)
+
+[node name="CameraZone" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="CameraZone"]
+position = Vector2(444.5, 251)
+shape = SubResource("RectangleShape2D_847p5")
+
+[node name="Tiro" parent="." instance=ExtResource("6_0nm1u")]
+position = Vector2(198, 127)

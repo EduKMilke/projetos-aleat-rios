@@ -9,6 +9,16 @@ var t_c = 0
 func _ready() -> void:
 	pass
 func _physics_process(delta: float) -> void:
+	if Global.dano == false and spr.animation != "dano":
+		tocar_animacao_dano()
+	if Input.is_action_pressed("t_d"):
+		spr.play("default")
+	if Input.is_action_pressed("t_a"):
+		spr.play("esquerda")
+	if Input.is_action_pressed("t_w"):
+		spr.play("cima")
+	if Input.is_action_pressed("t_s"):
+		spr.play("baixo")
 
 	var direction2 := Input.get_axis("t_w", "t_s") 
 	var direction := Input.get_axis("t_a", "t_d") 
@@ -63,3 +73,11 @@ func _tiro() -> void:
 		await get_tree().create_timer(Global.t_dano).timeout
 		spr.play("default")
 		Global.dano=true
+
+
+func tocar_animacao_dano():
+	spr.play("dano")
+	# O timer garante que o player volte ao normal após o tempo definido no Global
+	await get_tree().create_timer(Global.t_dano).timeout
+	Global.dano = true
+	spr.play("default")
