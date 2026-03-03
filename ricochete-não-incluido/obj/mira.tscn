@@ -1,0 +1,18 @@
+[gd_scene format=3 uid="uid://doq46jdv1ew40"]
+
+[ext_resource type="Script" uid="uid://bioof8x7qpxp0" path="res://script/mira.gd" id="1_pk0g7"]
+[ext_resource type="Texture2D" uid="uid://cresah361ou1n" path="res://icon.svg" id="2_s0xxt"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_kebsa"]
+radius = 30.016663
+
+[node name="CharacterBody2D" type="CharacterBody2D" unique_id=1844234011]
+script = ExtResource("1_pk0g7")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1561954615]
+shape = SubResource("CircleShape2D_kebsa")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1393914033]
+position = Vector2(0.50000143, -0.50000095)
+scale = Vector2(0.47656253, 0.5546875)
+texture = ExtResource("2_s0xxt")

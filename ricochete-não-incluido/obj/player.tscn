@@ -1,0 +1,22 @@
+[gd_scene format=3 uid="uid://larjbiqhslfy"]
+
+[ext_resource type="Texture2D" uid="uid://cresah361ou1n" path="res://icon.svg" id="1_x4w5f"]
+[ext_resource type="Script" uid="uid://dtt54e8i83wy3" path="res://script/arma-player.gd" id="2_g3svd"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_rhfbe"]
+
+[node name="CharacterBody2D" type="CharacterBody2D" unique_id=1366360308]
+collision_layer = 0
+collision_mask = 0
+script = ExtResource("2_g3svd")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1690689491]
+shape = SubResource("RectangleShape2D_rhfbe")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=869190]
+position = Vector2(-0.125, 1.9073486e-06)
+scale = Vector2(0.17382811, 0.18359375)
+texture = ExtResource("1_x4w5f")
+
+[node name="Marker2D" type="Marker2D" parent="." unique_id=101028985]
+position = Vector2(22, 0)

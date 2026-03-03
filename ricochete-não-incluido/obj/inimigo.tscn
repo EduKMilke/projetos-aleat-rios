@@ -1,0 +1,17 @@
+[gd_scene format=3 uid="uid://56xfue1yk2mx"]
+
+[ext_resource type="Texture2D" uid="uid://cresah361ou1n" path="res://icon.svg" id="1_i7axj"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_wg34c"]
+size = Vector2(53, 42)
+
+[node name="StaticBody2D" type="StaticBody2D" unique_id=1136726860 groups=["inimigos"]]
+collision_layer = 2
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1031832629]
+position = Vector2(0.5, 0)
+shape = SubResource("RectangleShape2D_wg34c")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=923634620]
+modulate = Color(1, 0.2, 0, 1)
+texture = ExtResource("1_i7axj")
