@@ -1,8 +1,7 @@
 extends Node2D
 var salas:Array[PackedScene]=[
 	preload("res://salas/Sala0.tscn"),
-	preload("res://salas/Sala0.tscn"),
-	preload("res://salas/Sala2.tscn")
+	preload("res://salas/Sala1.tscn")
 ]
 var salaboss:Array[PackedScene]=[
 	preload("res://salas/bosses/boss1.tscn"),

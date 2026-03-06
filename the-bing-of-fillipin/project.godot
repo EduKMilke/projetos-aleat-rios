@@ -31,6 +31,8 @@ Global="*res://scripts/global.gd"
 
 window/size/viewport_width=888
 window/size/viewport_height=500
+window/size/mode=2
+window/stretch/scale=1.3199999999999998
 
 [global_group]
 
