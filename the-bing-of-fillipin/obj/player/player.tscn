@@ -1,4 +1,4 @@
-[gd_scene load_steps=10 format=3 uid="uid://cdojeb1effneq"]
+[gd_scene format=3 uid="uid://cdojeb1effneq"]
 
 [ext_resource type="Script" uid="uid://dpvt7q77gtsed" path="res://scripts/jogador/fillipin.gd" id="1_g3svd"]
 [ext_resource type="Texture2D" uid="uid://etjdwaxkuun8" path="res://assets/fillipin/player.png" id="2_rhfbe"]
@@ -60,17 +60,17 @@ animations = [{
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_xnc2w"]
 size = Vector2(15, 31)
 
-[node name="CharacterBody2D" type="CharacterBody2D" groups=["player"]]
+[node name="CharacterBody2D" type="CharacterBody2D" unique_id=659582897 groups=["player"]]
 script = ExtResource("1_g3svd")
 
-[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=598781582]
 sprite_frames = SubResource("SpriteFrames_hqtel")
 animation = &"dano"
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=2125841642]
 position = Vector2(-0.5, 8.5)
 shape = SubResource("RectangleShape2D_xnc2w")
 
-[node name="CanvasLayer" type="CanvasLayer" parent="."]
+[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=132430244]
 
-[node name="Node2D" parent="CanvasLayer" instance=ExtResource("3_rhfbe")]
+[node name="Node2D" parent="CanvasLayer" unique_id=490145037 instance=ExtResource("3_rhfbe")]

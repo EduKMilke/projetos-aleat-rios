@@ -7,7 +7,10 @@ var salaboss:Array[PackedScene]=[
 	preload("res://salas/bosses/boss1.tscn"),
 	preload("res://salas/bosses/boss1.tscn")
 ]
-
+var itens:Array[PackedScene]=[
+	preload("res://obj/itens/it_energe.tscn"),
+	preload("res://obj/itens/it_energe.tscn")
+]
 #player
 var plaspd=20000 #veloc do player
 var tiroc=0.5 #coldown do tiro
