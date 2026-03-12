@@ -1,33 +1,53 @@
 extends Node2D
-class_name DungeonDoor # Isso permite que o script da Sala reconheça o tipo "DungeonDoor"
+class_name DungeonDoor
 
-# Sinal que avisa a Sala que o player tocou na porta
 signal player_entered
 
-# Pega a referência automática do nó Area2D
-# Se o seu nó tiver outro nome, mude "$Area2D" para "$NomeDoSeuNo"
 @onready var area = $Area2D 
+
+# --- VARIÁVEL DA ARENA ---
+# Diz se a porta está bloqueada pelos inimigos
+var esta_trancada: bool = false 
 
 func _ready():
 	if area:
-		# Conecta o sinal de colisão nativo da Godot
 		if not area.body_entered.is_connected(_on_body_entered):
 			area.body_entered.connect(_on_body_entered)
 	else:
 		print("ERRO CRÍTICO NA PORTA: Nó 'Area2D' não encontrado na cena: ", name)
 
 func _on_body_entered(body):
-	# Verifica se quem entrou foi o Player
-	# IMPORTANTE: Seu Player precisa estar no grupo "player" (minúsculo)
+	# 1. NOVA REGRA: Se a porta estiver trancada, o player não pode passar
+	if esta_trancada:
+		return 
+		
+	# 2. Regra antiga mantida
 	if body.is_in_group("player"):
-		# Só emite o sinal se a porta estiver visível/ativa
 		if visible:
 			emit_signal("player_entered")
 
-# Função usada pela Sala para esconder/desativar esta porta
 func set_active(is_active: bool):
 	visible = is_active
 	if area:
-		# Desliga a física para o player não entrar numa porta invisível
 		area.monitoring = is_active
 		area.monitorable = is_active
+
+# --- FUNÇÕES CHAMADAS PELA SALA QUANDO TEM INIMIGOS ---
+func trancar():
+	esta_trancada = true
+	
+	# EFEITO VISUAL (Opcional, mas recomendado para o jogador entender)
+	# Exemplo 1: Deixar a porta vermelha
+	modulate = Color(1, 0.5, 0.5) 
+	
+	# Exemplo 2: Trocar a animação
+	# $AnimatedSprite2D.play("fechada")
+	
+	# BLOQUEIO FÍSICO (Para o player não atravessar a imagem da porta)
+	# Se você criar um StaticBody2D com CollisionShape2D dentro da porta, ative-o aqui:
+	# $ParedeFisica/CollisionShape2D.set_deferred("disabled", false)
+
+func destrancar():
+	esta_trancada = false
+	Global.ener_ite+=1
+	modulate = Color(1, 1, 1) # Volta a cor normal

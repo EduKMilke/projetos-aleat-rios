@@ -17,7 +17,10 @@ func _on_timer_timeout():
 	
 	if player and pode_ver_player():
 		if global_position.distance_to(player.global_position) < 800:
+			
 			atirar()
+			await get_tree().create_timer(1).timeout
+			queue_free()
 func pode_ver_player() -> bool:
 	
 	ray.target_position = to_local(player.global_position)

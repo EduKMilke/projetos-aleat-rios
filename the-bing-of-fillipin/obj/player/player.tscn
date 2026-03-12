@@ -7,6 +7,7 @@
 [ext_resource type="Texture2D" uid="uid://distcyk044rbg" path="res://assets/fillipin/player_tras.png" id="4_2237b"]
 [ext_resource type="Texture2D" uid="uid://dmxrlbsn55cl3" path="res://assets/fillipin/player_frente.png" id="5_6owtx"]
 [ext_resource type="Texture2D" uid="uid://b8lej654rwoyy" path="res://assets/fillipin/player_esquerda.png" id="6_vyijb"]
+[ext_resource type="PackedScene" uid="uid://bep0vvbj8wdkj" path="res://obj/itens/sis_eneri.tscn" id="8_6owtx"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_hqtel"]
 animations = [{
@@ -74,3 +75,5 @@ shape = SubResource("RectangleShape2D_xnc2w")
 [node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=132430244]
 
 [node name="Node2D" parent="CanvasLayer" unique_id=490145037 instance=ExtResource("3_rhfbe")]
+
+[node name="sis_eneri" parent="CanvasLayer" unique_id=1032603342 instance=ExtResource("8_6owtx")]

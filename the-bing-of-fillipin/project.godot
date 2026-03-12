@@ -37,6 +37,7 @@ window/stretch/scale=1.3199999999999998
 [global_group]
 
 player=""
+inimigo=""
 
 [input]
 

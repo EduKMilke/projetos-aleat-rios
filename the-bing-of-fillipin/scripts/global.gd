@@ -1,20 +1,20 @@
 extends Node2D
 var salas:Array[PackedScene]=[
 	preload("res://salas/Sala0.tscn"),
-	preload("res://salas/Sala1.tscn")
+	preload("res://salas/Sala1.tscn"),
 ]
 var salaboss:Array[PackedScene]=[
 	preload("res://salas/bosses/boss1.tscn"),
 	preload("res://salas/bosses/boss1.tscn")
 ]
-var itens:Array[PackedScene]=[
-	preload("res://obj/itens/it_energe.tscn"),
-	preload("res://obj/itens/it_energe.tscn")
+var itens=[
+	[preload("res://obj/itens/it_energe.tscn"),0],
+	[preload("res://obj/itens/it_energe.tscn"),1]
 ]
+var item=0#qual é o item
 #player
-var plaspd=20000 #veloc do player
+var plaspd=15000 #veloc do player
 var tiroc=0.5 #coldown do tiro
-
 var vida_maxv=3 #vida maxima vermelha
 const vida_maxg=12 #vida maxima geral
 var vida_v=3#vida vermelha preenchida obs toda vez que iniciado precisa ser menor ou igaula a o vida_maxv
@@ -22,6 +22,7 @@ var vida_c=1#vida cinza lá
 var vida_g=vida_v+vida_c #soma das duas vidads
 var dano=true
 var t_dano=1 #tempo que player fica imortal dps de tomar dano
+var ener_ite=0
 func menos_vida()->void:
 	if dano == true: 
 		dano = false
@@ -30,6 +31,7 @@ func menos_vida()->void:
 		else:
 			vida_v -= 1
 		vida_g = vida_v + vida_c
+
 #tiro
 var tirospd=300 #spd tiro
 var tiroext=2 #tempo de existencioa

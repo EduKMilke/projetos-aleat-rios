@@ -9,6 +9,7 @@ var t_c = 0
 func _ready() -> void:
 	pass
 func _physics_process(delta: float) -> void:
+
 	if Global.dano == false and spr.animation != "dano":
 		tocar_animacao_dano()
 	if Input.is_action_pressed("t_d"):
@@ -37,7 +38,7 @@ func _physics_process(delta: float) -> void:
 		if t_c <= 0.0:
 			p_t = true
 			t_c = 0.0
-	
+
 	_tiro()
 	move_and_slide()
 

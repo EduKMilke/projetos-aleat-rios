@@ -11,7 +11,7 @@ func _ready() -> void:
 		return
 		
 	numi = randi_range(0, numale - 1)
-	item = Global.itens[numi]
+	item = Global.itens[numi][0]
 	var i_item = item.instantiate()
 	
 	# 1. Zera a posição ANTES de adicionar na cena

@@ -1,5 +1,4 @@
 extends Area2D
-
 var s_y: float = 0.0
 var time: float = 0.0
 

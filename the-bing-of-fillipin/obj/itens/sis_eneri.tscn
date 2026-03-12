@@ -1,0 +1,6 @@
+[gd_scene format=3 uid="uid://bep0vvbj8wdkj"]
+
+[ext_resource type="Script" uid="uid://d2pkkgpfba1li" path="res://scripts/itens/sis_eneri.gd" id="1_l246m"]
+
+[node name="sis_eneri" type="Node2D" unique_id=1032603342]
+script = ExtResource("1_l246m")
