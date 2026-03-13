@@ -1,17 +1,39 @@
-[gd_scene load_steps=4 format=3 uid="uid://bksq8hwoo4m3a"]
+[gd_scene format=3 uid="uid://bksq8hwoo4m3a"]
 
 [ext_resource type="Script" uid="uid://gd6ft5r21cqf" path="res://scripts/mapa/doors.gd" id="1_4gao4"]
-[ext_resource type="Texture2D" uid="uid://dlk4jsf6pla1i" path="res://assets/tiro/1bola.png" id="1_brtx1"]
+[ext_resource type="Texture2D" uid="uid://dbcp0akvv8acf" path="res://assets/Chão/porta pika final da final.png" id="2_4gao4"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_4gao4"]
 
-[node name="DooRight" type="Node2D"]
+[sub_resource type="AtlasTexture" id="AtlasTexture_h5w37"]
+atlas = ExtResource("2_4gao4")
+region = Rect2(0, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_q1neh"]
+atlas = ExtResource("2_4gao4")
+region = Rect2(0, 32, 32, 32)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_6fiak"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_h5w37")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_q1neh")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[node name="DooRight" type="Node2D" unique_id=1812886052]
 script = ExtResource("1_4gao4")
 
-[node name="Area2D" type="Area2D" parent="."]
+[node name="Area2D" type="Area2D" parent="." unique_id=773958016]
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=1119748311]
 shape = SubResource("CircleShape2D_4gao4")
 
-[node name="Sprite2D" type="Sprite2D" parent="Area2D"]
-texture = ExtResource("1_brtx1")
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Area2D" unique_id=1483355131]
+sprite_frames = SubResource("SpriteFrames_6fiak")

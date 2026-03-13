@@ -8,8 +8,8 @@ var salaboss:Array[PackedScene]=[
 	preload("res://salas/bosses/boss1.tscn")
 ]
 var itens=[
-	[preload("res://obj/itens/it_energe.tscn"),0],
-	[preload("res://obj/itens/it_energe.tscn"),1]
+	preload("res://obj/itens/it_energe.tscn"),
+	preload("res://obj/itens/it_energe.tscn")
 ]
 var item=0#qual é o item
 #player

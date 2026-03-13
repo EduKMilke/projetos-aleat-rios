@@ -11,6 +11,7 @@ func _process(_delta):
 			ener=null
 			max_e=0
 			atual_e=0
+			item=null
 	queue_redraw()
 func _draw():
 	var tama_tela = get_viewport_rect().size.x
@@ -19,16 +20,17 @@ func _draw():
 	var area_desenho = Rect2(posicao, novo_tamanho)
 	var posicao2 = Vector2(tama_tela - novo_tamanho.x - 50, 20)
 	var area_desenho2 = Rect2(posicao2, novo_tamanho)
-	if (atual_e==max_e):
-		draw_texture_rect(item, area_desenho, false,Color(1,1,1,1))
-	else:
-		draw_texture_rect(item, area_desenho, false,Color(1,1,1,0.5))
-	if atual_e>max_e:
-		atual_e=max_e
-	for i in max_e:
-		if i>atual_e:
-			draw_texture_rect(item, area_desenho2, false,Color(0,0,0,1))
+	if item!=null:
+		if (atual_e==max_e):
+			draw_texture_rect(item, area_desenho, false,Color(1,1,1,1))
 		else:
-			draw_texture_rect(item, area_desenho2, false,Color(1,1,1,1))
-		posicao2.y-=20
-		area_desenho2 = Rect2(posicao2, novo_tamanho)
+			draw_texture_rect(item, area_desenho, false,Color(1,1,1,0.5))
+		if atual_e>max_e:
+			atual_e=max_e
+		for i in max_e:
+			if i>atual_e:
+				draw_texture_rect(item, area_desenho2, false,Color(0,0,0,1))
+			else:
+				draw_texture_rect(item, area_desenho2, false,Color(1,1,1,1))
+			posicao2.y-=20
+			area_desenho2 = Rect2(posicao2, novo_tamanho)
