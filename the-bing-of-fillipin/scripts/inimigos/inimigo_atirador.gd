@@ -1,5 +1,5 @@
 extends CharacterBody2D
-
+var vida=10
 @export var bala_scene: PackedScene = preload("res://obj/tiros_dano_player/tiro_quase_segue.tscn")
 @onready var marker = $Marker2D
 @onready var ray = $RayCast2D
@@ -9,7 +9,9 @@ var player = null
 func _ready():
 	
 	player = get_tree().get_first_node_in_group("player")
-
+func _process(_delta: float) -> void:
+	if vida<=0:
+		queue_free()
 func _on_timer_timeout():
 	if player == null:
 		player = get_tree().get_first_node_in_group("player")
@@ -17,10 +19,8 @@ func _on_timer_timeout():
 	
 	if player and pode_ver_player():
 		if global_position.distance_to(player.global_position) < 800:
-			
 			atirar()
-			await get_tree().create_timer(1).timeout
-			queue_free()
+
 func pode_ver_player() -> bool:
 	
 	ray.target_position = to_local(player.global_position)

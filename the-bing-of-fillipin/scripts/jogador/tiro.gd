@@ -8,3 +8,15 @@ func _physics_process(delta: float) -> void:
 	position += direction_vector * Global.tirospd * delta
 	await get_tree().create_timer(Global.tiroext).timeout
 	queue_free()
+
+
+func _on_area_2d_body_entered(body: Node) -> void:
+	if body.is_in_group("inimigo"):
+		body.vida-=Global.dano_ti
+		queue_free()
+
+
+func _on_area_2d_area_entered(area: Area2D) -> void:
+	if area.is_in_group("inimigo"):
+		area.vida-=Global.dano_ti
+		queue_free()

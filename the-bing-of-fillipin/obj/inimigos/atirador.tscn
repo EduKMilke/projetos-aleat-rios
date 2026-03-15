@@ -2,13 +2,9 @@
 
 [ext_resource type="Texture2D" uid="uid://c3lg7fope4qob" path="res://assets/Inimigos/Felipe Neto.jpeg" id="2_fpx0e"]
 [ext_resource type="Script" uid="uid://ds414f0vra2ev" path="res://scripts/inimigos/inimigo_atirador.gd" id="2_q1a1w"]
-[ext_resource type="Texture2D" uid="uid://bdd181d4dxit7" path="res://assets/tiro/Tiro.jpeg" id="4_j6p11"]
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_0241t"]
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_fpx0e"]
 size = Vector2(61, 53)
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_tbckw"]
-size = Vector2(6.5, 6)
 
 [node name="Tiro" type="Area2D" unique_id=1517365363]
 
@@ -21,7 +17,7 @@ script = ExtResource("2_q1a1w")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Inimigo" unique_id=1236577066]
 position = Vector2(0.5, 0.5)
-shape = SubResource("RectangleShape2D_0241t")
+shape = SubResource("RectangleShape2D_fpx0e")
 
 [node name="Sprite2D" type="Sprite2D" parent="Inimigo" unique_id=533989838]
 position = Vector2(0.5, 0.5)
@@ -32,15 +28,6 @@ texture = ExtResource("2_fpx0e")
 position = Vector2(-22, -6)
 
 [node name="RayCast2D" type="RayCast2D" parent="Inimigo" unique_id=965267959]
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1033148410]
-position = Vector2(-56, -16)
-shape = SubResource("RectangleShape2D_tbckw")
-
-[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1171068313]
-position = Vector2(-56, -16)
-scale = Vector2(0.03444443, 0.029999997)
-texture = ExtResource("4_j6p11")
 
 [connection signal="body_entered" from="." to="." method="_on_body_entered"]
 [connection signal="timeout" from="Timer" to="Inimigo" method="_on_timer_timeout"]

@@ -1,20 +1,23 @@
-[gd_scene load_steps=4 format=3 uid="uid://q7y84lrvjjdk"]
+[gd_scene format=3 uid="uid://q7y84lrvjjdk"]
 
 [ext_resource type="Script" uid="uid://b5e31py084qa1" path="res://scripts/jogador/tiro.gd" id="1_hn7tn"]
 [ext_resource type="Texture2D" uid="uid://dlk4jsf6pla1i" path="res://assets/tiro/1bola.png" id="1_x1wpn"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_hn7tn"]
-radius = 2.0
+radius = 8.0
 
-[node name="Node2D" type="Node2D"]
+[node name="Node2D" type="Node2D" unique_id=1646533829]
 script = ExtResource("1_hn7tn")
 
-[node name="Area2D" type="Area2D" parent="."]
+[node name="Area2D" type="Area2D" parent="." unique_id=459730063]
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=835677694]
 shape = SubResource("CircleShape2D_hn7tn")
 
-[node name="Sprite2D" type="Sprite2D" parent="Area2D"]
-position = Vector2(-0.2500004, -0.50000066)
-scale = Vector2(0.13749997, 0.13999999)
+[node name="Sprite2D" type="Sprite2D" parent="Area2D" unique_id=156318512]
+position = Vector2(-0.250001, 1)
+scale = Vector2(0.828125, 0.78124994)
 texture = ExtResource("1_x1wpn")
+
+[connection signal="area_entered" from="Area2D" to="." method="_on_area_2d_area_entered"]
+[connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]
