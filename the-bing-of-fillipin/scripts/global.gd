@@ -13,7 +13,7 @@ var itens=[
 ]
 var item=0#qual é o item
 #player
-var plaspd=15000 #veloc do player
+var plaspd=250 #veloc do player
 var tiroc=0.5 #coldown do tiro
 var vida_maxv=3 #vida maxima vermelha
 const vida_maxg=12 #vida maxima geral
