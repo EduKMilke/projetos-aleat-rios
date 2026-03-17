@@ -5,8 +5,8 @@
 [ext_resource type="PackedScene" uid="uid://b6f0y8p2ixml8" path="res://portas/DoorBottom.tscn" id="3_42yvk"]
 [ext_resource type="PackedScene" uid="uid://bksq8hwoo4m3a" path="res://portas/DooRight.tscn" id="4_b6nb2"]
 [ext_resource type="PackedScene" uid="uid://643s4rtev5p1" path="res://portas/DoorTop.tscn" id="5_02td7"]
-[ext_resource type="Texture2D" uid="uid://byfs6atp7vdtg" path="res://assets/Bosses/Vilson.jpeg" id="6_dfpoi"]
 [ext_resource type="PackedScene" uid="uid://d1v7rgro8esl7" path="res://obj/paredes/parede.tscn" id="7_3rdta"]
+[ext_resource type="PackedScene" uid="uid://cdwuie3wh0bl1" path="res://obj/boss/bossquica.tscn" id="7_iu3ls"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_dfpoi"]
 size = Vector2(888, 499)
@@ -53,11 +53,6 @@ position = Vector2(90, 260)
 [node name="SpawnRight" type="Marker2D" parent="Spawns" unique_id=224263316]
 position = Vector2(765, 259)
 
-[node name="Icon" type="Sprite2D" parent="." unique_id=1089217972]
-position = Vector2(548, 278)
-scale = Vector2(0.7265625, 1.0625)
-texture = ExtResource("6_dfpoi")
-
 [node name="CameraZone" type="Area2D" parent="." unique_id=1088610468]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="CameraZone" unique_id=1863808184]
@@ -80,3 +75,6 @@ scale = Vector2(60.54264, 1.3039428)
 [node name="StaticBody2D" parent="." unique_id=59057244 instance=ExtResource("7_3rdta")]
 position = Vector2(472.99997, -3.000001)
 scale = Vector2(60.54264, 1.3039428)
+
+[node name="CharacterBody2D" parent="." unique_id=1575078040 groups=["inimigo"] instance=ExtResource("7_iu3ls")]
+position = Vector2(407, 241)

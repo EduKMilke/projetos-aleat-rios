@@ -23,6 +23,7 @@ var vida_g=vida_v+vida_c #soma das duas vidads
 var dano=true
 var t_dano=1 #tempo que player fica imortal dps de tomar dano
 var ener_ite=0
+var espinho=true #dano de espinho ativado
 func menos_vida()->void:
 	if dano == true: 
 		dano = false

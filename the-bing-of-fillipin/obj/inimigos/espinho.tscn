@@ -1,0 +1,13 @@
+[gd_scene format=3 uid="uid://blvhby6st2ucc"]
+
+[ext_resource type="Script" uid="uid://0uopwqjx858p" path="res://scripts/inimigos/espinho.gd" id="1_ksmtd"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_7ykrj"]
+
+[node name="Area2D" type="Area2D" unique_id=458550998]
+script = ExtResource("1_ksmtd")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=762532805]
+shape = SubResource("RectangleShape2D_7ykrj")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]

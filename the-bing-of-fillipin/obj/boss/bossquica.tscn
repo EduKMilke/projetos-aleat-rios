@@ -1,0 +1,15 @@
+[gd_scene format=3 uid="uid://cdwuie3wh0bl1"]
+
+[ext_resource type="Script" uid="uid://clr8b6j1eilo" path="res://scripts/boss/bossquica.gd" id="1_437eb"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_hi24r"]
+size = Vector2(116, 128)
+
+[node name="CharacterBody2D" type="CharacterBody2D" unique_id=1575078040]
+script = ExtResource("1_437eb")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=577213214]
+position = Vector2(-1, 1)
+shape = SubResource("RectangleShape2D_hi24r")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1564928680]

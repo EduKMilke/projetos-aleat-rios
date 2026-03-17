@@ -61,6 +61,7 @@ func _tiro() -> void:
 				var _loc_t = randi_range(int(global_position.y) + 10, int(global_position.y) - 10)
 				i_tiro.global_position.y = _loc_t
 				i_tiro.global_position.x = global_position.x
+
 			elif direc_t2 != 0:
 				var _loc_t = randi_range(int(global_position.x) + 10, int(global_position.x) - 10)
 				i_tiro.global_position.y = global_position.y
