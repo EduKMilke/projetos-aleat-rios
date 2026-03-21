@@ -7,7 +7,6 @@
 [ext_resource type="PackedScene" uid="uid://643s4rtev5p1" path="res://portas/DoorTop.tscn" id="5_hgn8j"]
 [ext_resource type="PackedScene" uid="uid://d1v7rgro8esl7" path="res://obj/paredes/parede.tscn" id="7_gkcju"]
 [ext_resource type="AudioStream" uid="uid://dbtyljvl07nd1" path="res://audio/The Bing of Filipin.mp3" id="7_pxlsa"]
-[ext_resource type="PackedScene" uid="uid://c28cprteop4kg" path="res://obj/inimigos/i_laser.tscn" id="8_pxlsa"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_r6ng0"]
 size = Vector2(888, 499)
@@ -80,6 +79,3 @@ scale = Vector2(60.54264, 1.3039428)
 [node name="StaticBody2D" parent="." unique_id=52508897 instance=ExtResource("7_gkcju")]
 position = Vector2(472.99997, -3.000001)
 scale = Vector2(60.54264, 1.3039428)
-
-[node name="StaticBody2D5" parent="." unique_id=1541603604 instance=ExtResource("8_pxlsa")]
-position = Vector2(600, 261)

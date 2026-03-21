@@ -1,0 +1,34 @@
+[gd_scene format=3 uid="uid://begdtjecqhen5"]
+
+[ext_resource type="Script" uid="uid://d21ff6oudh4fd" path="res://scripts/boss/barra_vida_boss.gd" id="1_7qo8u"]
+
+[sub_resource type="Gradient" id="Gradient_7cim7"]
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_7qo8u"]
+gradient = SubResource("Gradient_7cim7")
+width = 500
+height = 30
+fill_to = Vector2(0, 0.011363637)
+
+[sub_resource type="Gradient" id="Gradient_sune6"]
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_v5lny"]
+gradient = SubResource("Gradient_sune6")
+width = 500
+height = 30
+fill_to = Vector2(0.011363637, 0)
+
+[node name="Node2D" type="Node2D" unique_id=1877643881]
+script = ExtResource("1_7qo8u")
+
+[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=1089954868]
+
+[node name="ProgressBar" type="TextureProgressBar" parent="CanvasLayer" unique_id=1972855697]
+offset_left = 197.0
+offset_top = 469.0
+offset_right = 697.0
+offset_bottom = 499.0
+texture_under = SubResource("GradientTexture2D_7qo8u")
+texture_progress = SubResource("GradientTexture2D_v5lny")
+tint_under = Color(0.7176471, 0, 0, 1)
+tint_progress = Color(9.3854965e-07, 0.7154, 0.014755156, 1)
