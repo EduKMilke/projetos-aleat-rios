@@ -9,9 +9,12 @@ var salaboss:Array[PackedScene]=[
 ]
 var itens=[
 	preload("res://obj/itens/it_energe.tscn"),
-	preload("res://obj/itens/it_energe.tscn")
+	preload("res://obj/itens/it_tomate.tscn"),
+	preload("res://obj/itens/it_achocolatado.tscn")
+	
 ]
 var item=0#qual é o item
+var tomate = false
 #player
 var plaspd=250 #veloc do player
 var tiroc=0.5 #coldown do tiro

@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://distcyk044rbg"
-path="res://.godot/imported/player_frente.png-26cdb14eecff7bd04bac91174ccb5434.ctex"
+uid="uid://csnbrpdc28jo"
+path="res://.godot/imported/Parede direita.png-de5691d9f7399b0a0540f2e88e82bbb2.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/fillipin/player_frente.png"
-dest_files=["res://.godot/imported/player_frente.png-26cdb14eecff7bd04bac91174ccb5434.ctex"]
+source_file="res://assets/Paredes (não comestiveis)/Parede direita.png"
+dest_files=["res://.godot/imported/Parede direita.png-de5691d9f7399b0a0540f2e88e82bbb2.ctex"]
 
 [params]
 

@@ -10,7 +10,6 @@ extends Node2D
 @export var start_room_scene: PackedScene
 @export var item_room_scene: PackedScene
 
-
 var player_instance: CharacterBody2D 
 var map_grid = {} 
 var current_grid_pos = Vector2.ZERO
@@ -23,7 +22,10 @@ func _ready():
 
 func generate_dungeon():
 	randomize()
-	for child in get_children(): child.queue_free()
+	for child in get_children():
+		if child.name != "Pabluee":
+			child.queue_free()
+	
 	map_grid.clear()
 	
 	var rooms_to_create = randi_range(min_rooms, max_rooms)
@@ -39,7 +41,6 @@ func generate_dungeon():
 			layout_types[new_pos] = "standard"
 			created_positions.append(new_pos)
 
-	# Boss e Item logic
 	var candidates = created_positions.duplicate()
 	candidates.erase(Vector2.ZERO)
 	var dead_ends = []
@@ -55,7 +56,6 @@ func generate_dungeon():
 	candidates.erase(boss_pos)
 	if candidates.size() > 0: layout_types[candidates.pick_random()] = "item"
 
-	# Instanciação
 	for pos in layout_types:
 		var type = layout_types[pos]
 		var room_instance = null
@@ -89,8 +89,6 @@ func _spawn_player_at_start():
 		var start_room = map_grid[Vector2.ZERO]
 		player_instance.global_position = start_room.global_position
 		current_grid_pos = Vector2.ZERO
-		
-		# NOTA: Agora quem atualiza a câmera é o Area2D da sala, assim que o player nasce lá!
 	else:
 		push_error("ERRO: Player Scene não atribuída!")
 
@@ -105,9 +103,6 @@ func _on_player_travel(direction: Vector2):
 		
 		player_instance.global_position = spawn_pos
 		player_instance.velocity = Vector2.ZERO
-		
-		# O Area2D da nova sala vai detectar o player automaticamente
-		# e atualizar a câmera. Não precisamos fazer nada aqui.
 	else:
 		print("ERRO: Sala não encontrada.")
 

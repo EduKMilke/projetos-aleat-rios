@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://distcyk044rbg"
-path="res://.godot/imported/player_frente.png-26cdb14eecff7bd04bac91174ccb5434.ctex"
+uid="uid://bu273y7unsty"
+path="res://.godot/imported/Chão que não é de hospital.png-72e3224e201615e3e615e4342f5cd2ef.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/fillipin/player_frente.png"
-dest_files=["res://.godot/imported/player_frente.png-26cdb14eecff7bd04bac91174ccb5434.ctex"]
+source_file="res://assets/Chão/Chão que não é de hospital.png"
+dest_files=["res://.godot/imported/Chão que não é de hospital.png-72e3224e201615e3e615e4342f5cd2ef.ctex"]
 
 [params]
 
@@ -23,7 +23,7 @@ compress/rdo_quality_loss=0.0
 compress/hdr_compression=1
 compress/normal_map=0
 compress/channel_pack=0
-mipmaps/generate=false
+mipmaps/generate=true
 mipmaps/limit=-1
 roughness/mode=0
 roughness/src_normal=""
@@ -36,5 +36,5 @@ process/premult_alpha=false
 process/normal_map_invert_y=false
 process/hdr_as_srgb=false
 process/hdr_clamp_exposure=false
-process/size_limit=0
+process/size_limit=64
 detect_3d/compress_to=1

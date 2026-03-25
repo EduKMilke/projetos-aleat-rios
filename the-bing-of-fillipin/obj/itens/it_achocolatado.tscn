@@ -1,22 +1,22 @@
 [gd_scene format=3 uid="uid://brf0ntf88lgea"]
 
 [ext_resource type="Script" uid="uid://c7v4ihsn0t226" path="res://scripts/itens/it_achocolatado.gd" id="1_kedmf"]
-[ext_resource type="Texture2D" uid="uid://cre1ewllecbax" path="res://icon.svg" id="2_sln5w"]
+[ext_resource type="Texture2D" uid="uid://c02eh8downbv7" path="res://assets/itens/Achocolatado.png" id="2_kedmf"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_tb7do"]
-size = Vector2(10, 7)
+size = Vector2(18.5, 27.25)
 
 [node name="Area2D" type="Area2D" unique_id=1650647249]
 scale = Vector2(2, 2)
 script = ExtResource("1_kedmf")
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=283087348]
-position = Vector2(-3.2782555e-07, 2.3841858e-07)
-scale = Vector2(0.078125, 0.0625)
-texture = ExtResource("2_sln5w")
+position = Vector2(2.3841858e-07, -0.99999905)
+scale = Vector2(0.8203125, 0.94921875)
+texture = ExtResource("2_kedmf")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=768557398]
-position = Vector2(0, 0.5)
+position = Vector2(-0.5, 1)
 shape = SubResource("RectangleShape2D_tb7do")
 
 [connection signal="body_entered" from="." to="." method="_on_body_entered"]

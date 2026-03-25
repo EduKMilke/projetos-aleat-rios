@@ -14,7 +14,7 @@ compatibility/default_parent_skeleton_in_mesh_instance_3d=true
 
 [application]
 
-config/name="the bing of Fillipin"
+config/name="The Bing Of Fillipin"
 run/main_scene="uid://dlgijy3ydurgi"
 config/features=PackedStringArray("4.6", "Forward Plus")
 config/icon="res://icon.svg"
@@ -33,6 +33,7 @@ window/size/viewport_width=888
 window/size/viewport_height=500
 window/size/mode=2
 window/stretch/scale=1.3199999999999998
+mouse_cursor/custom_image="uid://k54nrodi86bb"
 
 [global_group]
 
@@ -61,3 +62,7 @@ t_w={
 "events": [Object(InputEventKey,"resource_local_to_scene":false,"resource_name":"","device":-1,"window_id":0,"alt_pressed":false,"shift_pressed":false,"ctrl_pressed":false,"meta_pressed":false,"pressed":false,"keycode":0,"physical_keycode":87,"key_label":0,"unicode":119,"location":0,"echo":false,"script":null)
 ]
 }
+
+[rendering]
+
+textures/canvas_textures/default_texture_filter=0

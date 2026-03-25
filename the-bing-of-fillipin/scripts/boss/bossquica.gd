@@ -60,3 +60,8 @@ func dano_troca():
 	move = true
 	a = true
 	direction = Vector2(randf_range(-1, 1), randf_range(-1, 1)).normalized()
+
+
+func _on_contato_body_entered(body: Node2D) -> void:
+	if body.is_in_group("player"):
+		Global.vida_v -= 1

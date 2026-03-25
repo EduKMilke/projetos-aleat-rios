@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://distcyk044rbg"
-path="res://.godot/imported/player_frente.png-26cdb14eecff7bd04bac91174ccb5434.ctex"
+uid="uid://2cgy32phltow"
+path="res://.godot/imported/Gordo catarrento.png-3314b16b31e7b268a87eaebf5922f17a.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/fillipin/player_frente.png"
-dest_files=["res://.godot/imported/player_frente.png-26cdb14eecff7bd04bac91174ccb5434.ctex"]
+source_file="res://assets/Inimigos/Gordo catarrento.png"
+dest_files=["res://.godot/imported/Gordo catarrento.png-3314b16b31e7b268a87eaebf5922f17a.ctex"]
 
 [params]
 

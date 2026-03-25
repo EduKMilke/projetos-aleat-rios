@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://distcyk044rbg"
-path="res://.godot/imported/player_frente.png-26cdb14eecff7bd04bac91174ccb5434.ctex"
+uid="uid://fshbkfsvcdr3"
+path="res://.godot/imported/Tomate.png-2ea76330ccf38aa5b457c41391d0fa8a.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/fillipin/player_frente.png"
-dest_files=["res://.godot/imported/player_frente.png-26cdb14eecff7bd04bac91174ccb5434.ctex"]
+source_file="res://assets/itens/Tomate.png"
+dest_files=["res://.godot/imported/Tomate.png-2ea76330ccf38aa5b457c41391d0fa8a.ctex"]
 
 [params]
 
