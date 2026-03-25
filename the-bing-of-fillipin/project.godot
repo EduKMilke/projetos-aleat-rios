@@ -21,6 +21,7 @@ config/icon="res://icon.svg"
 
 [audio]
 
+buses/default_bus_layout="uid://bsmqggiyx35f2"
 driver/output_latency=50
 
 [autoload]
@@ -39,6 +40,7 @@ mouse_cursor/custom_image="uid://k54nrodi86bb"
 
 player=""
 inimigo=""
+obstaculo=""
 
 [input]
 

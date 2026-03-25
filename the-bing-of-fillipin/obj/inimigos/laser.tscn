@@ -1,6 +1,7 @@
 [gd_scene format=3 uid="uid://bih804iv22c07"]
 
 [ext_resource type="Script" uid="uid://csc8ntj3j48c1" path="res://scripts/inimigos/i_laser/laser.gd" id="1_eouhs"]
+[ext_resource type="Texture2D" uid="uid://btx1unbgvnbi" path="res://assets/Inimigos/i_laser/Raio de café.png" id="2_n17a8"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_eouhs"]
 size = Vector2(322, 10)
@@ -21,5 +22,10 @@ end_cap_mode = 2
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=2103602575]
 position = Vector2(158, -1)
 shape = SubResource("RectangleShape2D_eouhs")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=2112034419]
+position = Vector2(441.75003, -1)
+scale = Vector2(27.765625, 1)
+texture = ExtResource("2_n17a8")
 
 [connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]

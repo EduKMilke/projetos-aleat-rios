@@ -64,3 +64,4 @@ func _tiro() -> void:
 		get_tree().current_scene.add_child(i_tiro)
 		p_t = false
 		t_c = Global.tiroc
+	

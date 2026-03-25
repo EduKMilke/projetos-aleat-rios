@@ -3,6 +3,11 @@ extends Node2D
 var d_x = 0    
 var d_y = 0    
 @onready var spr=$Area2D/Sprite2D
+@onready var som =$Atirando
+
+func _ready() -> void:
+	if som:
+		som.play()
 func _physics_process(delta: float) -> void:
 	var direction_vector = Vector2(d_x, d_y).normalized()
 	position += direction_vector * Global.tirospd * delta
@@ -13,10 +18,16 @@ func _physics_process(delta: float) -> void:
 func _on_area_2d_body_entered(body: Node) -> void:
 	if body.is_in_group("inimigo"):
 		body.vida-=Global.dano_ti
+		$Recebendo.play()
 		queue_free()
 
 
 func _on_area_2d_area_entered(area: Area2D) -> void:
 	if area.is_in_group("inimigo"):
 		area.vida-=Global.dano_ti
+		$Recebendo.play()
+		queue_free()
+func _on_area_2d_obstaculo_entered(area: Area2D) -> void:
+	if area.is_in_group("obstaculo"):
+		$Recebendo.play()
 		queue_free()

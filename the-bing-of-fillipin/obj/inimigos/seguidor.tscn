@@ -1,13 +1,38 @@
 [gd_scene format=3 uid="uid://cnttwji41phqx"]
 
 [ext_resource type="Script" uid="uid://8bg7cqt26t6k" path="res://scripts/inimigos/seguidor.gd" id="1_d7mtn"]
-[ext_resource type="Texture2D" uid="uid://cre1ewllecbax" path="res://icon.svg" id="1_nxak7"]
+[ext_resource type="Texture2D" uid="uid://bx2stxg30ywg8" path="res://assets/Inimigos/Voador/Inimigo voador.png" id="2_d7mtn"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ovv1h"]
+atlas = ExtResource("2_d7mtn")
+region = Rect2(0, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_4pkgf"]
+atlas = ExtResource("2_d7mtn")
+region = Rect2(64, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_716ye"]
+atlas = ExtResource("2_d7mtn")
+region = Rect2(0, 64, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_018pi"]
+atlas = ExtResource("2_d7mtn")
+region = Rect2(64, 64, 64, 64)
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_d7mtn"]
 animations = [{
 "frames": [{
 "duration": 1.0,
-"texture": ExtResource("1_nxak7")
+"texture": SubResource("AtlasTexture_ovv1h")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_4pkgf")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_716ye")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_018pi")
 }],
 "loop": true,
 "name": &"default",
@@ -15,17 +40,21 @@ animations = [{
 }]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_ovv1h"]
-radius = 12.0415945
+radius = 18.248287
 
 [node name="Area2D" type="Area2D" unique_id=938252076 groups=["inimigo"]]
 script = ExtResource("1_d7mtn")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=2098134983]
-position = Vector2(-1.1920929e-06, 3.5762787e-07)
-scale = Vector2(0.1875, 0.1875)
+process_mode = 3
+scale = Vector2(0.83203125, 0.7548828)
 sprite_frames = SubResource("SpriteFrames_d7mtn")
+frame_progress = 0.19888535
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1446037025]
+light_mask = 3
+visibility_layer = 3
+position = Vector2(-1, 3)
 shape = SubResource("CircleShape2D_ovv1h")
 
 [connection signal="area_entered" from="." to="." method="_on_area_entered"]

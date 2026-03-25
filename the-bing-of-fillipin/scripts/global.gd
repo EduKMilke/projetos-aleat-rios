@@ -2,22 +2,29 @@ extends Node2D
 var salas:Array[PackedScene]=[
 	preload("res://salas/Sala0.tscn"),
 	preload("res://salas/Sala1.tscn"),
+	preload("res://salas/sala2.tscn"),
+	preload("res://salas/sala3.tscn")
 ]
 var salaboss:Array[PackedScene]=[
 	preload("res://salas/bosses/boss1.tscn"),
 	preload("res://salas/bosses/boss1.tscn")
 ]
 var itens=[
-	preload("res://obj/itens/it_energe.tscn"),
 	preload("res://obj/itens/it_tomate.tscn"),
-	preload("res://obj/itens/it_achocolatado.tscn")
+	preload("res://obj/itens/it_achocolatado.tscn"),
+	preload("res://obj/itens/it_leite.tscn"),
+	preload("res://obj/itens/it_tenis_branco.tscn"),
+	preload("res://obj/itens/it_osmose.tscn")
 	
 ]
 var item=0#qual é o item
-var tomate = false
+var osmose=true
+
 #player
+var mdano=1 #multiplicador do dano
+var mtiroc=1 #multiplicador do cooldown do tiro
 var plaspd=250 #veloc do player
-var tiroc=0.5 #coldown do tiro
+var tiroc=0.5 * mtiroc #coldown do tiro
 var vida_maxv=3 #vida maxima vermelha
 const vida_maxg=12 #vida maxima geral
 var vida_v=3#vida vermelha preenchida obs toda vez que iniciado precisa ser menor ou igaula a o vida_maxv
@@ -39,7 +46,7 @@ func menos_vida()->void:
 #tiro
 var tirospd=300 #spd tiro
 var tiroext=2 #tempo de existencioa
-var dano_ti=1#dano do tiro
+var dano_ti=1*mdano#dano do tiro
 
 func _input(event: InputEvent) -> void:
 	if event is InputEventKey:
