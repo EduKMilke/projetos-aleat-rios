@@ -15,19 +15,18 @@ func _physics_process(delta: float) -> void:
 	queue_free()
 
 
-func _on_area_2d_body_entered(body: Node) -> void:
-	if body.is_in_group("inimigo"):
-		body.vida-=Global.dano_ti
-		$Recebendo.play()
-		queue_free()
-
 
 func _on_area_2d_area_entered(area: Area2D) -> void:
 	if area.is_in_group("inimigo"):
 		area.vida-=Global.dano_ti
 		$Recebendo.play()
 		queue_free()
-func _on_area_2d_obstaculo_entered(area: Area2D) -> void:
-	if area.is_in_group("obstaculo"):
+func _on_area_2d_body_entered(body: Node2D) -> void:
+	print(body)
+	if body.is_in_group("inimigo"):
+		body.vida-=Global.dano_ti
+		$Recebendo.play()
+		queue_free()
+	if body.is_in_group("obs"):
 		$Recebendo.play()
 		queue_free()

@@ -40,7 +40,7 @@ mouse_cursor/custom_image="uid://k54nrodi86bb"
 
 player=""
 inimigo=""
-obstaculo=""
+obs=""
 
 [input]
 

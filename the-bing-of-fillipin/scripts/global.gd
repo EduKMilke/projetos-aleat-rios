@@ -17,9 +17,10 @@ var itens=[
 	preload("res://obj/itens/it_osmose.tscn")
 	
 ]
+#area dos itena variaveis etc..
 var item=0#qual é o item
-var osmose=true
-
+var colisao=true
+var canudo=false
 #player
 var mdano=1 #multiplicador do dano
 var mtiroc=1 #multiplicador do cooldown do tiro
