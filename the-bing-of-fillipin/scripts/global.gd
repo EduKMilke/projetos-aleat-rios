@@ -3,7 +3,8 @@ var salas:Array[PackedScene]=[
 	preload("res://salas/Sala0.tscn"),
 	preload("res://salas/Sala1.tscn"),
 	preload("res://salas/sala2.tscn"),
-	preload("res://salas/sala3.tscn")
+	preload("res://salas/sala3.tscn"),
+	preload("res://salas/Sala4.tscn")
 ]
 var salaboss:Array[PackedScene]=[
 	preload("res://salas/bosses/boss1.tscn"),
@@ -14,14 +15,24 @@ var itens=[
 	preload("res://obj/itens/it_achocolatado.tscn"),
 	preload("res://obj/itens/it_leite.tscn"),
 	preload("res://obj/itens/it_tenis_branco.tscn"),
-	preload("res://obj/itens/it_osmose.tscn")
+	preload("res://obj/itens/it_osmose.tscn"),
+	preload("res://obj/itens/it_balde.tscn"),
+	preload("res://obj/itens/it_cachecol.tscn"),
+	preload("res://obj/itens/it_camelo.tscn"),
+	preload("res://obj/itens/it_lapis_pedreiro.tscn"),
+	preload("res://obj/itens/it_tenis_preto.tscn"),
+	preload("res://obj/itens/it_canudo.tscn")
 	
 ]
-#area dos itena variaveis etc..
 var item=0#qual é o item
-var colisao=true
-var canudo=false
+var eduardonarigudonarizmuitograndemesmomaiorqueotamanhodessavariavelsopratutetumanocaotaligadomuitograndemesmoseloko = true
+var cachecol = false #variavel que determina se efeitos temporários serão aplicados ou não
+var canudo = false
+var chance_cura: float=0.1
+var total_kills = 0
+
 #player
+var inteligencia = 1
 var mdano=1 #multiplicador do dano
 var mtiroc=1 #multiplicador do cooldown do tiro
 var plaspd=250 #veloc do player
@@ -45,7 +56,7 @@ func menos_vida()->void:
 		vida_g = vida_v + vida_c
 
 #tiro
-var tirospd=300 #spd tiro
+var tirospd=400 #spd tiro
 var tiroext=2 #tempo de existencioa
 var dano_ti=1*mdano#dano do tiro
 

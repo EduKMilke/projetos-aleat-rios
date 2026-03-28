@@ -1,26 +1,19 @@
 [gd_scene format=3 uid="uid://643s4rtev5p1"]
 
 [ext_resource type="Script" uid="uid://gd6ft5r21cqf" path="res://scripts/mapa/doors.gd" id="1_viv22"]
-[ext_resource type="Texture2D" uid="uid://dbcp0akvv8acf" path="res://assets/Chão/porta pika final da final.png" id="2_viv22"]
+[ext_resource type="Texture2D" uid="uid://brv65381myfo6" path="res://assets/Chão/porta pika final da final (1).png" id="2_abdsm"]
+[ext_resource type="Texture2D" uid="uid://sds0e4kt72jl" path="res://assets/Chão/porta pika final da final com bagui preto.png" id="3_4bo3k"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_4ur5g"]
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_h5w37"]
-atlas = ExtResource("2_viv22")
-region = Rect2(0, 0, 32, 32)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_q1neh"]
-atlas = ExtResource("2_viv22")
-region = Rect2(0, 32, 32, 32)
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_abdsm"]
 animations = [{
 "frames": [{
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_h5w37")
+"texture": ExtResource("2_abdsm")
 }, {
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_q1neh")
+"texture": ExtResource("3_4bo3k")
 }],
 "loop": true,
 "name": &"default",
@@ -36,4 +29,6 @@ script = ExtResource("1_viv22")
 shape = SubResource("CircleShape2D_4ur5g")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Area2D" unique_id=327930366]
+position = Vector2(4.9999995, -3)
+scale = Vector2(1.8984375, 1.9335938)
 sprite_frames = SubResource("SpriteFrames_abdsm")

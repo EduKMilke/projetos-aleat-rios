@@ -1,0 +1,20 @@
+[gd_scene format=3 uid="uid://daglhotksof1u"]
+
+[ext_resource type="Script" uid="uid://wxq85i5xthpw" path="res://scripts/tiro_dano_player/tiro_quase_segue.gd" id="1_2treg"]
+[ext_resource type="Texture2D" uid="uid://dvv6ygbd5bs3g" path="res://assets/Inimigos/Água.png" id="2_2treg"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_0evgd"]
+radius = 13.152946
+
+[node name="Area2D" type="Area2D" unique_id=2013597846]
+script = ExtResource("1_2treg")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=202764295]
+shape = SubResource("CircleShape2D_0evgd")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1385239256]
+position = Vector2(-0.5000006, -2.000001)
+scale = Vector2(0.825, 0.84000003)
+texture = ExtResource("2_2treg")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]

@@ -104,31 +104,31 @@ scale = Vector2(60.54264, 1.3039428)
 position = Vector2(472.99997, -3.000001)
 scale = Vector2(60.54264, 1.3039428)
 
-[node name="Pabluee" type="Node" parent="." unique_id=2010043160]
-
-[node name="StaticBody2D2" parent="Pabluee" unique_id=696841349 instance=ExtResource("7_300tb")]
-position = Vector2(6733, 513)
-scale = Vector2(3665.4114, 1.7002668)
-
-[node name="StaticBody2D3" parent="Pabluee" unique_id=264460736 instance=ExtResource("7_300tb")]
-position = Vector2(-6, 478.00003)
-rotation = -1.5707964
-scale = Vector2(60.54264, 1.3039428)
-
-[node name="StaticBody2D" parent="Pabluee" unique_id=1328360352 instance=ExtResource("7_300tb")]
-position = Vector2(472.99997, -3.000001)
-scale = Vector2(60.54264, 1.3039428)
-
 [node name="ParedeDireita" type="Sprite2D" parent="." unique_id=1454682313]
 position = Vector2(830.125, 242)
 scale = Vector2(7.179688, 16.625)
 texture = ExtResource("8_aqfe8")
+
+[node name="Pabluee" type="Node" parent="." unique_id=2010043160]
 
 [node name="ParedeEmbaixo" type="Sprite2D" parent="." unique_id=1985772351]
 z_index = 1
 position = Vector2(442.188, 40)
 scale = Vector2(27.886719, 5.859375)
 texture = ExtResource("9_qmln6")
+
+[node name="StaticBody2D5" parent="." unique_id=696841349 instance=ExtResource("7_300tb")]
+position = Vector2(6733, 513)
+scale = Vector2(3665.4114, 1.7002668)
+
+[node name="StaticBody2D7" parent="." unique_id=264460736 instance=ExtResource("7_300tb")]
+position = Vector2(-6, 478.00003)
+rotation = -1.5707964
+scale = Vector2(60.54264, 1.3039428)
+
+[node name="StaticBody2D6" parent="." unique_id=1328360352 instance=ExtResource("7_300tb")]
+position = Vector2(472.99997, -3.000001)
+scale = Vector2(60.54264, 1.3039428)
 
 [node name="ParedeEncima" type="Sprite2D" parent="." unique_id=2019219482]
 z_index = 2
@@ -205,9 +205,6 @@ rotation = 0.0042657815
 
 [node name="StaticBody2D2" parent="Mesa7" unique_id=1541603604 instance=ExtResource("13_kr6de")]
 position = Vector2(81.32707, -392.3505)
-
-[node name="StaticBody2D3" parent="Mesa7" unique_id=334359129 instance=ExtResource("13_kr6de")]
-position = Vector2(364.1862, -191.55522)
 
 [node name="StaticBody2D4" parent="Mesa7" unique_id=1535232354 instance=ExtResource("13_kr6de")]
 position = Vector2(614.3137, -396.62408)

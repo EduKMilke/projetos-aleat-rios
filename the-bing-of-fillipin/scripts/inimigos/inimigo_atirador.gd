@@ -1,6 +1,6 @@
 extends CharacterBody2D
-var vida=10
-@export var bala_scene: PackedScene = preload("res://obj/tiros_dano_player/tiro_quase_segue.tscn")
+var vida=7
+@export var bala_scene: PackedScene = preload("res://obj/tiros_dano_player/tiro_quase_segue_catarro.tscn")
 @onready var marker = $Marker2D
 @onready var ray = $RayCast2D
 

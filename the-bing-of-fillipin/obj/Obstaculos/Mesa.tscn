@@ -1,23 +1,21 @@
 [gd_scene format=3 uid="uid://bcuosw5em1kgc"]
 
 [ext_resource type="Texture2D" uid="uid://irg1t7jqk0ng" path="res://assets/Obstaculos/Mesa Davih.png" id="1_al5fd"]
-[ext_resource type="Script" uid="uid://dkilltrev7nof" path="res://scripts/mapa/mesa.gd" id="1_uti3b"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_uti3b"]
 size = Vector2(67.21631, 64.15834)
 
-[node name="StaticBody2D" type="StaticBody2D" unique_id=161964912 groups=["obs"]]
-collision_layer = 3
-collision_mask = 3
-script = ExtResource("1_uti3b")
-
-[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1139889893]
-position = Vector2(0, -4.7683716e-07)
-scale = Vector2(2.328125, 2.203125)
-texture = ExtResource("1_al5fd")
+[node name="StaticBody2D" type="StaticBody2D" unique_id=161964912 groups=["obstaculo"]]
+collision_layer = 4
+collision_mask = 4
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1066793359]
 position = Vector2(0.43613005, 0.6723759)
 rotation = -3.1415925
 scale = Vector2(0.76064473, 0.769109)
 shape = SubResource("RectangleShape2D_uti3b")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=2050375680]
+position = Vector2(0, 0.99999976)
+scale = Vector2(1.9999999, 2.15625)
+texture = ExtResource("1_al5fd")

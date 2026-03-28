@@ -13,6 +13,7 @@
 [ext_resource type="Texture2D" uid="uid://b0bjjeikm1duj" path="res://assets/Paredes (não comestiveis)/Parede esquerda.png" id="11_s1uxh"]
 [ext_resource type="Texture2D" uid="uid://bu273y7unsty" path="res://assets/Chão/Chão que não é de hospital.png" id="12_0qpes"]
 [ext_resource type="PackedScene" uid="uid://bcuosw5em1kgc" path="res://obj/Obstaculos/Mesa.tscn" id="13_h0xup"]
+[ext_resource type="PackedScene" uid="uid://xy3kwhvt5wum" path="res://obj/inimigos/bebedouro.tscn" id="14_wnxvq"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_847p5"]
 size = Vector2(887, 496)
@@ -109,19 +110,6 @@ scale = Vector2(60.54264, 1.3039428)
 
 [node name="Pabluee" type="Node" parent="." unique_id=2010043160]
 
-[node name="StaticBody2D2" parent="Pabluee" unique_id=696841349 instance=ExtResource("7_v54sx")]
-position = Vector2(6733, 513)
-scale = Vector2(3665.4114, 1.7002668)
-
-[node name="StaticBody2D3" parent="Pabluee" unique_id=264460736 instance=ExtResource("7_v54sx")]
-position = Vector2(-6, 478.00003)
-rotation = -1.5707964
-scale = Vector2(60.54264, 1.3039428)
-
-[node name="StaticBody2D" parent="Pabluee" unique_id=1328360352 instance=ExtResource("7_v54sx")]
-position = Vector2(472.99997, -3.000001)
-scale = Vector2(60.54264, 1.3039428)
-
 [node name="ParedeDireita" type="Sprite2D" parent="." unique_id=1454682313]
 position = Vector2(830.125, 242)
 scale = Vector2(7.179688, 16.625)
@@ -138,6 +126,19 @@ z_index = 2
 position = Vector2(442, 433)
 scale = Vector2(27.875, 6.875)
 texture = ExtResource("10_geopy")
+
+[node name="StaticBody2D6" parent="." unique_id=1328360352 instance=ExtResource("7_v54sx")]
+position = Vector2(472.99997, -3.000001)
+scale = Vector2(60.54264, 1.3039428)
+
+[node name="StaticBody2D7" parent="." unique_id=264460736 instance=ExtResource("7_v54sx")]
+position = Vector2(-6, 478.00003)
+rotation = -1.5707964
+scale = Vector2(60.54264, 1.3039428)
+
+[node name="StaticBody2D5" parent="." unique_id=696841349 instance=ExtResource("7_v54sx")]
+position = Vector2(6733, 513)
+scale = Vector2(3665.4114, 1.7002668)
 
 [node name="ParedeEsquerda" type="Sprite2D" parent="." unique_id=1531955165]
 position = Vector2(57, 242.50002)
@@ -204,3 +205,9 @@ rotation = 0.0042657815
 [node name="Mesa8" parent="." unique_id=51674528 instance=ExtResource("13_h0xup")]
 position = Vector2(428.99997, 151.99997)
 rotation = 0.0042657815
+
+[node name="Tiro2" parent="." unique_id=584747017 instance=ExtResource("14_wnxvq")]
+position = Vector2(31, 453)
+
+[node name="Tiro3" parent="." unique_id=1955853424 instance=ExtResource("14_wnxvq")]
+position = Vector2(859, 451)

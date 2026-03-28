@@ -1,0 +1,41 @@
+[gd_scene format=3 uid="uid://crqpl8botfy6s"]
+
+[ext_resource type="Script" uid="uid://bifymgpny1bem" path="res://scripts/itens/interface.gd" id="1_to1n6"]
+[ext_resource type="FontFile" uid="uid://ch0rjgwqgqt1n" path="res://assets/Fontes/PixelGame-R9AZe.otf" id="2_to1n6"]
+
+[node name="InterfaceOvo" type="CanvasLayer" unique_id=743260689]
+script = ExtResource("1_to1n6")
+
+[node name="Nome" type="Label" parent="." unique_id=1553538004]
+unique_name_in_owner = true
+offset_left = 287.0
+offset_top = 5.0
+offset_right = 847.0
+offset_bottom = 139.0
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_fonts/font = ExtResource("2_to1n6")
+theme_override_font_sizes/font_size = 50
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Desc" type="Label" parent="." unique_id=860992832]
+unique_name_in_owner = true
+modulate = Color(1, 1, 1, 0)
+offset_left = 200.0
+offset_top = 149.0
+offset_right = 921.0
+offset_bottom = 176.0
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_fonts/font = ExtResource("2_to1n6")
+theme_override_font_sizes/font_size = 22
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Fundo" type="ColorRect" parent="." unique_id=1983017298]
+unique_name_in_owner = true
+z_index = -2
+offset_left = -8.0
+offset_top = 30.0
+offset_right = 1086.0
+offset_bottom = 208.0
+color = Color(0, 0, 0, 1)

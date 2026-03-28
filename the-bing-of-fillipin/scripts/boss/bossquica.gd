@@ -1,6 +1,6 @@
 extends CharacterBody2D
 
-var tiro = preload("res://obj/tiros_dano_player/tiro_quase_segue.tscn")
+var tiro = preload("res://obj/tiros_dano_player/tiro_quase_segue_eletrico.tscn")
 var speed = 200
 var direction = Vector2(1, 1).normalized()
 var vida = 70

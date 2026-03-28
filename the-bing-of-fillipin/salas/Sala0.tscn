@@ -5,9 +5,9 @@
 [ext_resource type="PackedScene" uid="uid://b6f0y8p2ixml8" path="res://portas/DoorBottom.tscn" id="3_gkcju"]
 [ext_resource type="PackedScene" uid="uid://bksq8hwoo4m3a" path="res://portas/DooRight.tscn" id="4_pxlsa"]
 [ext_resource type="PackedScene" uid="uid://643s4rtev5p1" path="res://portas/DoorTop.tscn" id="5_hgn8j"]
+[ext_resource type="AudioStream" uid="uid://wm2nihortjeo" path="res://audio/Miojos do Abismo.wav" id="6_ffroc"]
 [ext_resource type="PackedScene" uid="uid://d1v7rgro8esl7" path="res://obj/paredes/parede.tscn" id="7_gkcju"]
-[ext_resource type="AudioStream" uid="uid://dbtyljvl07nd1" path="res://audio/The Bing of Filipin.mp3" id="7_pxlsa"]
-[ext_resource type="Script" uid="uid://b7jcd022u1tbt" path="res://scripts/mapa/spawn.gd" id="8_pxlsa"]
+[ext_resource type="Script" uid="uid://b7jcd022u1tbt" path="res://salas/spawn.gd" id="8_pxlsa"]
 [ext_resource type="Texture2D" uid="uid://csnbrpdc28jo" path="res://assets/Paredes (não comestiveis)/Parede direita.png" id="10_ffroc"]
 [ext_resource type="Texture2D" uid="uid://dconqtgkmoqh3" path="res://assets/Paredes (não comestiveis)/Parede embaixo.png" id="11_xkpq1"]
 [ext_resource type="Texture2D" uid="uid://batpur4sg1bn2" path="res://assets/Paredes (não comestiveis)/Parede encima.png" id="12_j2uqy"]
@@ -66,9 +66,11 @@ position = Vector2(765, 259)
 position = Vector2(445, 246.5)
 shape = SubResource("RectangleShape2D_r6ng0")
 
-[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." unique_id=1430751403]
-stream = ExtResource("7_pxlsa")
-pitch_scale = 0.01
+[node name="Musica" type="AudioStreamPlayer" parent="." unique_id=1430751403]
+stream = ExtResource("6_ffroc")
+volume_db = -2.701
+autoplay = true
+bus = &"Musica"
 
 [node name="Marker2D" type="Marker2D" parent="." unique_id=309074014]
 position = Vector2(439, 234)

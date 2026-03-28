@@ -3,7 +3,7 @@ extends StaticBody2D
 var player = null
 var laser_scene = preload("res://obj/inimigos/laser.tscn")
 var pode_atirar = true
-var vida=10
+var vida=7
 @onready var ani = $AnimatedSprite2D
 
 func _process(_delta: float) -> void:
@@ -19,15 +19,16 @@ func disparar_sequencia() -> void:
 	pode_atirar = false
 	
 	ani.frame = 1 
-	await get_tree().create_timer(0.5).timeout
+	await get_tree().create_timer(1.0).timeout
 	
 	ani.frame = 2
-	await get_tree().create_timer(0.5).timeout
+	await get_tree().create_timer(1.0).timeout
 	
 	var novo_laser = laser_scene.instantiate()
 	var posicao_alvo = player.global_position
-	await get_tree().create_timer(0.2).timeout
+	await get_tree().create_timer(1.0).timeout
 	add_child(novo_laser)
+	$Raio.play()
 	
 	if novo_laser.has_method("configurar_alvo"):
 		novo_laser.configurar_alvo(posicao_alvo)

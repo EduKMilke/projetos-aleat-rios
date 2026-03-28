@@ -7,6 +7,8 @@ const PLAYER_GROUP = "player"
 var movement_vector = Vector2.ZERO
 var target_acquired = false
 var a=true
+
+
 func _physics_process(delta):
 	if not is_instance_valid(player_target):
 		var players = get_tree().get_nodes_in_group(PLAYER_GROUP)

@@ -4,6 +4,7 @@
 [ext_resource type="Script" uid="uid://letkqkehwbbw" path="res://scripts/inimigos/i_laser/i_laser.gd" id="1_fx3r4"]
 [ext_resource type="Texture2D" uid="uid://cc40kq1n5o0ho" path="res://assets/Inimigos/i_laser/Caneca2.png" id="2_fx3r4"]
 [ext_resource type="Texture2D" uid="uid://nm72rlv7jxgx" path="res://assets/Inimigos/i_laser/Caneca3.png" id="3_uca1f"]
+[ext_resource type="AudioStream" uid="uid://bxrv8c57hdc15" path="res://audio/Boom.wav" id="5_uca1f"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_eulu3"]
 animations = [{
@@ -36,3 +37,7 @@ animation = &"ataque_laser"
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1469806080]
 position = Vector2(1, -6)
 shape = SubResource("RectangleShape2D_7i00a")
+
+[node name="Raio" type="AudioStreamPlayer" parent="." unique_id=1024387098]
+stream = ExtResource("5_uca1f")
+volume_db = -1.238

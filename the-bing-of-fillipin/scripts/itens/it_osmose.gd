@@ -14,6 +14,8 @@ func _process(delta: float) -> void:
 
 func _on_body_entered(body: Node2D) -> void:
 	if body.is_in_group("player"):
-		Global.colisao=false
+		Item.play()
+		body.set_collision_mask_value(3,false)
 		body.modulate.a = 0.5
+		Interface.exibir_item("Osmose", "Você é praticamente uma batata agora!")
 		queue_free()

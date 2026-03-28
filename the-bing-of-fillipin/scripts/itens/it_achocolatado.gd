@@ -13,5 +13,7 @@ func _process(delta: float) -> void:
 	position.y = s_y + movement
 func _on_body_entered(body: Node2D) -> void:
 	if body.is_in_group("player"):
+		Item.play()
 		Global.vida_maxv+=1
+		Interface.exibir_item("Achocolatado", "Rico em proteínas")
 		queue_free()

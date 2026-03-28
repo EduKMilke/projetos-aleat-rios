@@ -1,26 +1,19 @@
 [gd_scene format=3 uid="uid://dxu5h0cme75pe"]
 
 [ext_resource type="Script" uid="uid://gd6ft5r21cqf" path="res://scripts/mapa/doors.gd" id="1_fqhwx"]
-[ext_resource type="Texture2D" uid="uid://dbcp0akvv8acf" path="res://assets/Chão/porta pika final da final.png" id="2_fqhwx"]
+[ext_resource type="Texture2D" uid="uid://brv65381myfo6" path="res://assets/Chão/porta pika final da final (1).png" id="2_adk4e"]
+[ext_resource type="Texture2D" uid="uid://sds0e4kt72jl" path="res://assets/Chão/porta pika final da final com bagui preto.png" id="3_1ivll"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_fqhwx"]
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_h5w37"]
-atlas = ExtResource("2_fqhwx")
-region = Rect2(0, 0, 32, 32)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_q1neh"]
-atlas = ExtResource("2_fqhwx")
-region = Rect2(0, 32, 32, 32)
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_adk4e"]
 animations = [{
 "frames": [{
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_h5w37")
+"texture": ExtResource("2_adk4e")
 }, {
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_q1neh")
+"texture": ExtResource("3_1ivll")
 }],
 "loop": true,
 "name": &"default",
@@ -36,4 +29,7 @@ script = ExtResource("1_fqhwx")
 shape = SubResource("CircleShape2D_fqhwx")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Area2D" unique_id=375838730]
+position = Vector2(-4.999998, -3.999999)
+rotation = -1.5799438
+scale = Vector2(1.8239772, 1.4910486)
 sprite_frames = SubResource("SpriteFrames_adk4e")

@@ -15,4 +15,6 @@ func _on_body_entered(body: Node2D) -> void:
 	if body.is_in_group("player"):
 		Global.dano_ti= Global.dano_ti * 0.9
 		Global.tiroc -= 0.2
+		Interface.exibir_item("Tomate", "O pior sabor")
+		Item.play()
 		queue_free()

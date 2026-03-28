@@ -27,6 +27,8 @@ driver/output_latency=50
 [autoload]
 
 Global="*res://scripts/global.gd"
+Interface="*uid://crqpl8botfy6s"
+Item="*uid://d0rxltlreyns6"
 
 [display]
 
@@ -40,7 +42,7 @@ mouse_cursor/custom_image="uid://k54nrodi86bb"
 
 player=""
 inimigo=""
-obs=""
+obstaculo=""
 
 [input]
 

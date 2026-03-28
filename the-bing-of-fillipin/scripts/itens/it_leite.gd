@@ -14,6 +14,7 @@ func _process(delta: float) -> void:
 
 func _on_body_entered(body: Node2D) -> void:
 	if body.is_in_group("player"):
+		Item.play()
 		Global.mtiroc=1.5
 		Global.mdano=1.5
 		Global.dano_ti+=1
@@ -22,4 +23,6 @@ func _on_body_entered(body: Node2D) -> void:
 		Global.tiroc -= 0.1
 		Global.tiroext +=1
 		Global.tirospd +=1
+		Global.plaspd +=100
+		Interface.exibir_item("Leite", "Eu amo leite!")
 		queue_free()

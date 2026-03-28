@@ -1,0 +1,60 @@
+[gd_scene format=3 uid="uid://dqjgn1i8tj4yf"]
+
+[ext_resource type="Script" uid="uid://bpi16i5c50r23" path="res://scripts/inimigos/rastejador.gd" id="1_qhjrh"]
+[ext_resource type="Texture2D" uid="uid://b3iu0k5niwjgp" path="res://assets/Inimigos/Bicho q só fica no chão (1).png" id="2_qhjrh"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_lwjf7"]
+atlas = ExtResource("2_qhjrh")
+region = Rect2(0, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_nwn70"]
+atlas = ExtResource("2_qhjrh")
+region = Rect2(0, 64, 64, 64)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_d7mtn"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_lwjf7")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_nwn70")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_ovv1h"]
+radius = 18.248287
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_qhjrh"]
+radius = 21.213203
+
+[node name="Corpo" type="CharacterBody2D" unique_id=1015336148 groups=["inimigo"]]
+collision_layer = 7
+collision_mask = 7
+script = ExtResource("1_qhjrh")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=2098134983]
+process_mode = 3
+position = Vector2(0.18750094, -0.07812489)
+scale = Vector2(0.8378906, 0.7524414)
+sprite_frames = SubResource("SpriteFrames_d7mtn")
+autoplay = "default"
+frame_progress = 0.19888535
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1446037025]
+light_mask = 7
+visibility_layer = 7
+position = Vector2(1, 7)
+shape = SubResource("CircleShape2D_ovv1h")
+
+[node name="AreaDano" type="Area2D" parent="." unique_id=1784257559]
+collision_mask = 0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="AreaDano" unique_id=195153852]
+position = Vector2(1, 7)
+shape = SubResource("CircleShape2D_qhjrh")
+
+[connection signal="body_entered" from="AreaDano" to="." method="_on_area_dano_body_entered"]

@@ -13,6 +13,7 @@
 [ext_resource type="Texture2D" uid="uid://bu273y7unsty" path="res://assets/Chão/Chão que não é de hospital.png" id="11_lbxmg"]
 [ext_resource type="PackedScene" uid="uid://bcuosw5em1kgc" path="res://obj/Obstaculos/Mesa.tscn" id="12_v403o"]
 [ext_resource type="PackedScene" uid="uid://cnttwji41phqx" path="res://obj/inimigos/seguidor.tscn" id="13_dn5jv"]
+[ext_resource type="PackedScene" uid="uid://dqjgn1i8tj4yf" path="res://obj/inimigos/rastejador.tscn" id="14_gtgae"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_847p5"]
 size = Vector2(887, 496)
@@ -106,23 +107,23 @@ scale = Vector2(60.54264, 1.3039428)
 
 [node name="Pabluee" type="Node" parent="." unique_id=2010043160]
 
-[node name="StaticBody2D2" parent="Pabluee" unique_id=696841349 instance=ExtResource("6_bwckt")]
-position = Vector2(6733, 513)
-scale = Vector2(3665.4114, 1.7002668)
-
-[node name="StaticBody2D3" parent="Pabluee" unique_id=264460736 instance=ExtResource("6_bwckt")]
-position = Vector2(-6, 478.00003)
-rotation = -1.5707964
-scale = Vector2(60.54264, 1.3039428)
-
-[node name="StaticBody2D" parent="Pabluee" unique_id=1328360352 instance=ExtResource("6_bwckt")]
-position = Vector2(472.99997, -3.000001)
-scale = Vector2(60.54264, 1.3039428)
-
 [node name="ParedeDireita" type="Sprite2D" parent="." unique_id=1454682313]
 position = Vector2(830.125, 242)
 scale = Vector2(7.179688, 16.625)
 texture = ExtResource("7_lhtgm")
+
+[node name="StaticBody2D5" parent="." unique_id=696841349 instance=ExtResource("6_bwckt")]
+position = Vector2(6733, 513)
+scale = Vector2(3665.4114, 1.7002668)
+
+[node name="StaticBody2D6" parent="." unique_id=1328360352 instance=ExtResource("6_bwckt")]
+position = Vector2(472.99997, -3.000001)
+scale = Vector2(60.54264, 1.3039428)
+
+[node name="StaticBody2D7" parent="." unique_id=264460736 instance=ExtResource("6_bwckt")]
+position = Vector2(-6, 478.00003)
+rotation = -1.5707964
+scale = Vector2(60.54264, 1.3039428)
 
 [node name="ParedeEmbaixo" type="Sprite2D" parent="." unique_id=1985772351]
 z_index = 1
@@ -229,8 +230,8 @@ position = Vector2(153, 131)
 [node name="Area2D2" parent="." unique_id=834666488 instance=ExtResource("13_dn5jv")]
 position = Vector2(740, 123)
 
-[node name="Area2D3" parent="." unique_id=1109796584 instance=ExtResource("13_dn5jv")]
-position = Vector2(748, 377)
+[node name="Area2D3" parent="." unique_id=1467678326 instance=ExtResource("14_gtgae")]
+position = Vector2(161, 388)
 
-[node name="Area2D4" parent="." unique_id=1723764462 instance=ExtResource("13_dn5jv")]
-position = Vector2(154, 372)
+[node name="Area2D4" parent="." unique_id=751511534 instance=ExtResource("14_gtgae")]
+position = Vector2(728, 385)
