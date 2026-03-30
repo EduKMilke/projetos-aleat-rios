@@ -60,7 +60,7 @@ animations = [{
 }]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_xnc2w"]
-size = Vector2(15, 31)
+size = Vector2(22, 38)
 
 [node name="CharacterBody2D" type="CharacterBody2D" unique_id=659582897 groups=["player"]]
 collision_layer = 7
@@ -72,7 +72,7 @@ sprite_frames = SubResource("SpriteFrames_hqtel")
 animation = &"baixo"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=2125841642]
-position = Vector2(-0.5, 8.5)
+position = Vector2(0, 5)
 shape = SubResource("RectangleShape2D_xnc2w")
 
 [node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=132430244]

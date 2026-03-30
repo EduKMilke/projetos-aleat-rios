@@ -7,7 +7,7 @@
 [ext_resource type="PackedScene" uid="uid://643s4rtev5p1" path="res://portas/DoorTop.tscn" id="5_hgn8j"]
 [ext_resource type="AudioStream" uid="uid://wm2nihortjeo" path="res://audio/Miojos do Abismo.wav" id="6_ffroc"]
 [ext_resource type="PackedScene" uid="uid://d1v7rgro8esl7" path="res://obj/paredes/parede.tscn" id="7_gkcju"]
-[ext_resource type="Script" uid="uid://b7jcd022u1tbt" path="res://salas/spawn.gd" id="8_pxlsa"]
+[ext_resource type="Script" uid="uid://b7jcd022u1tbt" path="res://scripts/mapa/spawn.gd" id="8_pxlsa"]
 [ext_resource type="Texture2D" uid="uid://csnbrpdc28jo" path="res://assets/Paredes (não comestiveis)/Parede direita.png" id="10_ffroc"]
 [ext_resource type="Texture2D" uid="uid://dconqtgkmoqh3" path="res://assets/Paredes (não comestiveis)/Parede embaixo.png" id="11_xkpq1"]
 [ext_resource type="Texture2D" uid="uid://batpur4sg1bn2" path="res://assets/Paredes (não comestiveis)/Parede encima.png" id="12_j2uqy"]
@@ -83,16 +83,16 @@ scale = Vector2(23.731031, -3.650006)
 
 [node name="Pabluee" type="Node" parent="." unique_id=569139214]
 
-[node name="StaticBody2D2" parent="Pabluee" unique_id=1162079248 instance=ExtResource("7_gkcju")]
+[node name="StaticBody2D2" parent="." unique_id=1162079248 instance=ExtResource("7_gkcju")]
 position = Vector2(6733, 513)
 scale = Vector2(3665.4114, 1.7002668)
 
-[node name="StaticBody2D3" parent="Pabluee" unique_id=1420852253 instance=ExtResource("7_gkcju")]
+[node name="StaticBody2D3" parent="." unique_id=1420852253 instance=ExtResource("7_gkcju")]
 position = Vector2(-6, 478.00003)
 rotation = -1.5707964
 scale = Vector2(60.54264, 1.3039428)
 
-[node name="StaticBody2D" parent="Pabluee" unique_id=52508897 instance=ExtResource("7_gkcju")]
+[node name="StaticBody2D4" parent="." unique_id=52508897 instance=ExtResource("7_gkcju")]
 position = Vector2(472.99997, -3.000001)
 scale = Vector2(60.54264, 1.3039428)
 

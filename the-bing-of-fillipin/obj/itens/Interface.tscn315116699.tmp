@@ -6,39 +6,36 @@
 [node name="InterfaceOvo" type="CanvasLayer" unique_id=743260689]
 script = ExtResource("1_to1n6")
 
-[node name="Fundo" type="ColorRect" parent="." unique_id=1983017298]
+[node name="Nome" type="Label" parent="." unique_id=1553538004]
 unique_name_in_owner = true
-z_index = -2
-offset_left = -825.0
-offset_top = 6.0
-offset_right = 2177.0
-offset_bottom = 184.0
-size_flags_horizontal = 3
-color = Color(0, 0, 0, 1)
+offset_left = 287.0
+offset_top = 5.0
+offset_right = 847.0
+offset_bottom = 139.0
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_fonts/font = ExtResource("2_to1n6")
+theme_override_font_sizes/font_size = 50
+horizontal_alignment = 1
+vertical_alignment = 1
 
-[node name="Desc" type="Label" parent="Fundo" unique_id=860992832]
+[node name="Desc" type="Label" parent="." unique_id=860992832]
 unique_name_in_owner = true
 modulate = Color(1, 1, 1, 0)
-layout_mode = 0
-offset_left = 999.0
-offset_top = 153.0
-offset_right = 1720.0
-offset_bottom = 180.0
+offset_left = 200.0
+offset_top = 149.0
+offset_right = 921.0
+offset_bottom = 176.0
 theme_override_colors/font_color = Color(1, 1, 1, 1)
 theme_override_fonts/font = ExtResource("2_to1n6")
 theme_override_font_sizes/font_size = 22
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="Nome" type="Label" parent="Fundo" unique_id=1553538004]
+[node name="Fundo" type="ColorRect" parent="." unique_id=1983017298]
 unique_name_in_owner = true
-layout_mode = 0
-offset_left = 1086.0
-offset_top = 9.0
-offset_right = 1646.0
-offset_bottom = 143.0
-theme_override_colors/font_color = Color(1, 1, 1, 1)
-theme_override_fonts/font = ExtResource("2_to1n6")
-theme_override_font_sizes/font_size = 50
-horizontal_alignment = 1
-vertical_alignment = 1
+z_index = -2
+offset_left = -8.0
+offset_top = 30.0
+offset_right = 1086.0
+offset_bottom = 208.0
+color = Color(0, 0, 0, 1)
