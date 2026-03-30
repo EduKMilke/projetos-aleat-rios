@@ -25,7 +25,7 @@ var itens=[
 	
 ]
 var item=0#qual é o item
-var eduardonarigudonarizmuitograndemesmomaiorqueotamanhodessavariavelsopratutetumanocaotaligadomuitograndemesmoseloko = true
+
 var cachecol = false #variavel que determina se efeitos temporários serão aplicados ou não
 var canudo = false
 var chance_cura: float=0.1
