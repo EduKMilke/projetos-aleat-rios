@@ -1,0 +1,20 @@
+[gd_scene format=3 uid="uid://bsfr0fhkd1mf1"]
+
+[ext_resource type="Script" uid="uid://dh0mda2smd07u" path="res://scripts/boss/arduino/arduino.gd" id="1_n8q1c"]
+[ext_resource type="Texture2D" uid="uid://cre1ewllecbax" path="res://icon.svg" id="2_8peif"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ugnb8"]
+size = Vector2(182.5, 155)
+
+[node name="Arduino" type="CharacterBody2D" unique_id=1537071826]
+position = Vector2(-1, 1)
+scale = Vector2(0.45873213, 0.48080653)
+script = ExtResource("1_n8q1c")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1019397139]
+shape = SubResource("RectangleShape2D_ugnb8")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1253191051]
+position = Vector2(1.7881393e-06, 0)
+scale = Vector2(1.4218751, 1.234375)
+texture = ExtResource("2_8peif")

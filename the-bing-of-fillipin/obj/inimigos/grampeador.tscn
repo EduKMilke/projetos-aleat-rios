@@ -1,0 +1,18 @@
+[gd_scene format=3 uid="uid://355w0voe1kcr"]
+
+[ext_resource type="Script" uid="uid://dwsh4de1bcdj2" path="res://scripts/inimigos/grampeador.gd" id="1_jgdpn"]
+[ext_resource type="Texture2D" uid="uid://cre1ewllecbax" path="res://icon.svg" id="2_egory"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_egory"]
+size = Vector2(43, 29)
+
+[node name="Grampeador" type="CharacterBody2D" unique_id=1674915940 groups=["inimigo"]]
+script = ExtResource("1_jgdpn")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=2041431972]
+shape = SubResource("RectangleShape2D_egory")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=289197498]
+position = Vector2(1.5000005, 2.2500005)
+scale = Vector2(0.3515625, 0.23828125)
+texture = ExtResource("2_egory")

@@ -64,4 +64,4 @@ func dano_troca():
 
 func _on_contato_body_entered(body: Node2D) -> void:
 	if body.is_in_group("player"):
-		Global.vida_v -= 1
+		Global.menos_vida()

@@ -3,7 +3,7 @@ extends Area2D
 @export var speed: float = 200.0 
 var player_target: Node2D = null
 const PLAYER_GROUP = "player"
-
+@onready var spr=$Sprite2D
 var movement_vector = Vector2.ZERO
 var target_acquired = false
 var a=true

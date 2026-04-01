@@ -25,8 +25,6 @@ func pode_ver_player() -> bool:
 	
 	ray.target_position = to_local(player.global_position)
 	ray.force_raycast_update()
-	
-	
 	return not ray.is_colliding() or ray.get_collider().is_in_group("player")
 
 func atirar():

@@ -24,10 +24,10 @@ script = ExtResource("1_7qo8u")
 [node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=1089954868]
 
 [node name="ProgressBar" type="TextureProgressBar" parent="CanvasLayer" unique_id=1972855697]
-offset_left = 197.0
-offset_top = 469.0
-offset_right = 697.0
-offset_bottom = 499.0
+offset_left = 461.0
+offset_top = 651.0
+offset_right = 961.0
+offset_bottom = 681.0
 texture_under = SubResource("GradientTexture2D_7qo8u")
 texture_progress = SubResource("GradientTexture2D_v5lny")
 tint_under = Color(0.7176471, 0, 0, 1)

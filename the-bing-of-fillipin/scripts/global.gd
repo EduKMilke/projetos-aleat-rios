@@ -8,7 +8,7 @@ var salas:Array[PackedScene]=[
 ]
 var salaboss:Array[PackedScene]=[
 	preload("res://salas/bosses/boss1.tscn"),
-	preload("res://salas/bosses/boss1.tscn")
+	preload("res://obj/boss/bossquica.tscn")
 ]
 var itens=[
 	preload("res://obj/itens/it_tomate.tscn"),
