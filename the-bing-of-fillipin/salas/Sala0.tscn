@@ -14,6 +14,7 @@
 [ext_resource type="TileSet" uid="uid://nhms6ggth0u0" path="res://assets/meu chaozinho legal.tres" id="13_bv8ev"]
 [ext_resource type="Texture2D" uid="uid://b0bjjeikm1duj" path="res://assets/Paredes (não comestiveis)/Parede esquerda.png" id="13_xwyns"]
 [ext_resource type="PackedScene" uid="uid://bqll0gt8gl4oo" path="res://obj/pedestal-itens.tscn" id="14_ffroc"]
+[ext_resource type="PackedScene" uid="uid://ba0snddwpl2wb" path="res://obj/inimigos/amoeba.tscn" id="15_xkpq1"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_r6ng0"]
 size = Vector2(888, 499)
@@ -134,3 +135,6 @@ tile_set = ExtResource("13_bv8ev")
 
 [node name="ponto" parent="." unique_id=1265312814 instance=ExtResource("14_ffroc")]
 position = Vector2(217, 140)
+
+[node name="Area2D" parent="." unique_id=938252076 instance=ExtResource("15_xkpq1")]
+position = Vector2(315, 345)
