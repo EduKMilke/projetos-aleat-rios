@@ -44,9 +44,9 @@ func _ready() -> void:
 	queue_free()
 func disparar_no_boss() -> void:
 	if ani:
-		ani.frame = 1 
+		ani.frame = 0 
 		await get_tree().create_timer(0.5).timeout
-		ani.frame = 2
+		ani.frame = 1
 		await get_tree().create_timer(0.5).timeout
 	
 	# Cria o laser

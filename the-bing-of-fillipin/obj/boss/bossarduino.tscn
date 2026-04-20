@@ -1,10 +1,60 @@
 [gd_scene format=3 uid="uid://bsfr0fhkd1mf1"]
 
 [ext_resource type="Script" uid="uid://dh0mda2smd07u" path="res://scripts/boss/arduino/arduino.gd" id="1_n8q1c"]
-[ext_resource type="Texture2D" uid="uid://cre1ewllecbax" path="res://icon.svg" id="2_8peif"]
+[ext_resource type="Texture2D" uid="uid://b2hqnuu38ellw" path="res://assets/Bosses/Arduino Evo (1).png" id="2_n8q1c"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ugnb8"]
 size = Vector2(182.5, 155)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_8peif"]
+atlas = ExtResource("2_n8q1c")
+region = Rect2(0, 0, 100, 100)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ugnb8"]
+atlas = ExtResource("2_n8q1c")
+region = Rect2(100, 0, 100, 100)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_tkblx"]
+atlas = ExtResource("2_n8q1c")
+region = Rect2(0, 100, 100, 100)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_haqt5"]
+atlas = ExtResource("2_n8q1c")
+region = Rect2(100, 100, 100, 100)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_3nq8g"]
+atlas = ExtResource("2_n8q1c")
+region = Rect2(0, 200, 100, 100)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_syxib"]
+atlas = ExtResource("2_n8q1c")
+region = Rect2(100, 200, 100, 100)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_5471y"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_8peif")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ugnb8")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_tkblx")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_haqt5")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_3nq8g")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_syxib")
+}],
+"loop": true,
+"name": &"default",
+"speed": 10.0
+}]
 
 [node name="Arduino" type="CharacterBody2D" unique_id=1537071826]
 position = Vector2(-1, 1)
@@ -14,7 +64,8 @@ script = ExtResource("1_n8q1c")
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1019397139]
 shape = SubResource("RectangleShape2D_ugnb8")
 
-[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1253191051]
+[node name="Sprite2D" type="AnimatedSprite2D" parent="." unique_id=730827656]
 position = Vector2(1.7881393e-06, 0)
 scale = Vector2(1.4218751, 1.234375)
-texture = ExtResource("2_8peif")
+sprite_frames = SubResource("SpriteFrames_5471y")
+frame_progress = 0.7211425

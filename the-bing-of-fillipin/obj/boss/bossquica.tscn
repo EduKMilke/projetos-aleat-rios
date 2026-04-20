@@ -1,30 +1,94 @@
 [gd_scene format=3 uid="uid://cdwuie3wh0bl1"]
 
 [ext_resource type="Script" uid="uid://clr8b6j1eilo" path="res://scripts/boss/bossquica.gd" id="1_437eb"]
-[ext_resource type="Texture2D" uid="uid://byfs6atp7vdtg" path="res://assets/Bosses/Vilson.jpeg" id="2_artnh"]
+[ext_resource type="Texture2D" uid="uid://dkda6q733j07o" path="res://assets/Bosses/Chapeu.png" id="2_artnh"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_hi24r"]
-size = Vector2(116, 128)
+size = Vector2(116, 94)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_5wyb3"]
+atlas = ExtResource("2_artnh")
+region = Rect2(0, 64, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_6jggi"]
+atlas = ExtResource("2_artnh")
+region = Rect2(64, 32, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ro8jb"]
+atlas = ExtResource("2_artnh")
+region = Rect2(64, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_04cke"]
+atlas = ExtResource("2_artnh")
+region = Rect2(32, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_p7ibn"]
+atlas = ExtResource("2_artnh")
+region = Rect2(0, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_khl2h"]
+atlas = ExtResource("2_artnh")
+region = Rect2(0, 32, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_wis6l"]
+atlas = ExtResource("2_artnh")
+region = Rect2(32, 32, 32, 32)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_jdt5y"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_5wyb3")
+}],
+"loop": true,
+"name": &"ataque",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_6jggi")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ro8jb")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_04cke")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_p7ibn")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_khl2h")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_wis6l")
+}],
+"loop": true,
+"name": &"normal",
+"speed": 5.0
+}]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_artnh"]
-size = Vector2(126, 138)
+size = Vector2(126, 103)
 
 [node name="CharacterBody2D" type="CharacterBody2D" unique_id=1575078040]
 script = ExtResource("1_437eb")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=577213214]
-position = Vector2(-1, 1)
+position = Vector2(-1, 18)
 shape = SubResource("RectangleShape2D_hi24r")
 
-[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1564928680]
-position = Vector2(0, 2.500002)
-scale = Vector2(0.52444446, 0.5733334)
-texture = ExtResource("2_artnh")
+[node name="rodarodajequiti" type="AnimatedSprite2D" parent="." unique_id=1482713171]
+position = Vector2(-1.5000038, 0.9999962)
+scale = Vector2(3.84375, 3.9375)
+sprite_frames = SubResource("SpriteFrames_jdt5y")
+animation = &"ataque"
+autoplay = "normal"
 
 [node name="Contato" type="Area2D" parent="." unique_id=1195905581]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Contato" unique_id=2102192752]
-position = Vector2(1, 2)
+position = Vector2(1, 19.5)
 shape = SubResource("RectangleShape2D_artnh")
 
 [connection signal="body_entered" from="Contato" to="." method="_on_contato_body_entered"]

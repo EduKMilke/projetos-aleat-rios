@@ -18,6 +18,7 @@ func _ready() -> void:
 	_progress_bar = _ibar_vida.get_node("CanvasLayer/ProgressBar")
 	_progress_bar.max_value = vida
 	_progress_bar.value = vida
+	
 
 func _physics_process(delta):
 	if a == true:
@@ -51,6 +52,7 @@ func dano_troca():
 		return
 	move = false
 	for i in 5:
+		$rodarodajequiti.play("ataque")
 		var _i_tiro = tiro.instantiate()
 		_i_tiro.speed += 10
 		add_child(_i_tiro) 
@@ -58,6 +60,7 @@ func dano_troca():
 	if not is_inside_tree():
 		return
 	move = true
+	$rodarodajequiti.play("normal")
 	a = true
 	direction = Vector2(randf_range(-1, 1), randf_range(-1, 1)).normalized()
 
