@@ -4,67 +4,55 @@ var player = null
 var spd = 150
 var vida = 0
 var vid_max = 16
-var avoidance_force = 50 
-var div = true
-var podiv = 0
+var avoidance_force = 1000 
+var podiv = 0 
 
-@onready var amo_m = preload("res://obj/inimigos/amoeba.tscn")
-
+const AMOEBA_SCENE = preload("res://obj/inimigos/amoeba.tscn")
 
 func _ready() -> void:
 	vida = vid_max
 	add_to_group("inimigo")
 
-# Função para ser chamada quando a amoeba levar dano
 func tomar_dano(quantidade: int):
 	vida -= quantidade
+	if vida <= 0:
+		queue_free()
 
-
-func morrer():
-
-	
-	# Verificamos se ele ainda pode se dividir
-	if podiv < 2: 
+func _exit_tree() -> void:
+	if vida <= 0 and podiv < 2:
 		var pai_da_sala = get_parent()
+		var spawn_pos = global_position
 		
-		# Carregamos a cena aqui dentro para evitar erros de dependência circular
-		var amoeba_scene = load("res://obj/inimigos/amoeba.tscn")
-		
-		if amoeba_scene:
+		if pai_da_sala:
 			for i in 2:
-				var i_amo = amoeba_scene.instantiate()
+				var clone = AMOEBA_SCENE.instantiate()
+				clone.podiv = podiv + 1
+				clone.vid_max = vid_max - 5
+				clone.vida = clone.vid_max
 				
-				# CONFIGURAÇÃO DOS CLONES
-				i_amo.podiv = podiv + 1
-				i_amo.vid_max = vid_max - 5
-				i_amo.vida = i_amo.vid_max # CRITICAL: Garante que o clone não nasça com 0 de vida
-				i_amo.global_position = global_position + Vector2(randf_range(-40, 40), randf_range(-40, 40))
-				
-				# Adiciona à sala
-				pai_da_sala.add_child.call_deferred(i_amo)
-
-	queue_free()
+				pai_da_sala.add_child.call_deferred(clone)
+				clone.global_position = spawn_pos + Vector2(randf_range(-20, 20), randf_range(-20, 20))
 
 func _process(delta: float) -> void:
-	# --- Sua lógica de movimento original ---
 	if player == null:
 		player = get_tree().get_first_node_in_group("player")
 	
 	if player and global_position.distance_to(player.global_position) < 800:
 		var direction_vector = (player.global_position - global_position).normalized()
 		var separation = Vector2.ZERO
-		var areas = get_overlapping_areas()
+		var vizinhos = get_overlapping_areas()
 		
-		for area in areas:
+		for area in vizinhos:
 			if area.is_in_group("inimigo") and area != self:
 				var diff = global_position - area.global_position
-				separation += diff.normalized() * avoidance_force
+				var dist = diff.length()
+				if dist > 0:
+					separation += (diff.normalized() / dist) * avoidance_force
 		
-		var final_velocity = (direction_vector * spd) + separation
-		global_position += final_velocity * delta
+		var velocity = (direction_vector * spd) + separation
+		global_position += velocity * delta
 
 func _on_body_entered(body: Node2D) -> void:
 	if body.is_in_group("player"):
-		Global.menos_vida()
-func _exit_tree() -> void:
-		morrer()
+		if Global.has_method("menos_vida"):
+			Global.menos_vida()

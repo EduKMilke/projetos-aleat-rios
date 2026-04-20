@@ -5,7 +5,11 @@ var salas:Array[PackedScene]=[
 	preload("res://salas/sala2.tscn"),
 	preload("res://salas/sala3.tscn"),
 	preload("res://salas/Sala4.tscn"),
-	preload("res://salas/Sala5.tscn")
+	preload("res://salas/Sala5.tscn"),
+	preload("res://salas/Sala6.tscn"),
+	preload("res://salas/Sala7.tscn"),
+	preload("res://salas/Sala8.tscn"),
+	preload("res://salas/Sala9.tscn")
 ]
 var salaboss:Array[PackedScene]=[
 	preload("res://salas/bosses/boss1.tscn"),
