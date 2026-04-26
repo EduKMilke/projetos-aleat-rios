@@ -1,7 +1,22 @@
 [gd_scene format=3 uid="uid://6pjg86hi12kc"]
 
 [ext_resource type="Script" uid="uid://c3o4n1yvjwuk7" path="res://obj/boss/alcpao.gd" id="1_suwh5"]
-[ext_resource type="Texture2D" uid="uid://cre1ewllecbax" path="res://icon.svg" id="2_3k6lx"]
+[ext_resource type="Texture2D" uid="uid://dicr4gymke56v" path="res://assets/Obstaculos/Alçapãp aberto.png" id="2_3k6lx"]
+[ext_resource type="Texture2D" uid="uid://doo1wssqlg68a" path="res://assets/Obstaculos/Alçapão fechado.png" id="3_1j047"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_juto0"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_3k6lx")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_1j047")
+}],
+"loop": true,
+"name": &"Padrao",
+"speed": 5.0
+}]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_orilx"]
 size = Vector2(54, 52)
@@ -10,10 +25,11 @@ size = Vector2(54, 52)
 scale = Vector2(0.4929733, 0.3896465)
 script = ExtResource("1_suwh5")
 
-[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1192807092]
-position = Vector2(-0.4999981, -1)
-scale = Vector2(0.42968753, 0.421875)
-texture = ExtResource("2_3k6lx")
+[node name="Sprite2D" type="AnimatedSprite2D" parent="." unique_id=302745924]
+position = Vector2(0, 4.0019813e-08)
+scale = Vector2(1.6481625, 1.6040179)
+sprite_frames = SubResource("SpriteFrames_juto0")
+animation = &"Padrao"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1821261088]
 shape = SubResource("RectangleShape2D_orilx")

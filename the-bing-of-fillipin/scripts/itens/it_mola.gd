@@ -15,8 +15,6 @@ func _process(delta: float) -> void:
 func _on_body_entered(body: Node2D) -> void:
 	if body.is_in_group("player"):
 		Item.play()
-		Global.espinho=false
-		Global.plaspd -=50
-		Global.vida_v +=2
-		Interface.exibir_item("Camelo", "O melhor amigo do homem")
+		Global.mola = true
+		Interface.exibir_item("Mola de caneta", "Poin-oin-oin")
 		queue_free()

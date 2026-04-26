@@ -6,6 +6,7 @@ var vida = 0
 var vid_max = 16
 var avoidance_force = 1000 
 var podiv = 0 
+var knockback = Vector2.ZERO
 
 const AMOEBA_SCENE = preload("res://obj/inimigos/amoeba.tscn")
 
@@ -49,10 +50,14 @@ func _process(delta: float) -> void:
 				if dist > 0:
 					separation += (diff.normalized() / dist) * avoidance_force
 		
-		var velocity = (direction_vector * spd) + separation
+		var velocity = (direction_vector * spd) + separation+knockback
 		global_position += velocity * delta
+		knockback = knockback.move_toward(Vector2.ZERO, 1500 * delta)
 
 func _on_body_entered(body: Node2D) -> void:
-	if body.is_in_group("player"):
-		if Global.has_method("menos_vida"):
-			Global.menos_vida()
+	if Global.mola == true:
+		var direcao_empurrao = (global_position - body.global_position).normalized()
+		knockback = direcao_empurrao * 600
+		Global.menos_vida()
+	else:
+		Global.menos_vida()

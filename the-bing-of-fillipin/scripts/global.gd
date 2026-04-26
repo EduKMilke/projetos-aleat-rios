@@ -26,13 +26,16 @@ var itens=[
 	preload("res://obj/itens/it_camelo.tscn"),
 	preload("res://obj/itens/it_lapis_pedreiro.tscn"),
 	preload("res://obj/itens/it_tenis_preto.tscn"),
-	preload("res://obj/itens/it_canudo.tscn")
+	preload("res://obj/itens/it_canudo.tscn"),
+	preload("res://obj/itens/it_mola.tscn"),
+	preload("res://obj/itens/it_chapeu_anti_calvicie.tscn")
 	
 ]
 var item=0#qual é o item
 
 var cachecol = false #variavel que determina se efeitos temporários serão aplicados ou não
 var canudo = false
+var mola = false
 var chance_cura: float=0.1
 var total_kills = 0
 

@@ -4,6 +4,7 @@ var player = null
 var spd = 200
 var vida = 5
 var avoidance_force = 50 # Força para empurrar o vizinho
+var knockback = Vector2.ZERO
 
 func _process(delta: float) -> void:
 	if player == null:
@@ -25,13 +26,18 @@ func _process(delta: float) -> void:
 				separation += diff.normalized() * avoidance_force
 		
 		# Somamos a direção do player + a força de separação
-		var final_velocity = (direction_vector * spd) + separation
+		var final_velocity = (direction_vector * spd) + separation + knockback
 		global_position += final_velocity * delta
+		knockback = knockback.move_toward(Vector2.ZERO, 1500 * delta)
 		# ---------------------------
 
 	if vida <= 0:
 		queue_free()
 
 func _on_body_entered(body: Node2D) -> void:
-	if body.is_in_group("player"):
+	if Global.mola == true:
+		var direcao_empurrao = (global_position - body.global_position).normalized()
+		knockback = direcao_empurrao * 1800
+		Global.menos_vida()
+	else:
 		Global.menos_vida()

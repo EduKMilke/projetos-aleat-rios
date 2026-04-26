@@ -23,7 +23,7 @@ func _physics_process(delta: float) -> void:
 		if pode_atirar:
 			pode_atirar = false 
 			atirar()
-			await get_tree().create_timer(1.0).timeout
+			await get_tree().create_timer(2.0).timeout
 			pode_atirar = true
 		
 	if vida <= 0:
@@ -35,6 +35,6 @@ func atirar():
 	var nova_bala = bala_scene.instantiate()
 	var sprite = nova_bala.get_node("Sprite2D") 
 	
-	sprite.texture = load("res://assets/Inimigos/Água.png")
+	sprite.texture = load("res://assets/tiro/Grampo.png")
 	nova_bala.global_position = global_position
 	get_tree().current_scene.add_child(nova_bala)
