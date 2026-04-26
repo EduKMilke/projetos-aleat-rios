@@ -1,0 +1,29 @@
+[gd_scene format=3 uid="uid://k61wpmff3sjj"]
+
+[ext_resource type="Script" uid="uid://wge83ntc4tba" path="res://scripts/inimigos/bola.gd" id="1_lg4kg"]
+[ext_resource type="Texture2D" uid="uid://cre1ewllecbax" path="res://icon.svg" id="2_ih3u0"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_v88v3"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_ih3u0"]
+radius = 10.225778
+
+[node name="CharacterBody2D" type="CharacterBody2D" unique_id=1349508895 groups=["inimigo"]]
+scale = Vector2(-1.9104365, 1.7673997)
+script = ExtResource("1_lg4kg")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1583753022]
+shape = SubResource("CircleShape2D_v88v3")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1099147924]
+position = Vector2(-9.536743e-07, 0)
+scale = Vector2(0.14453125, 0.1328125)
+texture = ExtResource("2_ih3u0")
+
+[node name="Area2D" type="Area2D" parent="." unique_id=1286064206]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=1316979656]
+scale = Vector2(1, 1.0095959)
+shape = SubResource("CircleShape2D_ih3u0")
+
+[connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]
