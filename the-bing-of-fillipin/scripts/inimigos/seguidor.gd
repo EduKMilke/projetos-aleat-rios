@@ -37,7 +37,7 @@ func _process(delta: float) -> void:
 func _on_body_entered(body: Node2D) -> void:
 	if Global.mola == true:
 		var direcao_empurrao = (global_position - body.global_position).normalized()
-		knockback = direcao_empurrao * 1800
+		knockback = direcao_empurrao * 500
 		Global.menos_vida()
 	else:
 		Global.menos_vida()

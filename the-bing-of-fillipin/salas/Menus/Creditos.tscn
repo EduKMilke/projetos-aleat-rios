@@ -1,0 +1,81 @@
+[gd_scene format=3 uid="uid://em0vvh1ew38"]
+
+[ext_resource type="Script" uid="uid://dg22e012iqvcv" path="res://scripts/creditos.gd" id="1_2aenq"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_xyw2h"]
+bg_color = Color(0, 0, 0, 1)
+
+[node name="Creditos" type="ScrollContainer" unique_id=934807077 node_paths=PackedStringArray("text_node")]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_xyw2h")
+horizontal_scroll_mode = 0
+vertical_scroll_mode = 3
+script = ExtResource("1_2aenq")
+text_node = NodePath("MarginContainer/RichTextLabel")
+tempo = 100.0
+
+[node name="MarginContainer" type="MarginContainer" parent="." unique_id=893289234]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="RichTextLabel" type="RichTextLabel" parent="MarginContainer" unique_id=712313807]
+layout_mode = 2
+bbcode_enabled = true
+text = "[center]
+[b][font_size=48]CRÉDITOS[/font_size][/b]
+
+[img width=128]res://assets//GUI//Logo.png[/img]
+
+[b][font_size=32]Programação[/font_size][/b]
+[i]Eduardo Kitzmann Milke[/i]
+[i]Davih Bottega Teixeira[/i]
+
+[b][font_size=32]Game Design[/font_size][/b]
+[i]Eduardo Kitzmann Milke[/i]
+[i]Davih Bottega Teixeira[/i]
+[i]João Vitor Filipin Zimmermann[/i]
+[i]Heitor Scalcon Justen[/i]
+
+[b][font_size=32]Artistas[/font_size][/b]
+[i]Davih Bottega Teixeira[/i]
+[i]João Vitor Filipin Zimmermann[/i]
+[i]Heitor Scalcon Justen[/i]
+[i]Artur de Souza Hörmann[/i]
+[i]João Gabriel de Oliveira Brum Alves[/i]
+
+
+[b][font_size=32]AGRADECIMENTOS ESPECIAIS[/font_size][/b]
+[b]Willian Juliano Dutra[/b]
+[i]Professor orientador e motivador do projeto[/i]
+
+[b]Mathias Damke Mendes[/b]
+[i]Foi um grande home (literalmente)[/i]
+
+
+[b][font_size=32]TECNOLOGIAS[/font_size][/b]
+Desenvolvido com o motor [b][color=#478cbf]Godot Engine[/color][/b]
+Linguagem: [b]GDScript[/b]
+
+[font_size=18][i]Obrigado por jogar![/i][/font_size]
+
+
+
+
+
+
+
+
+
+
+
+
+
+[b][font_size=32]DÉBITOS[/font_size][/b]
+Não tenho
+[/center]"
+fit_content = true

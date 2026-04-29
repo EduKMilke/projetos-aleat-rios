@@ -15,7 +15,7 @@ var map_grid = {}
 var current_grid_pos = Vector2.ZERO
 
 func _ready():
-	get_tree().root.content_scale_factor = 0.88
+	get_tree().root.content_scale_factor = 0.80
 	if not Global.salas or Global.salas.is_empty():
 		push_error("ERRO: Global.salas vazia!")
 		return

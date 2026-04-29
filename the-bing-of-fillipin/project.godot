@@ -15,9 +15,11 @@ compatibility/default_parent_skeleton_in_mesh_instance_3d=true
 [application]
 
 config/name="The Bing Of Fillipin"
-run/main_scene="uid://dlgijy3ydurgi"
+run/main_scene="uid://w0hbpwwv3rbi"
 config/features=PackedStringArray("4.6", "Forward Plus")
-config/icon="res://icon.svg"
+boot_splash/bg_color=Color(1, 0.7670314, 0.5966993, 1)
+boot_splash/image="uid://caf4m7nt3lpoj"
+config/icon="uid://bafnmmg2bjdcr"
 
 [audio]
 

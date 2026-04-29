@@ -1,0 +1,62 @@
+[gd_scene format=3 uid="uid://ba0snddwpl2wb"]
+
+[ext_resource type="Script" uid="uid://can8ybg3k7dfh" path="res://scripts/inimigos/amoeba.gd" id="1_50qvd"]
+[ext_resource type="Texture2D" uid="uid://br1wbnled4c5m" path="res://assets/Inimigos/Amoeba.png" id="2_50qvd"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_rokcg"]
+atlas = ExtResource("2_50qvd")
+region = Rect2(0, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_3pky4"]
+atlas = ExtResource("2_50qvd")
+region = Rect2(32, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_usjof"]
+atlas = ExtResource("2_50qvd")
+region = Rect2(0, 32, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ftmic"]
+atlas = ExtResource("2_50qvd")
+region = Rect2(32, 32, 32, 32)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_d7mtn"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_rokcg")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_3pky4")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_usjof")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ftmic")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_ovv1h"]
+radius = 34.058773
+
+[node name="Area2D" type="Area2D" unique_id=938252076 groups=["inimigo"]]
+script = ExtResource("1_50qvd")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=2098134983]
+process_mode = 3
+scale = Vector2(1.6875, 1.65625)
+sprite_frames = SubResource("SpriteFrames_d7mtn")
+autoplay = "default"
+frame_progress = 0.14966607
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1446037025]
+light_mask = 3
+visibility_layer = 3
+position = Vector2(-1, 0)
+shape = SubResource("CircleShape2D_ovv1h")
+
+[connection signal="area_entered" from="." to="." method="_on_area_entered"]
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]
