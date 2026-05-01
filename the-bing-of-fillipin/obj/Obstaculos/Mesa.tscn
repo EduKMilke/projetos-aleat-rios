@@ -6,8 +6,8 @@
 size = Vector2(67.21631, 64.15834)
 
 [node name="StaticBody2D" type="StaticBody2D" unique_id=161964912 groups=["obstaculo"]]
-collision_layer = 4
-collision_mask = 4
+collision_layer = 3
+collision_mask = 3
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1066793359]
 position = Vector2(0.43613005, 0.6723759)

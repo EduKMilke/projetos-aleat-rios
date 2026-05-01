@@ -41,10 +41,10 @@ func _physics_process(delta):
 			if collision:
 				direction = direction.bounce(collision.get_normal())
 
-	if vida <= 0:
-		if is_instance_valid(_ibar_vida):
-			_ibar_vida.queue_free()
-		queue_free()
+	if vida<=0:
+		_ibar_vida.queue_free()
+		morrer()
+
 
 func dano_troca():
 	await get_tree().create_timer(10).timeout
@@ -63,8 +63,15 @@ func dano_troca():
 	$rodarodajequiti.play("normal")
 	a = true
 	direction = Vector2(randf_range(-1, 1), randf_range(-1, 1)).normalized()
-
-
 func _on_contato_body_entered(body: Node2D) -> void:
 	if body.is_in_group("player"):
 		Global.menos_vida()
+@onready var alca=preload("res://scripts/boss/alcpao.tscn")
+func morrer():
+	var i_alca = alca.instantiate()
+	var pos_morte = global_position # Pega a posição enquanto ainda está na árvore
+	
+	get_tree().current_scene.add_child(i_alca)
+	i_alca.global_position = pos_morte
+	
+	queue_free() # Deleta o boss DEPOIS de criar o item

@@ -37,8 +37,10 @@ func _processar_animacoes_movimento():
 	elif Input.is_action_pressed("t_s"): spr.play("baixo")
 
 func tocar_animacao_dano():
+	set_collision_mask_value(1, false)
 	spr.play("dano")
 	await get_tree().create_timer(Global.t_dano).timeout
+	set_collision_mask_value(1, true)
 	Global.dano = true
 	spr.play("default")
 

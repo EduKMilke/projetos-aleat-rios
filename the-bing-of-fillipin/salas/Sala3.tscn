@@ -14,6 +14,7 @@
 [ext_resource type="PackedScene" uid="uid://bcuosw5em1kgc" path="res://obj/Obstaculos/Mesa.tscn" id="12_v403o"]
 [ext_resource type="PackedScene" uid="uid://cnttwji41phqx" path="res://obj/inimigos/seguidor.tscn" id="13_dn5jv"]
 [ext_resource type="PackedScene" uid="uid://dqjgn1i8tj4yf" path="res://obj/inimigos/rastejador.tscn" id="14_gtgae"]
+[ext_resource type="PackedScene" uid="uid://cdojeb1effneq" path="res://obj/player/player.tscn" id="15_rg3nr"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_847p5"]
 size = Vector2(887, 496)
@@ -235,3 +236,5 @@ position = Vector2(161, 388)
 
 [node name="Area2D4" parent="." unique_id=751511534 instance=ExtResource("14_gtgae")]
 position = Vector2(728, 385)
+
+[node name="CharacterBody2D" parent="." unique_id=659582897 instance=ExtResource("15_rg3nr")]

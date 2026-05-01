@@ -22,7 +22,7 @@ animations = [{
 size = Vector2(54, 52)
 
 [node name="Area2D" type="Area2D" unique_id=1398712884]
-scale = Vector2(0.4929733, 0.3896465)
+scale = Vector2(1.4354876, 1.2750459)
 script = ExtResource("1_suwh5")
 
 [node name="Sprite2D" type="AnimatedSprite2D" parent="." unique_id=302745924]

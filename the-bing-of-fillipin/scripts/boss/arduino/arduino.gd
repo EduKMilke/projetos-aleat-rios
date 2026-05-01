@@ -1,5 +1,5 @@
 extends CharacterBody2D
-
+@onready var alca=preload("res://scripts/boss/alcpao.tscn")
 var player = null
 var acao = 0
 var spd = 100.0 # Ajustei para 100, pois 5000 é rápido demais para CharacterBody2D
@@ -10,7 +10,7 @@ var pled=true
 var tiro=preload("res://obj/tiros_dano_player/tiro_segue.tscn")
 var a=true
 var b=true
-var vida=40
+var vida=1
 var barra_vida = preload("res://obj/boss/barra_vida_boss.tscn")
 var _ibar_vida
 var _progress_bar
@@ -43,7 +43,10 @@ func _physics_process(delta: float) -> void:
 			4:if a==true: 
 				atira()
 		velocity = direcao_atual
-		move_and_slide()
+	if vida<=0:
+		_ibar_vida.queue_free()
+		morrer()
+	move_and_slide()
 
 # Funções que definem a direção
 func parado():
@@ -82,3 +85,11 @@ func escolher_nova_acao():
 	y_ale=randf_range(-100,100)
 	await get_tree().create_timer(1).timeout
 	escolher_nova_acao()
+func morrer():
+	var i_alca = alca.instantiate()
+	var pos_morte = global_position # Pega a posição enquanto ainda está na árvore
+	
+	get_tree().current_scene.add_child(i_alca)
+	i_alca.global_position = pos_morte
+	
+	queue_free() # Deleta o boss DEPOIS de criar o item

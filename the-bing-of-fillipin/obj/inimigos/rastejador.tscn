@@ -32,8 +32,7 @@ radius = 18.248287
 radius = 21.213203
 
 [node name="Corpo" type="CharacterBody2D" unique_id=1015336148 groups=["inimigo"]]
-collision_layer = 7
-collision_mask = 7
+position = Vector2(4, -12)
 script = ExtResource("1_qhjrh")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=2098134983]

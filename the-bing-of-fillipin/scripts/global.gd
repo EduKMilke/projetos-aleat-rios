@@ -67,6 +67,8 @@ func menos_vida()->void:
 var tirospd=400 #spd tiro
 var tiroext=2 #tempo de existencioa
 var dano_ti=1*mdano#dano do tiro
+#quando um boss morre
+
 
 func _input(event: InputEvent) -> void:
 	if event is InputEventKey:
