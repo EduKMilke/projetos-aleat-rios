@@ -6,7 +6,6 @@
 [ext_resource type="PackedScene" uid="uid://bksq8hwoo4m3a" path="res://portas/DooRight.tscn" id="4_b6nb2"]
 [ext_resource type="PackedScene" uid="uid://643s4rtev5p1" path="res://portas/DoorTop.tscn" id="5_02td7"]
 [ext_resource type="PackedScene" uid="uid://d1v7rgro8esl7" path="res://obj/paredes/parede.tscn" id="7_3rdta"]
-[ext_resource type="PackedScene" uid="uid://cdwuie3wh0bl1" path="res://obj/boss/bossquica.tscn" id="7_iu3ls"]
 [ext_resource type="Texture2D" uid="uid://csnbrpdc28jo" path="res://assets/Paredes (não comestiveis)/Parede direita.png" id="8_qytqg"]
 [ext_resource type="Texture2D" uid="uid://dconqtgkmoqh3" path="res://assets/Paredes (não comestiveis)/Parede embaixo.png" id="9_gtvr5"]
 [ext_resource type="Texture2D" uid="uid://batpur4sg1bn2" path="res://assets/Paredes (não comestiveis)/Parede encima.png" id="10_ps4uq"]
@@ -123,9 +122,6 @@ scale = Vector2(60.54264, 1.3039428)
 [node name="StaticBody2D" parent="." unique_id=59057244 instance=ExtResource("7_3rdta")]
 position = Vector2(472.99997, -3.000001)
 scale = Vector2(60.54264, 1.3039428)
-
-[node name="CharacterBody2D" parent="." unique_id=1575078040 groups=["inimigo"] instance=ExtResource("7_iu3ls")]
-position = Vector2(407, 241)
 
 [node name="Pabluee" type="Node" parent="." unique_id=1604886456]
 

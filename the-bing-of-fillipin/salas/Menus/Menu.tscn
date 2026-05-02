@@ -3,6 +3,7 @@
 [ext_resource type="Script" uid="uid://dlov108wr5lqd" path="res://scripts/mapa/menu.gd" id="1_qhv7s"]
 [ext_resource type="Texture2D" uid="uid://dbho4gejukbdg" path="res://assets/GUI/Butao3.png" id="2_nxucy"]
 [ext_resource type="FontFile" uid="uid://ch0rjgwqgqt1n" path="res://assets/Fontes/PixelGame-R9AZe.otf" id="3_yrgb8"]
+[ext_resource type="AudioStream" uid="uid://bfj1xaag4wq6b" path="res://audio/Menu consertado.wav" id="4_yrgb8"]
 
 [sub_resource type="Animation" id="Animation_qhv7s"]
 length = 0.001
@@ -153,3 +154,7 @@ theme_override_font_sizes/font_size = 50
 text = "Sair"
 horizontal_alignment = 1
 vertical_alignment = 1
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." unique_id=1566888276]
+stream = ExtResource("4_yrgb8")
+autoplay = true

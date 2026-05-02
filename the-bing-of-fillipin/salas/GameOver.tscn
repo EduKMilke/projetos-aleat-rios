@@ -1,0 +1,98 @@
+[gd_scene format=3 uid="uid://ej37ns0livwn"]
+
+[ext_resource type="Script" uid="uid://c2tvbxwqkejtv" path="res://scripts/game_over.gd" id="1_mv2pu"]
+[ext_resource type="Texture2D" uid="uid://dydb0of6w282m" path="res://assets/GUI/Game Acabado.jpeg" id="1_na7v8"]
+[ext_resource type="Texture2D" uid="uid://dbho4gejukbdg" path="res://assets/GUI/Butao3.png" id="2_0obip"]
+[ext_resource type="FontFile" uid="uid://ch0rjgwqgqt1n" path="res://assets/Fontes/PixelGame-R9AZe.otf" id="3_88534"]
+[ext_resource type="AudioStream" uid="uid://0ydejv5wajdh" path="res://audio/Game Over.wav" id="5_yu5ma"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_88534"]
+atlas = ExtResource("2_0obip")
+region = Rect2(0, 0, 64, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_mv2pu"]
+atlas = ExtResource("2_0obip")
+region = Rect2(0, 32, 64, 32)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_yu5ma"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_88534")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_mv2pu")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_lwdus"]
+atlas = ExtResource("2_0obip")
+region = Rect2(0, 0, 64, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_enfol"]
+atlas = ExtResource("2_0obip")
+region = Rect2(0, 32, 64, 32)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_gb3cb"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_lwdus")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_enfol")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[node name="GameOver" type="Control" unique_id=1666525061]
+layout_mode = 3
+anchors_preset = 0
+script = ExtResource("1_mv2pu")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=645542847]
+position = Vector2(442.00003, 249.00002)
+scale = Vector2(1.0909092, 1.1520737)
+texture = ExtResource("1_na7v8")
+
+[node name="Tentar" type="AnimatedSprite2D" parent="." unique_id=358801831]
+position = Vector2(440, 326)
+scale = Vector2(3.71875, 3.15625)
+sprite_frames = SubResource("SpriteFrames_yu5ma")
+
+[node name="Sair" type="AnimatedSprite2D" parent="." unique_id=94748812]
+position = Vector2(440, 422)
+scale = Vector2(3.6875002, 2.9375)
+sprite_frames = SubResource("SpriteFrames_gb3cb")
+
+[node name="Label" type="Label" parent="." unique_id=674464320]
+layout_mode = 0
+offset_left = 330.0
+offset_top = 303.0
+offset_right = 555.0
+offset_bottom = 353.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("3_88534")
+theme_override_font_sizes/font_size = 32
+text = "Tentar novamente"
+
+[node name="Label2" type="Label" parent="." unique_id=2001952134]
+layout_mode = 0
+offset_left = 397.0
+offset_top = 392.0
+offset_right = 622.0
+offset_bottom = 499.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("3_88534")
+theme_override_font_sizes/font_size = 50
+text = "Sair
+"
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." unique_id=1509658603]
+stream = ExtResource("5_yu5ma")
+autoplay = true

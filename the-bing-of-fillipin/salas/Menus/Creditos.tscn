@@ -1,6 +1,7 @@
 [gd_scene format=3 uid="uid://em0vvh1ew38"]
 
 [ext_resource type="Script" uid="uid://dg22e012iqvcv" path="res://scripts/creditos.gd" id="1_2aenq"]
+[ext_resource type="AudioStream" uid="uid://cjtbdhgvphemd" path="res://audio/MelhorMusicadeTodas.wav" id="2_fvmtb"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_xyw2h"]
 bg_color = Color(0, 0, 0, 1)
@@ -79,3 +80,13 @@ Linguagem: [b]GDScript[/b]
 Não tenho
 [/center]"
 fit_content = true
+
+[node name="Timer" type="Timer" parent="." unique_id=591251217]
+wait_time = 20.0
+autostart = true
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." unique_id=1707638472]
+stream = ExtResource("2_fvmtb")
+autoplay = true
+
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
