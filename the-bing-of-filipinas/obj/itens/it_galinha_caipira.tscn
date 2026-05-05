@@ -1,0 +1,22 @@
+[gd_scene format=3 uid="uid://c3n8iqnqkpnwx"]
+
+[ext_resource type="Script" uid="uid://cludhssk6rr5s" path="res://scripts/itens/it_galinha_caipira.gd" id="1_hiecr"]
+[ext_resource type="Texture2D" uid="uid://dmhni54e5oqbe" path="res://assets/itens/Galinha Caipira.png" id="2_s2gf6"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_tb7do"]
+size = Vector2(18.5, 27.25)
+
+[node name="Area2D" type="Area2D" unique_id=1650647249]
+scale = Vector2(2, 2)
+script = ExtResource("1_hiecr")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=283087348]
+position = Vector2(2.3841858e-07, -0.99999905)
+scale = Vector2(0.8203125, 0.94921875)
+texture = ExtResource("2_s2gf6")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=768557398]
+position = Vector2(-0.5, 1)
+shape = SubResource("RectangleShape2D_tb7do")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]

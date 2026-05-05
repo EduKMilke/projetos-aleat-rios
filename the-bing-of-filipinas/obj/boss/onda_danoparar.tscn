@@ -1,0 +1,44 @@
+[gd_scene format=3 uid="uid://ccrdrcw8n1x37"]
+
+[ext_resource type="Script" uid="uid://drkcfqxlc6ymo" path="res://scripts/boss/compasso/onda_danoparar.gd" id="1_lv13j"]
+[ext_resource type="Texture2D" uid="uid://biey86raqjveh" path="res://assets/Bosses/Parar (1).png" id="2_6k2h3"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_a110v"]
+radius = 4.0
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_f1004"]
+radius = 3.5
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_ijw4h"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_6k2h3")
+}],
+"loop": true,
+"name": &"Parar",
+"speed": 5.0
+}]
+
+[node name="Area2D" type="Area2D" unique_id=945742123]
+script = ExtResource("1_lv13j")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1863844382]
+shape = SubResource("CircleShape2D_a110v")
+
+[node name="Area2D" type="Area2D" parent="." unique_id=527633446]
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="Area2D" unique_id=738567450]
+modulate = Color(0.96959966, 0.522633, 0, 1)
+shape = SubResource("CircleShape2D_f1004")
+
+[node name="Sprite2D" type="AnimatedSprite2D" parent="." unique_id=1763184087]
+position = Vector2(-0.2500002, 1)
+scale = Vector2(0.578125, 0.56249994)
+sprite_frames = SubResource("SpriteFrames_ijw4h")
+animation = &"Parar"
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]
+[connection signal="body_exited" from="." to="." method="_on_body_exited"]
+[connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]
+[connection signal="body_exited" from="Area2D" to="." method="_on_area_2d_body_exited"]

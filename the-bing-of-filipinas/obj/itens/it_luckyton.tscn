@@ -1,0 +1,22 @@
+[gd_scene format=3 uid="uid://8ax78qkcekax"]
+
+[ext_resource type="Script" uid="uid://blfldv33w2n1x" path="res://scripts/itens/it_luckyton.gd" id="1_1crti"]
+[ext_resource type="Texture2D" uid="uid://but8pgi5xbreh" path="res://assets/itens/Luckyton.png" id="2_wl3cl"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_tb7do"]
+size = Vector2(19.5, 16.5)
+
+[node name="Area2D" type="Area2D" unique_id=1650647249]
+scale = Vector2(2, 2)
+script = ExtResource("1_1crti")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=283087348]
+position = Vector2(5.684342e-14, -4.7683716e-07)
+scale = Vector2(0.59375, 0.609375)
+texture = ExtResource("2_wl3cl")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=768557398]
+position = Vector2(0.5, 0)
+shape = SubResource("RectangleShape2D_tb7do")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]

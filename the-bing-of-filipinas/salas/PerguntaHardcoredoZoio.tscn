@@ -1,0 +1,75 @@
+[gd_scene format=3 uid="uid://csrlws64dkcwp"]
+
+[ext_resource type="Script" uid="uid://brn8mvvh8yj2w" path="res://scripts/pergunta_hardcoredo_zoio.gd" id="1_hhp1u"]
+[ext_resource type="FontFile" uid="uid://ch0rjgwqgqt1n" path="res://assets/Fontes/PixelGame-R9AZe.otf" id="2_psfs1"]
+[ext_resource type="AudioStream" uid="uid://cnhhts81a1ij6" path="res://audio/QuizTimeLooop.wav" id="3_k51jb"]
+[ext_resource type="FontFile" uid="uid://p13lwvc0n7e4" path="res://assets/Fontes/PixelPowerline-9xOK.ttf" id="4_vlag5"]
+
+[sub_resource type="CanvasTexture" id="CanvasTexture_ym6pm"]
+
+[node name="PerguntaHardcoredoZoio" type="Control" unique_id=1312058203]
+layout_mode = 3
+anchors_preset = 0
+script = ExtResource("1_hhp1u")
+
+[node name="TextureRect" type="TextureRect" parent="." unique_id=648428729]
+modulate = Color(0, 0, 0, 1)
+layout_mode = 0
+offset_right = 1142.0
+offset_bottom = 687.0
+texture = SubResource("CanvasTexture_ym6pm")
+
+[node name="Pergunta" type="Label" parent="." unique_id=838506566]
+layout_mode = 0
+offset_left = 3.0
+offset_top = 165.0
+offset_right = 884.0
+offset_bottom = 362.0
+theme_override_colors/font_color = Color(1, 1, 0, 1)
+theme_override_fonts/font = ExtResource("2_psfs1")
+theme_override_font_sizes/font_size = 40
+text = "Quanto é 23 x 3?"
+autowrap_mode = 2
+
+[node name="Label2" type="Label" parent="." unique_id=1886192226]
+layout_mode = 0
+offset_left = 276.0
+offset_top = 7.0
+offset_right = 893.0
+offset_bottom = 174.0
+theme_override_fonts/font = ExtResource("2_psfs1")
+theme_override_font_sizes/font_size = 48
+text = "Se você é apto para passar de ano, 
+então responda a pergunta
+RÁPIDO"
+horizontal_alignment = 1
+
+[node name="LineEdit" type="LineEdit" parent="." unique_id=438546844]
+layout_mode = 0
+offset_left = 321.0
+offset_top = 434.0
+offset_right = 844.0
+offset_bottom = 475.0
+placeholder_text = "Digite aqui sua resposta"
+select_all_on_focus = true
+caret_blink = true
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." unique_id=359464984]
+stream = ExtResource("3_k51jb")
+autoplay = true
+
+[node name="QuizTimer" type="Timer" parent="." unique_id=1596458723]
+wait_time = 30.0
+autostart = true
+
+[node name="Cronometro" type="Label" parent="." unique_id=1132684378]
+layout_mode = 0
+offset_left = 52.0
+offset_top = 385.0
+offset_right = 144.0
+offset_bottom = 469.0
+theme_override_fonts/font = ExtResource("4_vlag5")
+theme_override_font_sizes/font_size = 31
+
+[connection signal="text_submitted" from="LineEdit" to="." method="_on_line_edit_text_submitted"]
+[connection signal="timeout" from="QuizTimer" to="." method="_on_quiz_timer_timeout"]

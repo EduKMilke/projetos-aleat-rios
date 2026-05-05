@@ -1,0 +1,34 @@
+[gd_scene format=3 uid="uid://dodd2sd6blmtx"]
+
+[ext_resource type="Texture2D" uid="uid://2cgy32phltow" path="res://assets/Inimigos/Gordo catarrento.png" id="2_fpx0e"]
+[ext_resource type="Script" uid="uid://ds414f0vra2ev" path="res://scripts/inimigos/inimigo_atirador.gd" id="2_q1a1w"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_fpx0e"]
+size = Vector2(47, 53)
+
+[node name="Tiro" type="Area2D" unique_id=1517365363]
+
+[node name="Timer" type="Timer" parent="." unique_id=1231718822]
+wait_time = 1.5
+autostart = true
+
+[node name="Inimigo" type="CharacterBody2D" parent="." unique_id=1025221599 groups=["inimigo"]]
+z_index = 10
+script = ExtResource("2_q1a1w")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Inimigo" unique_id=1236577066]
+position = Vector2(-1, 1)
+shape = SubResource("RectangleShape2D_fpx0e")
+
+[node name="Sprite2D" type="Sprite2D" parent="Inimigo" unique_id=533989838]
+position = Vector2(-9.999992, -2)
+scale = Vector2(2.1098633, 0.9316407)
+texture = ExtResource("2_fpx0e")
+
+[node name="Marker2D" type="Marker2D" parent="Inimigo" unique_id=1388591604]
+position = Vector2(-22, -6)
+
+[node name="RayCast2D" type="RayCast2D" parent="Inimigo" unique_id=965267959]
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]
+[connection signal="timeout" from="Timer" to="Inimigo" method="_on_timer_timeout"]

@@ -1,0 +1,22 @@
+[gd_scene format=3 uid="uid://st0l5jrsuc07"]
+
+[ext_resource type="Script" uid="uid://bxfuoyh4yn1bn" path="res://scripts/itens/it_ovo.gd" id="1_0g6o1"]
+[ext_resource type="Texture2D" uid="uid://dugux6dj52sb7" path="res://assets/itens/Ovo (1).png" id="2_yplrl"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_tb7do"]
+size = Vector2(18.5, 27.25)
+
+[node name="Area2D" type="Area2D" unique_id=1650647249]
+scale = Vector2(2, 2)
+script = ExtResource("1_0g6o1")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=283087348]
+position = Vector2(2.3841858e-07, -0.99999905)
+scale = Vector2(0.8203125, 0.94921875)
+texture = ExtResource("2_yplrl")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=768557398]
+position = Vector2(-0.5, 1)
+shape = SubResource("RectangleShape2D_tb7do")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]
