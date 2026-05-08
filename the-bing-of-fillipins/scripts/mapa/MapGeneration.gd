@@ -43,7 +43,7 @@ func generate_dungeon():
 	# Define Boss e Item
 	var candidates = created_positions.duplicate()
 	candidates.erase(Vector2.ZERO)
-	var boss_pos = candidates.back() # Última sala criada costuma ser longe
+	var boss_pos = candidates.back() 
 	layout_types[boss_pos] = "boss"
 	
 	# Instancia as salas

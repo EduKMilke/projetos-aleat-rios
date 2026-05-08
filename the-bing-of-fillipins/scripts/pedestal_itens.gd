@@ -14,10 +14,10 @@ func _ready() -> void:
 	item = Global.itens[numi]
 	var i_item = item.instantiate()
 	
-	# 1. Zera a posição ANTES de adicionar na cena
+	
 	i_item.position = Vector2.ZERO
 	
-	# 2. AGORA sim adicionamos à cena (Isso dispara o _ready do item)
+	
 	add_child(i_item)
 
 func _process(_delta: float) -> void:

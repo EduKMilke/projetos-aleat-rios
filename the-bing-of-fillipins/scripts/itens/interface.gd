@@ -4,7 +4,7 @@ extends CanvasLayer
 @onready var label_desc = %Desc
 @onready var fundo = %Fundo
 
-# Ajuste esse valor para subir mais ou menos (ex: 100 sobe um pouco, 200 sobe muito)
+
 var offset_superior: float = 250.0
 
 func _ready():
@@ -18,15 +18,15 @@ func _ready():
 func centralizar_tudo():
 	var viewport_size = get_viewport().get_visible_rect().size
 	
-	# CALCULO DA POSIÇÃO:
-	# X: Meio exato (Largura da tela / 2) - (Metade do fundo)
-	# Y: Meio da tela - (Metade do fundo) - (O quanto você quer subir)
+	
+	
+	
 	var pos_x = (viewport_size.x / 2.0) - (fundo.size.x / 2.0)
 	var pos_y = (viewport_size.y / 2.0) - (fundo.size.y / 2.0) - offset_superior
 	
 	fundo.position = Vector2(pos_x, pos_y)
 	
-	# Centraliza os textos horizontalmente dentro do fundo
+	
 	label_nome.position.x = (fundo.size.x / 2.0) - (label_nome.size.x / 2.0)
 	label_desc.position.x = (fundo.size.x / 2.0) - (label_desc.size.x / 2.0)
 

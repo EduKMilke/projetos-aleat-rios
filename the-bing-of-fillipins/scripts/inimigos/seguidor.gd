@@ -3,7 +3,7 @@ extends Area2D
 var player = null
 var spd = 100
 var vida = 5
-var separation_speed = 60 # Velocidade da separação (menor que a spd ajuda a estabilizar)
+var separation_speed = 60 # Velocidade da separação 
 var knockback = Vector2.ZERO
 
 func _process(delta: float) -> void:

@@ -69,9 +69,9 @@ func _on_contato_body_entered(body: Node2D) -> void:
 @onready var alca=preload("res://scripts/boss/alcpao.tscn")
 func morrer():
 	var i_alca = alca.instantiate()
-	var pos_morte = global_position # Pega a posição enquanto ainda está na árvore
+	var pos_morte = global_position 
 	
 	get_tree().current_scene.add_child(i_alca)
 	i_alca.global_position = pos_morte
 	
-	queue_free() # Deleta o boss DEPOIS de criar o item
+	queue_free() 

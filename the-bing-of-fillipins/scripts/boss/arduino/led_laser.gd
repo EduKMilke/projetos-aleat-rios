@@ -24,17 +24,17 @@ func _physics_process(_delta: float) -> void:
 	if is_colliding():
 		cast_point = to_local(get_collision_point())
 		
-		# Opcional: Se o laser bater em algo que tem vida, causa dano
+		
 		var obj = get_collider()
 		if obj.has_method("receber_dano"):
 			obj.receber_dano(1)
 
-	# Atualiza a linha visual
+	
 	if line_2d:
 		line_2d.set_point_position(0, Vector2.ZERO)
 		line_2d.set_point_position(1, cast_point)
 	
-	# Atualiza a área de colisão (Area2D)
+	
 	if collision_shape and collision_shape.shape is SegmentShape2D:
 		collision_shape.shape.b = cast_point
 func _on_area_2d_body_entered(body: Node2D) -> void:

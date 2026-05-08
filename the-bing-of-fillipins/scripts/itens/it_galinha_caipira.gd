@@ -15,5 +15,5 @@ func _on_body_entered(body: Node2D) -> void:
 	if body.is_in_group("player"):
 		Item.play()
 		Global.dano_ti+=1
-		Interface.exibir_item("Ovo", "Rígido e delicado")
+		Interface.exibir_item("Galinha Caipira", "O melhor sabor")
 		queue_free()

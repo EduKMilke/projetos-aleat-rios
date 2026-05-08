@@ -1,17 +1,17 @@
 extends StaticBody2D
 
 var player = null
-var ard = null # Este agora é o seu BOSS (o alvo)
+var ard = null # Boss (alvo)
 var pode_atirar = true
-var vida = 10 # Vida da própria torre, se for destrutível
+var vida = 10 # Vida do Led
 
-# Ajuste o caminho para a cena do seu laser
+
 var laser_scene = preload("res://obj/boss/led_laser.tscn")
 
 @onready var ani = $AnimatedSprite2D
 
 func _ready() -> void:
-	# 1. Verifica se a torre encontrou o grupo "Arduino"
+	#Verifica se led entrou no grupo 
 	if ard == null:
 		var alvos = get_tree().get_nodes_in_group("Arduino")
 		if alvos.size() > 0:
@@ -19,26 +19,26 @@ func _ready() -> void:
 		else:
 			return
 
-	# 2. Verifica se o Player existe
+	#Verifica se o Player existe
 	if player == null:
 		player = get_tree().get_first_node_in_group("player")
 		if player == null:
 
 			return
 
-	# 3. Verifica a distância e o estado do disparo
+	#Verifica a distância e o estado do disparo
 	if is_instance_valid(player) and is_instance_valid(ard):
 		var distancia = global_position.distance_to(player.global_position)
 		
 		if distancia < 800:
 			if pode_atirar:
-				print("🚀 DISTÂNCIA OK: Disparando laser no Boss em: ", ard.global_position)
+				print("Disparando laser no Boss em: ", ard.global_position)
 				disparar_no_boss()
 			else:
 				# Se essa mensagem aparecer, a torre está esperando o tempo de recarga (await)
 				pass 
 		else:
-			# O player está longe demais da torre
+			#Player muito longe
 			pass
 	await get_tree().create_timer(5).timeout
 	queue_free()
@@ -49,13 +49,13 @@ func disparar_no_boss() -> void:
 		ani.frame = 1
 		await get_tree().create_timer(0.5).timeout
 	
-	# Cria o laser
+	# 
 	var novo_laser = laser_scene.instantiate()
 	
-	# Adiciona na cena principal para o laser não se mover com a torre
+	# 
 	add_child(novo_laser)
 	
-	# O laser nasce na posição desta torre
+	# 
 	novo_laser.global_position = global_position
 	
 	if has_node("Raio"):

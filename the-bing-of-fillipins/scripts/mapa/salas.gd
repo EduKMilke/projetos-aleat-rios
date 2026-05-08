@@ -3,7 +3,7 @@ class_name DungeonRoom
 
 signal player_entered_door(direction: Vector2)
 
-# --- REFERÊNCIAS ---
+# Preloads
 @export_group("Portas")
 @export var door_top: Node2D
 @export var door_bottom: Node2D
@@ -19,13 +19,13 @@ signal player_entered_door(direction: Vector2)
 @onready var room_camera: Camera2D = $Camera2D
 @onready var camera_zone: Area2D = $CameraZone
 
-# --- VARIÁVEIS DA ARENA ---
+#Variáveis arena
 var sala_concluida: bool = false
 var inimigos_vivos: int = 0
-var player_dentro: bool = false # Nova flag para controle
+var player_dentro: bool = false # Flag de controle
 
 func _ready():
-	# Conecta portas (Seu código original)
+	
 	_conectar_sinais_portas()
 	
 	if room_camera: room_camera.enabled = false
@@ -34,9 +34,9 @@ func _ready():
 		if body.is_in_group("player"):
 			_on_camera_zone_entered(body)
 
-# --- LOOP DE VERIFICAÇÃO ---
+
 func _process(_delta):
-	# Se o player está na sala e a sala ainda não foi limpa
+	
 	if player_dentro and not sala_concluida:
 		_verificar_status_inimigos()
 
@@ -59,9 +59,9 @@ func _verificar_status_inimigos():
 func _finalizar_sala():
 	sala_concluida = true
 	_destrancar_portas()
-	set_process(false) # Para de rodar o _process economizando performance
+	set_process(false) 
 
-# --- QUANDO O PLAYER ENTRA NA SALA ---
+# Quando player entra sala
 func _on_camera_zone_entered(body):
 	if body.is_in_group("player"):
 		player_dentro = true
@@ -69,9 +69,9 @@ func _on_camera_zone_entered(body):
 			room_camera.enabled = true
 			room_camera.make_current()
 
-# --- LÓGICA DE PORTAS ---
+# Portas
 func _trancar_portas():
-	# Só tranca se as portas já não estiverem trancadas (evita spam de animação)
+	# Só tranca se as portas já não estiverem trancadas 
 	for door in [door_top, door_bottom, door_left, door_right]:
 		if door and door.visible and door.has_method("trancar"):
 			door.trancar()
@@ -81,7 +81,7 @@ func _destrancar_portas():
 		if door and door.has_method("destrancar"):
 			door.destrancar()
 
-# --- MÉTODOS AUXILIARES ---
+#Extras
 func _conectar_sinais_portas():
 	if door_top and door_top.has_signal("player_entered"):
 		door_top.player_entered.connect(func(): _on_door_signal(Vector2.UP))
