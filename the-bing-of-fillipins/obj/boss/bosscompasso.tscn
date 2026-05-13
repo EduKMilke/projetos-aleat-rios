@@ -77,4 +77,10 @@ autoplay = "default"
 [node name="TimerAtaque" type="Timer" parent="." unique_id=231472985]
 autostart = true
 
+[node name="CE" type="Marker2D" parent="." unique_id=2010132592 groups=["grupo_spawn"]]
+position = Vector2(-113, -76)
+
+[node name="CD" type="Marker2D" parent="." unique_id=397937589 groups=["grupo_spawn"]]
+position = Vector2(138, -75)
+
 [connection signal="timeout" from="TimerAtaque" to="." method="_on_timer_ataque_timeout"]

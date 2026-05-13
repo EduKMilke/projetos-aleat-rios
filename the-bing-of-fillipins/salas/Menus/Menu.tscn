@@ -3,6 +3,7 @@
 [ext_resource type="Script" uid="uid://dlov108wr5lqd" path="res://scripts/mapa/menu.gd" id="1_qhv7s"]
 [ext_resource type="FontFile" uid="uid://ch0rjgwqgqt1n" path="res://assets/Fontes/PixelGame-R9AZe.otf" id="3_yrgb8"]
 [ext_resource type="AudioStream" uid="uid://bfj1xaag4wq6b" path="res://audio/Menu consertado.wav" id="4_yrgb8"]
+[ext_resource type="Texture2D" uid="uid://d0nn5c2utsol7" path="res://assets/tiro/Miojo.png" id="5_0tjdr"]
 [ext_resource type="FontFile" uid="uid://p13lwvc0n7e4" path="res://assets/Fontes/PixelPowerline-9xOK.ttf" id="5_70sey"]
 
 [sub_resource type="Animation" id="Animation_qhv7s"]
@@ -53,6 +54,26 @@ _data = {
 &"RESET": SubResource("Animation_qhv7s"),
 &"escuro": SubResource("Animation_pcn7o")
 }
+
+[sub_resource type="Gradient" id="Gradient_wth3h"]
+offsets = PackedFloat32Array(0, 0.4738562, 1)
+colors = PackedColorArray(0, 0, 0, 0, 1, 1, 1, 1, 1, 1, 1, 0)
+
+[sub_resource type="GradientTexture1D" id="GradientTexture1D_6bef5"]
+gradient = SubResource("Gradient_wth3h")
+
+[sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_7rbo7"]
+particle_flag_disable_z = true
+emission_shape = 3
+emission_box_extents = Vector3(576, 324, 1)
+direction = Vector3(1, -0.2, 0)
+spread = 180.0
+initial_velocity_min = 10.0
+initial_velocity_max = 20.0
+gravity = Vector3(0, 0, 0)
+scale_min = 0.5
+scale_max = 2.0
+color_ramp = SubResource("GradientTexture1D_6bef5")
 
 [node name="Menu" type="Node2D" unique_id=1917140015]
 script = ExtResource("1_qhv7s")
@@ -141,3 +162,10 @@ offset_bottom = 142.0
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_fonts/font = ExtResource("5_70sey")
 text = "Beta"
+
+[node name="GPUParticles2D" type="GPUParticles2D" parent="." unique_id=1443873924]
+position = Vector2(439, 259)
+texture = ExtResource("5_0tjdr")
+lifetime = 5.0
+preprocess = 5.0
+process_material = SubResource("ParticleProcessMaterial_7rbo7")

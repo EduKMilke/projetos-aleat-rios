@@ -32,17 +32,17 @@ func _process(delta: float) -> void:
 			lab2.modulate="#ffff00"
 			lab1.modulate="#000000"
 			lab3.modulate="#000000"
-
 			if Input.is_action_just_pressed("ui_accept"):
-				get_tree().quit()
+				anim.play("escuro")
+				await anim.animation_finished
+				get_tree().change_scene_to_file("res://salas/Menus/Creditos.tscn")
+
 			
 		2:
 			lab3.modulate="#ffff00"
 			lab2.modulate="#000000"
 			lab1.modulate="#000000"
-
 			if Input.is_action_just_pressed("ui_accept"):
-				anim.play("escuro")
-				await anim.animation_finished
-				get_tree().change_scene_to_file("res://salas/Menus/Creditos.tscn")
+				get_tree().quit()
+
 			

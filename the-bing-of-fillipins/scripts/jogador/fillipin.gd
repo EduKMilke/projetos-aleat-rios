@@ -26,7 +26,15 @@ func _physics_process(delta: float) -> void:
 		t_c -= delta
 		if t_c <= 0.0:
 			p_t = true
-
+	# Pega todos os nós do grupo
+	if Global.osmose==true:
+		var obstaculos = get_tree().get_nodes_in_group("obstaculo")
+		
+		for obstaculo in obstaculos:
+			# Verifica se o nó é um objeto de colisão (StaticBody, CharacterBody, etc)
+			if obstaculo is CollisionObject2D or obstaculo is CollisionObject3D:
+				# Adiciona uma exceção: este nó (self) ignora o obstáculo
+				self.add_collision_exception_with(obstaculo)
 	_tiro()
 	move_and_slide()
 

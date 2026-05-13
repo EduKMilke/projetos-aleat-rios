@@ -27,7 +27,9 @@ func _on_area_2d_body_entered(body: Node) -> void:
 		queue_free()
 	
 	if body.is_in_group("obstaculo"):
-		queue_free()
+		if "vida" in body:
+			body.vida -= 1
+		queue_free() 
 
 
 func _on_area_2d_area_entered(area: Area2D) -> void:

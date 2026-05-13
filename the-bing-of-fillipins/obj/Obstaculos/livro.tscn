@@ -1,0 +1,48 @@
+[gd_scene format=3 uid="uid://b16b4sgtepp6s"]
+
+[ext_resource type="Script" uid="uid://d2k7ll55ktipw" path="res://scripts/Obstaculos/livro.gd" id="1_3r5a6"]
+[ext_resource type="Texture2D" uid="uid://basu62olelvdk" path="res://assets/Obstaculos/Pilha de livros.png" id="2_xnf3b"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_3r5a6"]
+size = Vector2(30, 29.5)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_n1ma7"]
+atlas = ExtResource("2_xnf3b")
+region = Rect2(0, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_cfuth"]
+atlas = ExtResource("2_xnf3b")
+region = Rect2(32, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ryp3p"]
+atlas = ExtResource("2_xnf3b")
+region = Rect2(0, 32, 32, 32)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_jt0h0"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_n1ma7")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_cfuth")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ryp3p")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[node name="StaticBody2D" type="StaticBody2D" unique_id=849521119 groups=["obstaculo"]]
+script = ExtResource("1_3r5a6")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1633347688]
+position = Vector2(0, 0.75)
+shape = SubResource("RectangleShape2D_3r5a6")
+
+[node name="PilhaDeLivros" type="AnimatedSprite2D" parent="." unique_id=490619861]
+position = Vector2(-1.0000019, -2.000001)
+scale = Vector2(1.5937499, 1.265625)
+sprite_frames = SubResource("SpriteFrames_jt0h0")

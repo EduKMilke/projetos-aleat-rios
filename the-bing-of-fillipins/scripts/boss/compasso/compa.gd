@@ -2,8 +2,8 @@ extends CharacterBody2D
 
 @onready var timer_ataque = $TimerAtaque
 @onready var anim = $AnimatedSprite2D
-@onready var locspw1 = $Spawns_i/CE
-@onready var locspw2 = $Spawns_i/CD
+@onready var locspw1 = $CE
+@onready var locspw2 = $CD
 
 var speed = 200
 var vida = 70 * Global.inteligencia

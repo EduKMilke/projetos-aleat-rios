@@ -14,6 +14,7 @@
 [ext_resource type="TileSet" uid="uid://nhms6ggth0u0" path="res://assets/meu chaozinho legal.tres" id="13_bv8ev"]
 [ext_resource type="Texture2D" uid="uid://b0bjjeikm1duj" path="res://assets/Paredes (não comestiveis)/Parede esquerda.png" id="13_xwyns"]
 [ext_resource type="PackedScene" uid="uid://bqll0gt8gl4oo" path="res://obj/pedestal-itens.tscn" id="14_ffroc"]
+[ext_resource type="PackedScene" uid="uid://b16b4sgtepp6s" path="res://obj/Obstaculos/livro.tscn" id="16_ow547"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_r6ng0"]
 size = Vector2(888, 499)
@@ -77,7 +78,7 @@ position = Vector2(439, 234)
 script = ExtResource("8_pxlsa")
 
 [node name="StaticBody2D" parent="." unique_id=513627437 instance=ExtResource("7_gkcju")]
-position = Vector2(915.99994, 287.00003)
+position = Vector2(917.00006, 287)
 rotation = -1.5611616
 scale = Vector2(23.731031, -3.650006)
 
@@ -134,3 +135,6 @@ tile_set = ExtResource("13_bv8ev")
 
 [node name="ponto" parent="." unique_id=1265312814 instance=ExtResource("14_ffroc")]
 position = Vector2(217, 140)
+
+[node name="StaticBody2D5" parent="." unique_id=849521119 instance=ExtResource("16_ow547")]
+position = Vector2(278, 312)

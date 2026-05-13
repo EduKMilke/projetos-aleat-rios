@@ -9,7 +9,10 @@ var salas:Array[PackedScene]=[
 	preload("res://salas/Sala6.tscn"),
 	preload("res://salas/Sala7.tscn"),
 	preload("res://salas/Sala8.tscn"),
-	preload("res://salas/Sala9.tscn")
+	preload("res://salas/Sala9.tscn"),
+	preload("res://salas/Sala10.tscn"),
+	preload("res://salas/Sala11.tscn"),
+	preload("res://salas/Sala12.tscn")
 ]
 var salaboss:Array[PackedScene]=[
 	preload("res://salas/bosses/boss1.tscn"),
@@ -58,7 +61,7 @@ var canudo = false
 var mola = false
 var chance_cura: float=0.1
 var total_kills = 0
-
+var osmose=false
 #player
 var inteligencia = 1
 var mdano=1 #multiplicador do dano
