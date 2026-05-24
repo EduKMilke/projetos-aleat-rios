@@ -1,10 +1,22 @@
 [gd_scene format=3 uid="uid://w0hbpwwv3rbi"]
 
 [ext_resource type="Script" uid="uid://dlov108wr5lqd" path="res://scripts/mapa/menu.gd" id="1_qhv7s"]
+[ext_resource type="Texture2D" uid="uid://c4gwdch6g4wdq" path="res://assets/GUI/QuadroNegroMenu.png" id="2_0tjdr"]
 [ext_resource type="FontFile" uid="uid://ch0rjgwqgqt1n" path="res://assets/Fontes/PixelGame-R9AZe.otf" id="3_yrgb8"]
 [ext_resource type="AudioStream" uid="uid://bfj1xaag4wq6b" path="res://audio/Menu consertado.wav" id="4_yrgb8"]
-[ext_resource type="Texture2D" uid="uid://d0nn5c2utsol7" path="res://assets/tiro/Miojo.png" id="5_0tjdr"]
 [ext_resource type="FontFile" uid="uid://p13lwvc0n7e4" path="res://assets/Fontes/PixelPowerline-9xOK.ttf" id="5_70sey"]
+[ext_resource type="Texture2D" uid="uid://bqkq4hj1tocq" path="res://assets/GUI/Paradasquadro/1.png" id="6_0tjdr"]
+[ext_resource type="Texture2D" uid="uid://c06kigtjkm7ya" path="res://assets/GUI/Paradasquadro/2.png" id="7_o66do"]
+[ext_resource type="Texture2D" uid="uid://cisnfrk70git" path="res://assets/GUI/Paradasquadro/a.png" id="7_wth3h"]
+[ext_resource type="Texture2D" uid="uid://dslogrer7agcv" path="res://assets/GUI/Paradasquadro/+.png" id="8_anqq5"]
+[ext_resource type="Texture2D" uid="uid://bbl5gd10yjn3n" path="res://assets/GUI/Paradasquadro/-.png" id="9_chvkf"]
+[ext_resource type="Texture2D" uid="uid://dke2f2hhdindu" path="res://assets/GUI/Paradasquadro/b.png" id="11_quy03"]
+[ext_resource type="Texture2D" uid="uid://dmvojoywu7yox" path="res://assets/GUI/Paradasquadro/c.png" id="12_svc0q"]
+[ext_resource type="Texture2D" uid="uid://by0r0jdr3jpwy" path="res://assets/GUI/Paradasquadro/dividido.png" id="13_p6gog"]
+[ext_resource type="Texture2D" uid="uid://dt83cleff0sn0" path="res://assets/GUI/Paradasquadro/i.png" id="14_a706t"]
+[ext_resource type="Texture2D" uid="uid://bmmvam4sa8kpb" path="res://assets/GUI/Paradasquadro/x.png" id="15_ikusc"]
+[ext_resource type="Texture2D" uid="uid://daav7ttkdrtu5" path="res://assets/GUI/Paradasquadro/y.png" id="16_0asmt"]
+[ext_resource type="Texture2D" uid="uid://bwuaek5yc116q" path="res://assets/GUI/titulo.png" id="16_anqq5"]
 
 [sub_resource type="Animation" id="Animation_qhv7s"]
 length = 0.001
@@ -75,6 +87,92 @@ scale_min = 0.5
 scale_max = 2.0
 color_ramp = SubResource("GradientTexture1D_6bef5")
 
+[sub_resource type="Animation" id="Animation_chvkf"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("AnimationPlayer2/Titulo:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(441, 136)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("AnimationPlayer2/Titulo:rotation")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.0]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("AnimationPlayer2/Titulo:scale")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(2.6, 2.6166666)]
+}
+
+[sub_resource type="Animation" id="Animation_quy03"]
+resource_name = "titulo"
+length = 4.0333333
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("AnimationPlayer2/Titulo:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(441, 136)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("AnimationPlayer2/Titulo:rotation")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 1, 2.04, 3.0333333, 4.0333333),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1),
+"update": 0,
+"values": [0.0, -0.16580627893946132, 0.2757620218151043, -0.16580627893946132, 0.0]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("AnimationPlayer2/Titulo:scale")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 1.04, 2.04, 3.0333333, 4.0333333),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1),
+"update": 0,
+"values": [Vector2(2.6, 2.6166666), Vector2(2.1, 2), Vector2(2.8, 3), Vector2(3, 3), Vector2(2.6, 2.6166666)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_svc0q"]
+_data = {
+&"RESET": SubResource("Animation_chvkf"),
+&"titulo": SubResource("Animation_quy03")
+}
+
 [node name="Menu" type="Node2D" unique_id=1917140015]
 script = ExtResource("1_qhv7s")
 
@@ -87,7 +185,7 @@ offset_right = 889.0
 offset_bottom = 502.0
 color = Color(0, 0, 0, 1)
 
-[node name="ColorRect" type="ColorRect" parent="." unique_id=378712008]
+[node name="ColorRect" type="TextureRect" parent="." unique_id=1304838411]
 anchors_preset = -1
 anchor_right = 0.5
 offset_left = -2.0
@@ -99,7 +197,7 @@ pivot_offset = Vector2(100, 0)
 size_flags_horizontal = 3
 size_flags_vertical = 3
 size_flags_stretch_ratio = 1.45
-color = Color(1, 0.7020927, 0.522112, 1)
+texture = ExtResource("2_0tjdr")
 
 [node name="Label" type="Label" parent="." unique_id=1124061138]
 modulate = Color(0, 0, 0, 1)
@@ -111,19 +209,6 @@ offset_bottom = 311.0
 theme_override_fonts/font = ExtResource("3_yrgb8")
 theme_override_font_sizes/font_size = 50
 text = "Jogar"
-horizontal_alignment = 1
-vertical_alignment = 1
-
-[node name="Label4" type="Label" parent="." unique_id=961743499]
-z_index = 2
-offset_left = 251.0
-offset_top = 50.0
-offset_right = 631.0
-offset_bottom = 147.0
-theme_override_colors/font_color = Color(0, 0, 0, 1)
-theme_override_fonts/font = ExtResource("3_yrgb8")
-theme_override_font_sizes/font_size = 50
-text = "A ascensão de Filipin"
 horizontal_alignment = 1
 vertical_alignment = 1
 
@@ -154,18 +239,104 @@ vertical_alignment = 1
 stream = ExtResource("4_yrgb8")
 autoplay = true
 
-[node name="Label5" type="Label" parent="." unique_id=516413204]
-offset_left = 629.0
-offset_top = 122.0
-offset_right = 689.0
-offset_bottom = 142.0
-theme_override_colors/font_color = Color(0, 0, 0, 1)
-theme_override_fonts/font = ExtResource("5_70sey")
-text = "Beta"
-
 [node name="GPUParticles2D" type="GPUParticles2D" parent="." unique_id=1443873924]
 position = Vector2(439, 259)
-texture = ExtResource("5_0tjdr")
+texture = ExtResource("6_0tjdr")
 lifetime = 5.0
 preprocess = 5.0
 process_material = SubResource("ParticleProcessMaterial_7rbo7")
+
+[node name="GPUParticles2D2" type="GPUParticles2D" parent="." unique_id=1835692339]
+position = Vector2(439, 259)
+texture = ExtResource("7_o66do")
+lifetime = 5.0
+preprocess = 5.0
+process_material = SubResource("ParticleProcessMaterial_7rbo7")
+
+[node name="GPUParticles2D3" type="GPUParticles2D" parent="." unique_id=1668217586]
+position = Vector2(439, 259)
+texture = ExtResource("8_anqq5")
+lifetime = 5.0
+preprocess = 5.0
+process_material = SubResource("ParticleProcessMaterial_7rbo7")
+
+[node name="GPUParticles2D4" type="GPUParticles2D" parent="." unique_id=863943915]
+position = Vector2(439, 259)
+texture = ExtResource("8_anqq5")
+lifetime = 5.0
+preprocess = 5.0
+process_material = SubResource("ParticleProcessMaterial_7rbo7")
+
+[node name="GPUParticles2D5" type="GPUParticles2D" parent="." unique_id=1737208923]
+position = Vector2(439, 259)
+texture = ExtResource("9_chvkf")
+lifetime = 5.0
+preprocess = 5.0
+process_material = SubResource("ParticleProcessMaterial_7rbo7")
+
+[node name="GPUParticles2D6" type="GPUParticles2D" parent="." unique_id=97722056]
+position = Vector2(439, 259)
+texture = ExtResource("7_wth3h")
+lifetime = 5.0
+preprocess = 5.0
+process_material = SubResource("ParticleProcessMaterial_7rbo7")
+
+[node name="GPUParticles2D7" type="GPUParticles2D" parent="." unique_id=1217630551]
+position = Vector2(439, 259)
+texture = ExtResource("11_quy03")
+lifetime = 5.0
+preprocess = 5.0
+process_material = SubResource("ParticleProcessMaterial_7rbo7")
+
+[node name="GPUParticles2D8" type="GPUParticles2D" parent="." unique_id=261333412]
+position = Vector2(439, 259)
+texture = ExtResource("12_svc0q")
+lifetime = 5.0
+preprocess = 5.0
+process_material = SubResource("ParticleProcessMaterial_7rbo7")
+
+[node name="GPUParticles2D9" type="GPUParticles2D" parent="." unique_id=1404304487]
+position = Vector2(439, 259)
+texture = ExtResource("13_p6gog")
+lifetime = 5.0
+preprocess = 5.0
+process_material = SubResource("ParticleProcessMaterial_7rbo7")
+
+[node name="GPUParticles2D10" type="GPUParticles2D" parent="." unique_id=808069168]
+position = Vector2(439, 259)
+texture = ExtResource("14_a706t")
+lifetime = 5.0
+preprocess = 5.0
+process_material = SubResource("ParticleProcessMaterial_7rbo7")
+
+[node name="GPUParticles2D11" type="GPUParticles2D" parent="." unique_id=244115245]
+position = Vector2(439, 259)
+texture = ExtResource("15_ikusc")
+lifetime = 5.0
+preprocess = 5.0
+process_material = SubResource("ParticleProcessMaterial_7rbo7")
+
+[node name="GPUParticles2D12" type="GPUParticles2D" parent="." unique_id=1711041020]
+position = Vector2(439, 259)
+texture = ExtResource("16_0asmt")
+lifetime = 5.0
+preprocess = 5.0
+process_material = SubResource("ParticleProcessMaterial_7rbo7")
+
+[node name="AnimationPlayer2" type="AnimationPlayer" parent="." unique_id=764271677]
+libraries/ = SubResource("AnimationLibrary_svc0q")
+autoplay = &"titulo"
+
+[node name="Titulo" type="Sprite2D" parent="AnimationPlayer2" unique_id=1297048439]
+position = Vector2(441, 136)
+scale = Vector2(2.6, 2.6166666)
+texture = ExtResource("16_anqq5")
+
+[node name="Label5" type="Label" parent="AnimationPlayer2" unique_id=516413204]
+offset_left = 540.0
+offset_top = 150.0
+offset_right = 580.0
+offset_bottom = 170.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("5_70sey")
+text = "Beta"

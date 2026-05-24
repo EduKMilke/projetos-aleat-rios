@@ -20,8 +20,25 @@ var perguntas = [
 	{"texto": "Na expressão 48 = 2x + 18, qual o valor de x?",
 	 "resposta": "15"},
 	{"texto": "Quanto é 10298377192761299461628 elevado na 0?",
-	 "resposta": "1"}
-	
+	 "resposta": "1"},
+	{"texto": "Se Eduardo = 3 e Mathias = 6, quanto vale a expressão 9((Mathias/3) + Eduardo)?",
+	"resposta": "45"},
+	{"texto": "Se Cristiano Ronaldo = 8 e Ronaldo Cristiano = -8, quanto vale Ronaldo Ronaldo?",
+	"resposta": "0"},
+	{"texto": "Dada a Equação Linear Geral da Álgebra: a1x1 + a2x2 + a3x3 + anxn = b Quanto vale 5??(Dica: termial)",
+	"resposta": "15"},
+	{"texto": "O que é o que é? Não se come, mas é bom para se comer.(termina com '-lher')",
+	"resposta": "talher"},
+	{"texto": "O que é, o que é? Nunca volta, embora nunca tenha ido.",
+	"resposta": "passado"},
+	{"texto": "O que é, o que é? Tem no meio do ovo.",
+	"resposta": "v"},
+	{"texto": "O que é, o que é? Tem no meio do ovo.",
+	"resposta": "v"},
+	{"texto": "O que é, o que é? O lugar mais certo do Brasil.",
+	"resposta": "sertão"},
+	{"texto": "Quanto vale (-3)³ + 7*(-8)",
+	"resposta": "-83"}
 ]
 var pergunta_atual = {}
 
