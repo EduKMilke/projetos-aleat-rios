@@ -27,9 +27,9 @@ func _physics_process(delta: float) -> void:
 	if vida <= 0:
 		queue_free()
 func _on_body_entered(body: Node2D) -> void:
+	if body.is_in_group("player"):
+		Global.menos_vida()
 	if Global.mola == true:
 		var direcao_empurrao = (global_position - body.global_position).normalized()
 		knockback = direcao_empurrao * 500
-		Global.menos_vida()
-	else:
 		Global.menos_vida()

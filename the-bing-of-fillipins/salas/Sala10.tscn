@@ -157,7 +157,7 @@ tile_map_data = PackedByteArray("AAAAAAEAAAAAAAEAAAAAAAMAAAAAAAMAAAAAAAUAAAAAAAE
 tile_set = SubResource("TileSet_h0xup")
 
 [node name="Mesa6" parent="." unique_id=243448925 instance=ExtResource("12_fpq38")]
-position = Vector2(566.99994, 236)
+position = Vector2(589.99994, 224.99998)
 rotation = 0.0042657815
 
 [node name="Mesa9" parent="." unique_id=123094078 instance=ExtResource("12_fpq38")]
@@ -165,27 +165,27 @@ position = Vector2(435.99997, 330)
 rotation = 0.0042657815
 
 [node name="Mesa10" parent="." unique_id=731442825 instance=ExtResource("12_fpq38")]
-position = Vector2(564, 325)
+position = Vector2(577, 348)
 rotation = 0.0042657815
 
 [node name="Mesa11" parent="." unique_id=503767054 instance=ExtResource("12_fpq38")]
-position = Vector2(566.99994, 133.99998)
+position = Vector2(571.99994, 109)
 rotation = 0.0042657815
 
 [node name="Mesa13" parent="." unique_id=58829853 instance=ExtResource("12_fpq38")]
-position = Vector2(311, 130)
+position = Vector2(308.99997, 110.999985)
 rotation = 0.0042657815
 
 [node name="Mesa16" parent="." unique_id=464825063 instance=ExtResource("12_fpq38")]
-position = Vector2(439, 133)
+position = Vector2(439, 175.00002)
 rotation = 0.0042657815
 
 [node name="Mesa17" parent="." unique_id=90028492 instance=ExtResource("12_fpq38")]
-position = Vector2(314.99997, 329)
+position = Vector2(287.99997, 357)
 rotation = 0.0042657815
 
 [node name="Mesa7" parent="." unique_id=1467255094 instance=ExtResource("12_fpq38")]
-position = Vector2(311, 231.99998)
+position = Vector2(293.99997, 231.99997)
 rotation = 0.0042657815
 
 [node name="Tiro" parent="." unique_id=1517365363 instance=ExtResource("13_pj86l")]
@@ -199,3 +199,7 @@ position = Vector2(775, 53)
 
 [node name="Corpo2" parent="." unique_id=152931718 instance=ExtResource("14_bwmma")]
 position = Vector2(779, 407)
+
+[node name="StaticBody2D8" parent="." unique_id=402497577 instance=ExtResource("6_xvixt")]
+position = Vector2(437.00003, 497)
+scale = Vector2(60, 2)

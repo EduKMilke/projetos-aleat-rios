@@ -16,23 +16,30 @@ var current_grid_pos = Vector2.ZERO
 
 func _ready():
 	get_tree().root.content_scale_factor = 0.80
+	
+	# Alerta caso o Autoload esteja vazio no executável
 	if not Global.salas or Global.salas.is_empty():
+		print_rich("[color=red]ERRO: Global.salas está vazio ou não foi carregado corretamente![/color]")
 		return
+		
 	generate_dungeon()
 
 func generate_dungeon():
 	randomize()
-	# Limpa salas antigas
+	
+	# Limpa salas antigas com segurança
 	for child in get_children():
-		if child != player_instance:
-			child.queue_free()
+		if player_instance and child == player_instance:
+			continue
+		child.queue_free()
 	
 	map_grid.clear()
 	var created_positions = [Vector2.ZERO]
 	var layout_types = { Vector2.ZERO: "start" }
 	
 	# Lógica de criação de caminhos
-	while created_positions.size() < randi_range(min_rooms, max_rooms):
+	var target_rooms = randi_range(min_rooms, max_rooms)
+	while created_positions.size() < target_rooms:
 		var base_pos = created_positions.pick_random()
 		var dir = [Vector2.UP, Vector2.DOWN, Vector2.LEFT, Vector2.RIGHT].pick_random()
 		var new_pos = base_pos + dir
@@ -40,11 +47,16 @@ func generate_dungeon():
 			layout_types[new_pos] = "standard"
 			created_positions.append(new_pos)
 
-	# Define Boss e Item
+	# Define Boss e Item com segurança para evitar crash silencioso (.back() em array vazio)
 	var candidates = created_positions.duplicate()
 	candidates.erase(Vector2.ZERO)
-	var boss_pos = candidates.back() 
-	layout_types[boss_pos] = "boss"
+	
+	if not candidates.is_empty():
+		var boss_pos = candidates.back() 
+		layout_types[boss_pos] = "boss"
+	else:
+		# Fail-safe: Se o mapa falhar e só gerar 1 sala, ela vira a do boss para não crashar
+		layout_types[Vector2.ZERO] = "boss"
 	
 	# Instancia as salas
 	for pos in layout_types:
@@ -65,10 +77,19 @@ func generate_dungeon():
 
 func _get_room_by_type(type):
 	match type:
-		"start": return start_room_scene.instantiate()
-		"item": return item_room_scene.instantiate() if item_room_scene else Global.salas.pick_random().instantiate()
-		"boss": return Global.salaboss.pick_random().instantiate()
-		"standard": return Global.salas.pick_random().instantiate()
+		"start": 
+			return start_room_scene.instantiate() if start_room_scene else null
+		"item": 
+			if item_room_scene:
+				return item_room_scene.instantiate()
+			elif Global.salas and not Global.salas.is_empty():
+				return Global.salas.pick_random().instantiate()
+		"boss": 
+			if Global.salaboss and not Global.salaboss.is_empty():
+				return Global.salaboss.pick_random().instantiate()
+		"standard": 
+			if Global.salas and not Global.salas.is_empty():
+				return Global.salas.pick_random().instantiate()
 	return null
 
 func _get_neighbors(pos, layout):
@@ -78,7 +99,7 @@ func _get_neighbors(pos, layout):
 	return n
 
 func _spawn_player_at_start():
-	if player_scene:
+	if player_scene and map_grid.has(Vector2.ZERO):
 		player_instance = player_scene.instantiate()
 		add_child(player_instance)
 		player_instance.add_to_group("player")
@@ -89,4 +110,5 @@ func _on_player_travel(direction: Vector2):
 	if map_grid.has(new_grid_pos):
 		current_grid_pos = new_grid_pos
 		var next_room = map_grid[new_grid_pos]
-		player_instance.global_position = next_room.get_spawn_pos(direction)
+		if next_room.has_method("get_spawn_pos"):
+			player_instance.global_position = next_room.get_spawn_pos(direction)

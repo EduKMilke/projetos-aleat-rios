@@ -1,9 +1,10 @@
 extends Node2D
+
 var salas:Array[PackedScene]=[
 	preload("res://salas/Sala0.tscn"),
 	preload("res://salas/Sala1.tscn"),
-	preload("res://salas/sala2.tscn"),
-	preload("res://salas/sala3.tscn"),
+	preload("res://salas/Sala2.tscn"),
+	preload("res://salas/Sala3.tscn"),
 	preload("res://salas/Sala4.tscn"),
 	preload("res://salas/Sala5.tscn"),
 	preload("res://salas/Sala6.tscn"),
@@ -46,12 +47,9 @@ var itens=[
 	preload("res://obj/itens/it_ovo.tscn"),
 	preload("res://obj/itens/it_placa_mae.tscn"),
 	preload("res://obj/itens/it_tenis_vermelho.tscn")
-	
-	
-	
 ]
-var item=0#qual é o item
-#não sei
+
+var item=0
 var mitose = false
 var luckyton = false
 var escala_tiro = 1.0
@@ -62,42 +60,45 @@ var mola = false
 var chance_cura: float=0.1
 var total_kills = 0
 var osmose=false
-#player
+
+# player status
 var inteligencia = 1
-var mdano=1 #multiplicador do dano
-var mtiroc=1 #multiplicador do cooldown do tiro
-var plaspd=200 #veloc do player
-var tiroc=0.5 * mtiroc #coldown do tiro
-var vida_maxv=3 #vida maxima vermelha
-const vida_maxg=12 #vida maxima geral
-var vida_v=3#vida vermelha preenchida obs toda vez que iniciado precisa ser menor ou igaula a o vida_maxv
-var vida_c=1#vida cinza lá
-var vida_g=vida_v+vida_c #soma das duas vidads
+var mdano=1 
+var mtiroc=1 
+var plaspd=200 
+var tiroc=0.5 * mtiroc 
+var vida_maxv=3 
+const vida_maxg=12 
+var vida_v=3
+var vida_c=1
+var vida_g=4 # Definido direto como 4 para evitar leitura de nulos no primeiro frame
 var dano=true
-var t_dano=1 #tempo que player fica imortal dps de tomar dano
+var t_dano=1 
 var ener_ite=0
-var espinho=true #dano de espinho ativado
+var espinho=true 
+
+# tiro status
+var tirospd=400 
+var tiroext=2 
+var dano_ti=1*mdano
+
 func _ready() -> void:
 	randomize()
+	# Atualiza o valor real logo no começo de forma segura
+	vida_g = vida_v + vida_c
 
-func _process(delta: float) -> void:
-	if vida_g <=0:
-		vida_g = 3
-		get_tree().change_scene_to_file("res://salas/GameOver.tscn")
-		
+# REMOVIDO O _process DAQUI PARA EVITAR O CRASH EM LOOP!
+
 func menos_vida() -> void:
-	
 	if dano == false: 
 		return
 
-	#Sorteio do Luckyton (10% de chance)
 	if luckyton == true:
 		var chance = randi_range(1, 100)
 		if chance <= 10:
 			tocar_tempo_invencivel() 
 			return 
 
-	
 	perder_vida_real()
 
 func perder_vida_real():
@@ -110,7 +111,15 @@ func perder_vida_real():
 		
 	vida_g = vida_v + vida_c
 	
-	
+	# Checa a morte aqui! Só roda UMA vez quando toma o dano fatal.
+	if vida_g <= 0:
+		vida_g = 3
+		vida_v = 3 # Reseta os status antes de mudar de cena
+		vida_c = 0
+		get_tree().change_scene_to_file("res://salas/GameOver.tscn")
+		dano = true
+		return # Corta a função aqui já que mudou de cena
+
 	await get_tree().create_timer(t_dano).timeout
 	dano = true
 
@@ -118,13 +127,6 @@ func tocar_tempo_invencivel():
 	dano = false
 	await get_tree().create_timer(t_dano).timeout
 	dano = true
-
-#tiro
-var tirospd=400 #spd tiro
-var tiroext=2 #tempo de existencioa
-var dano_ti=1*mdano#dano do tiro
-#quando um boss morre
-
 
 func _input(event: InputEvent) -> void:
 	if event is InputEventKey:

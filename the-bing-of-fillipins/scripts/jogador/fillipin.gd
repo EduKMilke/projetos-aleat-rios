@@ -39,10 +39,11 @@ func _physics_process(delta: float) -> void:
 	move_and_slide()
 
 func _processar_animacoes_movimento():
-	if Input.is_action_pressed("t_d"): spr.play("default")
+	if Input.is_action_pressed("t_d"): spr.play("direita")
 	elif Input.is_action_pressed("t_a"): spr.play("esquerda")
 	elif Input.is_action_pressed("t_w"): spr.play("cima")
 	elif Input.is_action_pressed("t_s"): spr.play("baixo")
+	else: spr.play("default")
 
 func tocar_animacao_dano():
 	set_collision_mask_value(1, false)

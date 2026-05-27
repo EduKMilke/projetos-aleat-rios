@@ -171,3 +171,7 @@ position = Vector2(379, 225)
 
 [node name="Grampeador2" parent="." unique_id=1099550053 instance=ExtResource("16_rmhje")]
 position = Vector2(520, 223)
+
+[node name="StaticBody2D16" parent="." unique_id=1198882361 instance=ExtResource("8_jt0nk")]
+position = Vector2(437.00003, 497)
+scale = Vector2(60, 2)

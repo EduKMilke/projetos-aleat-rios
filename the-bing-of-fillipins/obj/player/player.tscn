@@ -2,19 +2,71 @@
 
 [ext_resource type="Script" uid="uid://dpvt7q77gtsed" path="res://scripts/jogador/fillipin.gd" id="1_g3svd"]
 [ext_resource type="Texture2D" uid="uid://etjdwaxkuun8" path="res://assets/fillipin/player.png" id="2_rhfbe"]
+[ext_resource type="Texture2D" uid="uid://b05x4hfnylb3u" path="res://assets/fillipin/Fillipin andando de frente.png" id="2_x0qt0"]
 [ext_resource type="Texture2D" uid="uid://7332iroq84tx" path="res://assets/vidas/vidaV_0.png" id="3_hle3s"]
 [ext_resource type="PackedScene" uid="uid://oo8vph4vtyhv" path="res://obj/vida/sis_vida.tscn" id="3_rhfbe"]
-[ext_resource type="Texture2D" uid="uid://distcyk044rbg" path="res://assets/fillipin/player_frente.png" id="4_2237b"]
+[ext_resource type="Texture2D" uid="uid://u3cue4xxxkmh" path="res://assets/fillipin/Fillipin dando de costa.png" id="3_rvcjy"]
 [ext_resource type="Texture2D" uid="uid://dmxrlbsn55cl3" path="res://assets/fillipin/player_tras.png" id="5_6owtx"]
-[ext_resource type="Texture2D" uid="uid://b8lej654rwoyy" path="res://assets/fillipin/player_esquerda.png" id="6_vyijb"]
+[ext_resource type="Texture2D" uid="uid://8rarlnxibxfj" path="res://assets/fillipin/Fillipin andando pra direita.png" id="7_e4sxn"]
+[ext_resource type="Texture2D" uid="uid://bj8e63fufdn1x" path="res://assets/fillipin/Fillipin andando pra esquerda.png" id="8_4w3xu"]
 [ext_resource type="PackedScene" uid="uid://bep0vvbj8wdkj" path="res://obj/itens/sis_eneri.tscn" id="8_6owtx"]
 [ext_resource type="AudioStream" uid="uid://cwkox4kihekwg" path="res://audio/Miojo.wav" id="9_vyijb"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_spqqc"]
+atlas = ExtResource("2_x0qt0")
+region = Rect2(0, 0, 50, 50)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_xmgw7"]
+atlas = ExtResource("2_x0qt0")
+region = Rect2(50, 0, 50, 50)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_d25gt"]
+atlas = ExtResource("2_x0qt0")
+region = Rect2(0, 50, 50, 50)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_xvbou"]
+atlas = ExtResource("3_rvcjy")
+region = Rect2(0, 0, 50, 50)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_h1xc3"]
+atlas = ExtResource("3_rvcjy")
+region = Rect2(0, 50, 50, 50)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_g3kei"]
+atlas = ExtResource("7_e4sxn")
+region = Rect2(0, 0, 50, 50)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_n3ep3"]
+atlas = ExtResource("7_e4sxn")
+region = Rect2(50, 0, 50, 50)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_nxmly"]
+atlas = ExtResource("7_e4sxn")
+region = Rect2(0, 50, 50, 50)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_mf5y8"]
+atlas = ExtResource("8_4w3xu")
+region = Rect2(0, 0, 50, 50)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ht5cx"]
+atlas = ExtResource("8_4w3xu")
+region = Rect2(50, 0, 50, 50)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_4dpaj"]
+atlas = ExtResource("8_4w3xu")
+region = Rect2(0, 50, 50, 50)
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_hqtel"]
 animations = [{
 "frames": [{
 "duration": 1.0,
-"texture": ExtResource("5_6owtx")
+"texture": SubResource("AtlasTexture_spqqc")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_xmgw7")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_d25gt")
 }],
 "loop": true,
 "name": &"baixo",
@@ -22,7 +74,10 @@ animations = [{
 }, {
 "frames": [{
 "duration": 1.0,
-"texture": ExtResource("4_2237b")
+"texture": SubResource("AtlasTexture_xvbou")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_h1xc3")
 }],
 "loop": true,
 "name": &"cima",
@@ -44,7 +99,7 @@ animations = [{
 }, {
 "frames": [{
 "duration": 1.0,
-"texture": ExtResource("2_rhfbe")
+"texture": ExtResource("5_6owtx")
 }],
 "loop": true,
 "name": &"default",
@@ -52,7 +107,27 @@ animations = [{
 }, {
 "frames": [{
 "duration": 1.0,
-"texture": ExtResource("6_vyijb")
+"texture": SubResource("AtlasTexture_g3kei")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_n3ep3")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_nxmly")
+}],
+"loop": true,
+"name": &"direita",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_mf5y8")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ht5cx")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_4dpaj")
 }],
 "loop": true,
 "name": &"esquerda",
@@ -69,7 +144,6 @@ script = ExtResource("1_g3svd")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=598781582]
 sprite_frames = SubResource("SpriteFrames_hqtel")
-animation = &"baixo"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=2125841642]
 light_mask = 129

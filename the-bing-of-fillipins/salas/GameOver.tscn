@@ -83,15 +83,14 @@ text = "Tentar novamente"
 
 [node name="Label2" type="Label" parent="." unique_id=2001952134]
 layout_mode = 0
-offset_left = 397.0
-offset_top = 392.0
-offset_right = 622.0
-offset_bottom = 499.0
+offset_left = 389.0
+offset_top = 395.0
+offset_right = 614.0
+offset_bottom = 502.0
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_fonts/font = ExtResource("3_88534")
 theme_override_font_sizes/font_size = 50
-text = "Sair
-"
+text = "Menu"
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." unique_id=1509658603]
 stream = ExtResource("5_yu5ma")

@@ -29,11 +29,10 @@ animations = [{
 radius = 21.377558
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_qhjrh"]
-radius = 22.0
+radius = 22.090721
 
 [node name="Corpo" type="CharacterBody2D" unique_id=1015336148 groups=["inimigo"]]
 z_index = 10
-position = Vector2(4, -12)
 script = ExtResource("1_qhjrh")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=2098134983]
@@ -51,7 +50,6 @@ position = Vector2(-2, 13)
 shape = SubResource("CircleShape2D_ovv1h")
 
 [node name="AreaDano" type="Area2D" parent="." unique_id=1784257559]
-collision_mask = 0
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="AreaDano" unique_id=195153852]
 position = Vector2(-2, 13)

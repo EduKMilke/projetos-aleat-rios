@@ -47,6 +47,6 @@ func _process(delta: float) -> void:
 			$Tentar.frame = 0
 			$Sair.frame = 1
 			if Input.is_action_just_pressed("ui_accept"):
-				get_tree().quit()
+				get_tree().change_scene_to_file("res://salas/Menus/Menu.tscn")
 			
 		

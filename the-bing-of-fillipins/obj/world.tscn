@@ -5,7 +5,7 @@
 [ext_resource type="PackedScene" uid="uid://lq1l7cwo05jx" path="res://salas/Itemsala.tscn" id="4_ho8sn"]
 [ext_resource type="PackedScene" uid="uid://cdojeb1effneq" path="res://obj/player/player.tscn" id="4_ltf1h"]
 
-[node name="World" type="Node2D" unique_id=1273904001]
+[node name="world" type="Node2D" unique_id=1273904001]
 script = ExtResource("1_ho8sn")
 player_scene = ExtResource("4_ltf1h")
 start_room_scene = ExtResource("3_wxalf")

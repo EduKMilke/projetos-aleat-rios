@@ -199,3 +199,7 @@ position = Vector2(775, 53)
 
 [node name="Corpo2" parent="." unique_id=152931718 instance=ExtResource("14_7hhxt")]
 position = Vector2(779, 407)
+
+[node name="StaticBody2D8" parent="." unique_id=1363109856 instance=ExtResource("6_rv4d3")]
+position = Vector2(437.00003, 497)
+scale = Vector2(60, 2)

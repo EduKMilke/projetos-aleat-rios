@@ -205,3 +205,7 @@ rotation = 0.0042657815
 
 [node name="CharacterBody2D" parent="." unique_id=1349508895 instance=ExtResource("13_ixlj7")]
 position = Vector2(439, 223)
+
+[node name="StaticBody2D8" parent="." unique_id=1293882535 instance=ExtResource("6_sy4yf")]
+position = Vector2(437.00003, 497)
+scale = Vector2(60, 2)
