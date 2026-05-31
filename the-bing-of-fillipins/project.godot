@@ -14,7 +14,7 @@ compatibility/default_parent_skeleton_in_mesh_instance_3d=true
 
 [application]
 
-config/name="The Bing Of Fillipins"
+config/name="Sera O Fim De Filipin"
 run/main_scene="uid://w0hbpwwv3rbi"
 config/features=PackedStringArray("4.6", "Forward Plus")
 boot_splash/bg_color=Color(1, 0.7670314, 0.5966993, 1)
@@ -31,6 +31,7 @@ driver/output_latency=50
 Global="*res://scripts/global.gd"
 Interface="*uid://crqpl8botfy6s"
 Item="*uid://d0rxltlreyns6"
+Livraria="*uid://c7xxhawmgggh3"
 
 [display]
 

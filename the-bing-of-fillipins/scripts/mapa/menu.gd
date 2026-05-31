@@ -30,7 +30,7 @@ func _process(delta: float) -> void:
 					a=false
 					await anim.animation_finished
 
-					get_tree().change_scene_to_file("res://obj/world.tscn")
+					get_tree().change_scene_to_file("res://obj/Cutscene.tscn")
 
 			1:
 				lab2.modulate="#ffff00"

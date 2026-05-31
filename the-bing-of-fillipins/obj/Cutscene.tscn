@@ -1,0 +1,156 @@
+[gd_scene format=3 uid="uid://d0bxcjgo0f1ym"]
+
+[ext_resource type="Script" uid="uid://klldharfb4fc" path="res://scripts/cutscene.gd" id="1_20pia"]
+[ext_resource type="Texture2D" uid="uid://cxc13cjnmpvgr" path="res://assets/Cutscene/1.png" id="2_adg8e"]
+[ext_resource type="Texture2D" uid="uid://dophiv50gm4sw" path="res://assets/Cutscene/2.png" id="3_ul7ak"]
+[ext_resource type="Texture2D" uid="uid://dvp0h01760x17" path="res://assets/Cutscene/3.png" id="4_4s84p"]
+[ext_resource type="Texture2D" uid="uid://bwk2sf6hixcr2" path="res://assets/Cutscene/4.png" id="5_rgnsf"]
+[ext_resource type="Texture2D" uid="uid://ooqn2l5jwr61" path="res://assets/Cutscene/5.png" id="6_c7tae"]
+[ext_resource type="FontFile" uid="uid://p13lwvc0n7e4" path="res://assets/Fontes/PixelPowerline-9xOK.ttf" id="7_adg8e"]
+
+[sub_resource type="CanvasTexture" id="CanvasTexture_mpffe"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_1ucjh"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_adg8e")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_ul7ak")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_4s84p")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_rgnsf")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_c7tae")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="CanvasTexture" id="CanvasTexture_aa34u"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_xthus"]
+bg_color = Color(0.99978787, 0.074511655, 0.15641645, 1)
+border_width_left = 5
+border_width_top = 5
+border_width_right = 5
+border_width_bottom = 5
+border_color = Color(0, 0.84309113, 0.27407426, 1)
+
+[sub_resource type="CanvasTexture" id="CanvasTexture_20pia"]
+
+[sub_resource type="Animation" id="Animation_adg8e"]
+resource_name = "Escrueeee"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(0, 0, 0, 0), Color(0, 0, 0, 1)]
+}
+
+[sub_resource type="Animation" id="Animation_ul7ak"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(0, 0, 0, 0)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_4s84p"]
+_data = {
+&"Escrueeee": SubResource("Animation_adg8e"),
+&"RESET": SubResource("Animation_ul7ak")
+}
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_adg8e"]
+bg_color = Color(0, 0, 0, 1)
+border_width_left = 5
+border_width_top = 5
+border_width_right = 5
+border_width_bottom = 5
+border_color = Color(0.7921569, 0, 0, 1)
+
+[node name="Cutscene" type="Node2D" unique_id=2137872043]
+script = ExtResource("1_20pia")
+
+[node name="TextureRect" type="TextureRect" parent="." unique_id=150941764]
+modulate = Color(0.99583095, 0.81280524, 0.71279603, 1)
+offset_right = 1183.0
+offset_bottom = 734.0
+mouse_filter = 2
+texture = SubResource("CanvasTexture_mpffe")
+
+[node name="Cen" type="AnimatedSprite2D" parent="." unique_id=1828639331]
+position = Vector2(442, 229)
+scale = Vector2(0.40468746, 0.42314813)
+sprite_frames = SubResource("SpriteFrames_1ucjh")
+
+[node name="TextureRect2" type="TextureRect" parent="." unique_id=278958883]
+modulate = Color(0.52160466, 0.23933077, 0.117328785, 1)
+offset_left = -6.0
+offset_top = 446.0
+offset_right = 1182.0
+offset_bottom = 753.0
+mouse_filter = 2
+texture = SubResource("CanvasTexture_aa34u")
+
+[node name="Button" type="Button" parent="." unique_id=1305426105]
+offset_left = 712.0
+offset_top = 362.0
+offset_right = 853.0
+offset_bottom = 417.0
+theme_override_styles/hover = SubResource("StyleBoxFlat_xthus")
+text = "Continuar"
+
+[node name="Preto" type="TextureRect" parent="." unique_id=1065208560]
+modulate = Color(0, 0, 0, 0)
+offset_left = -5.0
+offset_right = 1181.0
+offset_bottom = 745.0
+mouse_filter = 2
+texture = SubResource("CanvasTexture_20pia")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Preto" unique_id=454697745]
+libraries/ = SubResource("AnimationLibrary_4s84p")
+
+[node name="Label" type="Label" parent="." unique_id=1441393454]
+offset_left = 517.0
+offset_top = 220.0
+offset_right = 811.0
+offset_bottom = 258.0
+theme_override_colors/font_color = Color(0.29582268, 0.6346329, 0.99999994, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("7_adg8e")
+theme_override_font_sizes/font_size = 31
+text = "Mas eu sou fera"
+
+[node name="Pular" type="Button" parent="." unique_id=1393498990]
+offset_left = 34.0
+offset_top = 368.0
+offset_right = 114.0
+offset_bottom = 407.0
+theme_override_styles/hover = SubResource("StyleBoxFlat_adg8e")
+text = "Pular"
+
+[connection signal="pressed" from="Button" to="." method="_on_button_pressed"]
+[connection signal="pressed" from="Pular" to="." method="_on_pular_pressed"]
