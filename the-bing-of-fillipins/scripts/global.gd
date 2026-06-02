@@ -13,7 +13,10 @@ var salas:Array[PackedScene]=[
 	preload("res://salas/Sala9.tscn"),
 	preload("res://salas/Sala10.tscn"),
 	preload("res://salas/Sala11.tscn"),
-	preload("res://salas/Sala12.tscn")
+	preload("res://salas/Sala12.tscn"),
+	preload("res://salas/Sala13.tscn"),
+	preload("res://salas/Sala14.tscn"),
+	preload("res://salas/Sala15.tscn")
 ]
 var salaboss:Array[PackedScene]=[
 	preload("res://salas/bosses/boss1.tscn"),
@@ -48,7 +51,7 @@ var itens=[
 	preload("res://obj/itens/it_placa_mae.tscn"),
 	preload("res://obj/itens/it_tenis_vermelho.tscn")
 ]
-
+var player=null
 var item=0
 var mitose = false
 var luckyton = false
@@ -103,19 +106,22 @@ func menos_vida() -> void:
 
 func perder_vida_real():
 	dano = false 
-	
+
 	if vida_c > 0:
 		vida_c -= 1
 	else:
 		vida_v -= 1
 		
 	vida_g = vida_v + vida_c
-	
-	# Checa a morte aqui! Só roda UMA vez quando toma o dano fatal.
 	if vida_g <= 0:
 		vida_g = 3
 		vida_v = 3 # Reseta os status antes de mudar de cena
 		vida_c = 0
+		player = get_tree().get_first_node_in_group("player")
+		player.spr.play("morte")
+		player.anim.play("morte")
+		player.morte=true
+		await player.anim.animation_finished
 		get_tree().change_scene_to_file("res://salas/GameOver.tscn")
 		dano = true
 		return # Corta a função aqui já que mudou de cena

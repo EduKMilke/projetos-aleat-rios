@@ -15,6 +15,7 @@
 [ext_resource type="PackedScene" uid="uid://blvhby6st2ucc" path="res://obj/inimigos/espinho.tscn" id="13_vygqi"]
 [ext_resource type="PackedScene" uid="uid://355w0voe1kcr" path="res://obj/inimigos/grampeador.tscn" id="14_f8grl"]
 [ext_resource type="PackedScene" uid="uid://cnttwji41phqx" path="res://obj/inimigos/seguidor.tscn" id="15_ct475"]
+[ext_resource type="PackedScene" uid="uid://k61wpmff3sjj" path="res://obj/inimigos/bola.tscn" id="16_f8grl"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_847p5"]
 size = Vector2(887, 496)
@@ -232,3 +233,6 @@ position = Vector2(431, 239)
 [node name="StaticBody2D8" parent="." unique_id=1296733232 instance=ExtResource("6_a5qxp")]
 position = Vector2(437.00003, 497)
 scale = Vector2(60, 2)
+
+[node name="CharacterBody2D" parent="." unique_id=1349508895 instance=ExtResource("16_f8grl")]
+position = Vector2(212, 241)

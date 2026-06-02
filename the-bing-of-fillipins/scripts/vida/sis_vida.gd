@@ -11,7 +11,8 @@ func _ready():
 	vida_ver_0 = load(img2)
 	vida_c=load(img3)
 func _process(_delta):
-	queue_redraw()
+
+		queue_redraw()
 func _draw():
 	var posicao = Vector2(0, 0)
 	if Global.vida_g>Global.vida_maxg:

@@ -12,6 +12,7 @@
 [ext_resource type="Texture2D" uid="uid://b0bjjeikm1duj" path="res://assets/Paredes (não comestiveis)/Parede esquerda.png" id="10_nm05n"]
 [ext_resource type="Texture2D" uid="uid://bu273y7unsty" path="res://assets/Chão/Chão que não é de hospital.png" id="11_7o3r3"]
 [ext_resource type="PackedScene" uid="uid://355w0voe1kcr" path="res://obj/inimigos/grampeador.tscn" id="12_cdefg"]
+[ext_resource type="PackedScene" uid="uid://xy3kwhvt5wum" path="res://obj/inimigos/bebedouro.tscn" id="13_8sdbg"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_847p5"]
 size = Vector2(887, 496)
@@ -163,3 +164,6 @@ position = Vector2(686, 346)
 [node name="StaticBody2D8" parent="." unique_id=1247404252 instance=ExtResource("6_63xjk")]
 position = Vector2(437.00003, 497)
 scale = Vector2(60, 2)
+
+[node name="Tiro" parent="." unique_id=1517365363 instance=ExtResource("13_8sdbg")]
+position = Vector2(439, 244)

@@ -12,6 +12,46 @@
 [ext_resource type="PackedScene" uid="uid://bep0vvbj8wdkj" path="res://obj/itens/sis_eneri.tscn" id="8_6owtx"]
 [ext_resource type="AudioStream" uid="uid://cwkox4kihekwg" path="res://audio/Miojo.wav" id="9_vyijb"]
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_xnc2w"]
+size = Vector2(22, 38)
+
+[sub_resource type="Animation" id="Animation_x0qt0"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("AnimatedSprite2D:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(0, 0)]
+}
+
+[sub_resource type="Animation" id="Animation_rvcjy"]
+resource_name = "morte"
+length = 2.9
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("AnimatedSprite2D:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.76666665, 1.9333333, 2.8),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 0,
+"values": [Vector2(0, 0), Vector2(-50, -30), Vector2(50, -75), Vector2(0, -100)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_e4sxn"]
+_data = {
+&"RESET": SubResource("Animation_x0qt0"),
+&"morte": SubResource("Animation_rvcjy")
+}
+
 [sub_resource type="AtlasTexture" id="AtlasTexture_spqqc"]
 atlas = ExtResource("2_x0qt0")
 region = Rect2(0, 0, 50, 50)
@@ -132,18 +172,20 @@ animations = [{
 "loop": true,
 "name": &"esquerda",
 "speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("5_6owtx")
+}],
+"loop": true,
+"name": &"morte",
+"speed": 5.0
 }]
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_xnc2w"]
-size = Vector2(22, 38)
 
 [node name="CharacterBody2D" type="CharacterBody2D" unique_id=659582897 groups=["player"]]
 collision_layer = 131
 collision_mask = 131
 script = ExtResource("1_g3svd")
-
-[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=598781582]
-sprite_frames = SubResource("SpriteFrames_hqtel")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=2125841642]
 light_mask = 129
@@ -159,3 +201,10 @@ shape = SubResource("RectangleShape2D_xnc2w")
 
 [node name="Tiro" type="AudioStreamPlayer" parent="." unique_id=2138108796]
 stream = ExtResource("9_vyijb")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=1644859885]
+libraries/ = SubResource("AnimationLibrary_e4sxn")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=598781582]
+sprite_frames = SubResource("SpriteFrames_hqtel")
+animation = &"morte"

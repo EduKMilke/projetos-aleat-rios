@@ -31,7 +31,7 @@ func mostrar_pagina():
 
 func _input(event):
 	
-	if lendo and (event is InputEventKey or event is InputEventMouseButton):
+	if lendo and Input.is_key_pressed(KEY_ENTER):
 		if event.is_pressed():
 			fechar_e_sumir()
 
