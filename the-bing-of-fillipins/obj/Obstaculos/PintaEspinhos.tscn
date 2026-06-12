@@ -1,0 +1,6 @@
+[gd_scene format=3 uid="uid://cuagfib6724id"]
+
+[ext_resource type="TileSet" uid="uid://d1u5ofm48ufqv" path="res://Espinhos.tres" id="1_q12d6"]
+
+[node name="PintaEspinhos" type="TileMapLayer" unique_id=1011329976]
+tile_set = ExtResource("1_q12d6")

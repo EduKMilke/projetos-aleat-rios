@@ -15,6 +15,8 @@
 [ext_resource type="Texture2D" uid="uid://b0bjjeikm1duj" path="res://assets/Paredes (não comestiveis)/Parede esquerda.png" id="13_xwyns"]
 [ext_resource type="PackedScene" uid="uid://bqll0gt8gl4oo" path="res://obj/pedestal-itens.tscn" id="14_ffroc"]
 [ext_resource type="PackedScene" uid="uid://b16b4sgtepp6s" path="res://obj/Obstaculos/livro.tscn" id="16_ow547"]
+[ext_resource type="Texture2D" uid="uid://ch1wwyr008sl3" path="res://assets/GUI/Andar (2).png" id="16_xwyns"]
+[ext_resource type="Texture2D" uid="uid://hdji5jn053b3" path="res://assets/GUI/Atirar.png" id="17_ow547"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_r6ng0"]
 size = Vector2(888, 499)
@@ -121,10 +123,10 @@ texture = ExtResource("13_xwyns")
 
 [node name="ColorRect" type="ColorRect" parent="." unique_id=1111893281]
 z_index = -4
-offset_left = -718.0
-offset_top = -323.0
-offset_right = 1568.0
-offset_bottom = 1030.0
+offset_left = -745.0
+offset_top = -325.0
+offset_right = 1541.0
+offset_bottom = 1028.0
 mouse_filter = 2
 color = Color(0.8217889, 0.82178867, 0.8217887, 1)
 
@@ -142,3 +144,13 @@ position = Vector2(278, 312)
 [node name="StaticBody2D6" parent="." unique_id=1569880 instance=ExtResource("7_gkcju")]
 position = Vector2(437.00003, 497)
 scale = Vector2(60, 2)
+
+[node name="Andar(2)" type="Sprite2D" parent="." unique_id=866356968]
+position = Vector2(115.5, 89.9375)
+scale = Vector2(0.5975609, 0.6169355)
+texture = ExtResource("16_xwyns")
+
+[node name="Atirar" type="Sprite2D" parent="." unique_id=158075016]
+position = Vector2(756.99994, 78.99997)
+scale = Vector2(0.5466667, 0.5652921)
+texture = ExtResource("17_ow547")

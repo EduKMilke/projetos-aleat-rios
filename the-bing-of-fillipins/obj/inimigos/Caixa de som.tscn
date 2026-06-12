@@ -1,0 +1,134 @@
+[gd_scene format=3 uid="uid://bpcapmmhvrfr5"]
+
+[ext_resource type="Script" uid="uid://crevrx4a32ii3" path="res://scripts/inimigos/caixa_de_som.gd" id="1_swljq"]
+[ext_resource type="Texture2D" uid="uid://do1i1qfoxuvfw" path="res://assets/Inimigos/Caixa de som possuída.png" id="2_k2m77"]
+[ext_resource type="Texture2D" uid="uid://cpdff5iwiir30" path="res://assets/Inimigos/Neymar.png" id="3_k2m77"]
+[ext_resource type="Texture2D" uid="uid://ejtym61e4ryd" path="res://assets/Inimigos/Onda_sonora.png" id="3_sxwsw"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_kj83t"]
+size = Vector2(38, 66)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_q3pmm"]
+atlas = ExtResource("2_k2m77")
+region = Rect2(0, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_o6jki"]
+atlas = ExtResource("2_k2m77")
+region = Rect2(64, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_5eh87"]
+atlas = ExtResource("2_k2m77")
+region = Rect2(128, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_fr0sq"]
+atlas = ExtResource("2_k2m77")
+region = Rect2(0, 64, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_t2hxc"]
+atlas = ExtResource("2_k2m77")
+region = Rect2(64, 64, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_dw8g3"]
+atlas = ExtResource("2_k2m77")
+region = Rect2(128, 64, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_fa537"]
+atlas = ExtResource("2_k2m77")
+region = Rect2(128, 64, 64, 64)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_hnnrb"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_q3pmm")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_o6jki")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_5eh87")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_fr0sq")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_t2hxc")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_dw8g3")
+}],
+"loop": true,
+"name": &"Atacando",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_fa537")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_pefum"]
+radius = 109.01835
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ki62x"]
+atlas = ExtResource("3_sxwsw")
+region = Rect2(0, 32, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_eef3g"]
+atlas = ExtResource("3_sxwsw")
+region = Rect2(32, 32, 32, 32)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_jymes"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("3_k2m77")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ki62x")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_eef3g")
+}],
+"loop": true,
+"name": &"default",
+"speed": 2.0
+}]
+
+[node name="CaixaDeSom" type="Area2D" unique_id=2045971007 groups=["inimigo"]]
+script = ExtResource("1_swljq")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=410268176 groups=["inimigo"]]
+position = Vector2(8, 3)
+shape = SubResource("RectangleShape2D_kj83t")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1175844813]
+position = Vector2(7, -1)
+scale = Vector2(1.1171876, 1.234375)
+sprite_frames = SubResource("SpriteFrames_hnnrb")
+frame_progress = 0.020188557
+
+[node name="Ataque" type="Timer" parent="." unique_id=2037322431]
+wait_time = 5.0
+autostart = true
+
+[node name="Onda" type="Area2D" parent="." unique_id=1392647152]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Onda" unique_id=1843854111]
+position = Vector2(9, 7)
+shape = SubResource("CircleShape2D_pefum")
+disabled = true
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Onda" unique_id=514631233]
+visible = false
+position = Vector2(2.3841858e-06, 12)
+scale = Vector2(8.375, 8.1875)
+sprite_frames = SubResource("SpriteFrames_jymes")
+frame = 2
+frame_progress = 0.5396461
+
+[connection signal="timeout" from="Ataque" to="." method="_on_ataque_timeout"]
+[connection signal="body_entered" from="Onda" to="." method="_on_onda_body_entered"]

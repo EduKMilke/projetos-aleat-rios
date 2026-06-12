@@ -16,7 +16,12 @@ var salas:Array[PackedScene]=[
 	preload("res://salas/Sala12.tscn"),
 	preload("res://salas/Sala13.tscn"),
 	preload("res://salas/Sala14.tscn"),
-	preload("res://salas/Sala15.tscn")
+	preload("res://salas/Sala15.tscn"),
+	preload("res://salas/Sala16.tscn"),
+	preload("res://salas/Sala17.tscn"),
+	preload("res://salas/Sala18.tscn"),
+	preload("res://salas/Sala19.tscn"),
+	preload("res://salas/Sala20.tscn")
 ]
 var salaboss:Array[PackedScene]=[
 	preload("res://salas/bosses/boss1.tscn"),
@@ -114,16 +119,18 @@ func perder_vida_real():
 		
 	vida_g = vida_v + vida_c
 	if vida_g <= 0:
-		vida_g = 3
-		vida_v = 3 # Reseta os status antes de mudar de cena
-		vida_c = 0
+		
 		player = get_tree().get_first_node_in_group("player")
 		player.spr.play("morte")
 		player.anim.play("morte")
 		player.morte=true
 		await player.anim.animation_finished
+		vida_g = 3
+		vida_v = 3 
+		vida_c = 0
 		get_tree().change_scene_to_file("res://salas/GameOver.tscn")
 		dano = true
+		
 		return # Corta a função aqui já que mudou de cena
 
 	await get_tree().create_timer(t_dano).timeout

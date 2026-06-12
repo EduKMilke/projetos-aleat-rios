@@ -1,0 +1,24 @@
+[gd_resource type="TileSet" format=3 uid="uid://d1u5ofm48ufqv"]
+
+[ext_resource type="Texture2D" uid="uid://s0d0y1mam417" path="res://assets/Chão/espinho (1).png" id="1_y05tg"]
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_y2dkv"]
+texture = ExtResource("1_y05tg")
+0:0/0 = 0
+0:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(8, 8, -8, 8, -8, -8, 8, -8)
+0:0/0/custom_data_0 = "espinho"
+1:0/0 = 0
+1:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(8, 8, 8, -8, -8, -8, -8, 8)
+1:0/0/custom_data_0 = "espinho"
+0:1/0 = 0
+0:1/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, 0.35971832, -8, 8, -8, -8, 8, -8, 8, 6.4749146, 8, 8, -8, 8, -8, 8)
+0:1/0/custom_data_0 = "espinho"
+1:1/0 = 0
+1:1/0/physics_layer_0/polygon_0/points = PackedVector2Array(8, 8, 8, -8, -8, -8, -8, 8, 8, 8)
+
+[resource]
+physics_layer_0/collision_layer = 1
+physics_layer_1/collision_layer = 1
+custom_data_layer_0/name = "tipo"
+custom_data_layer_0/type = 4
+sources/0 = SubResource("TileSetAtlasSource_y2dkv")

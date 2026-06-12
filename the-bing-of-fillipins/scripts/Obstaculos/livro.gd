@@ -13,7 +13,7 @@ func _process(delta: float) -> void:
 
 func destruir():
 	var chanced = randf()
-	if chanced <= 1.0:
+	if chanced <= 0.1:
 		spawnar_diario()
 	queue_free()
 	

@@ -11,6 +11,7 @@
 [ext_resource type="Texture2D" uid="uid://bj8e63fufdn1x" path="res://assets/fillipin/Fillipin andando pra esquerda.png" id="8_4w3xu"]
 [ext_resource type="PackedScene" uid="uid://bep0vvbj8wdkj" path="res://obj/itens/sis_eneri.tscn" id="8_6owtx"]
 [ext_resource type="AudioStream" uid="uid://cwkox4kihekwg" path="res://audio/Miojo.wav" id="9_vyijb"]
+[ext_resource type="Texture2D" uid="uid://ddmd1p6climj" path="res://assets/fillipin/Filipinmortofantasma.png" id="12_rvcjy"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_xnc2w"]
 size = Vector2(22, 38)
@@ -175,7 +176,7 @@ animations = [{
 }, {
 "frames": [{
 "duration": 1.0,
-"texture": ExtResource("5_6owtx")
+"texture": ExtResource("12_rvcjy")
 }],
 "loop": true,
 "name": &"morte",
