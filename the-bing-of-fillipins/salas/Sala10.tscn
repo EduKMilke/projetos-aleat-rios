@@ -14,6 +14,8 @@
 [ext_resource type="PackedScene" uid="uid://bcuosw5em1kgc" path="res://obj/Obstaculos/Mesa.tscn" id="12_fpq38"]
 [ext_resource type="PackedScene" uid="uid://xy3kwhvt5wum" path="res://obj/inimigos/bebedouro.tscn" id="13_pj86l"]
 [ext_resource type="PackedScene" uid="uid://dqjgn1i8tj4yf" path="res://obj/inimigos/rastejador.tscn" id="14_bwmma"]
+[ext_resource type="PackedScene" uid="uid://355w0voe1kcr" path="res://obj/inimigos/grampeador.tscn" id="15_u2kif"]
+[ext_resource type="PackedScene" uid="uid://b16b4sgtepp6s" path="res://obj/Obstaculos/livro.tscn" id="16_5fjhk"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_847p5"]
 size = Vector2(887, 496)
@@ -157,35 +159,35 @@ tile_map_data = PackedByteArray("AAAAAAEAAAAAAAEAAAAAAAMAAAAAAAMAAAAAAAUAAAAAAAE
 tile_set = SubResource("TileSet_h0xup")
 
 [node name="Mesa6" parent="." unique_id=243448925 instance=ExtResource("12_fpq38")]
-position = Vector2(589.99994, 224.99998)
+position = Vector2(597, 244.99998)
 rotation = 0.0042657815
 
 [node name="Mesa9" parent="." unique_id=123094078 instance=ExtResource("12_fpq38")]
-position = Vector2(435.99997, 330)
+position = Vector2(444.99997, 301)
 rotation = 0.0042657815
 
 [node name="Mesa10" parent="." unique_id=731442825 instance=ExtResource("12_fpq38")]
-position = Vector2(577, 348)
+position = Vector2(600, 369)
 rotation = 0.0042657815
 
 [node name="Mesa11" parent="." unique_id=503767054 instance=ExtResource("12_fpq38")]
-position = Vector2(571.99994, 109)
+position = Vector2(591, 127)
 rotation = 0.0042657815
 
 [node name="Mesa13" parent="." unique_id=58829853 instance=ExtResource("12_fpq38")]
-position = Vector2(308.99997, 110.999985)
+position = Vector2(298, 132)
 rotation = 0.0042657815
 
 [node name="Mesa16" parent="." unique_id=464825063 instance=ExtResource("12_fpq38")]
-position = Vector2(439, 175.00002)
+position = Vector2(444, 191.00002)
 rotation = 0.0042657815
 
 [node name="Mesa17" parent="." unique_id=90028492 instance=ExtResource("12_fpq38")]
-position = Vector2(287.99997, 357)
+position = Vector2(292.99997, 371)
 rotation = 0.0042657815
 
 [node name="Mesa7" parent="." unique_id=1467255094 instance=ExtResource("12_fpq38")]
-position = Vector2(293.99997, 231.99997)
+position = Vector2(297.99997, 248.99998)
 rotation = 0.0042657815
 
 [node name="Tiro" parent="." unique_id=1517365363 instance=ExtResource("13_pj86l")]
@@ -203,3 +205,18 @@ position = Vector2(779, 407)
 [node name="StaticBody2D8" parent="." unique_id=402497577 instance=ExtResource("6_xvixt")]
 position = Vector2(437.00003, 497)
 scale = Vector2(60, 2)
+
+[node name="Grampeador" parent="." unique_id=1674915940 instance=ExtResource("15_u2kif")]
+position = Vector2(856, 26)
+
+[node name="Grampeador2" parent="." unique_id=525765329 instance=ExtResource("15_u2kif")]
+position = Vector2(862, 464)
+
+[node name="StaticBody2D9" parent="." unique_id=849521119 instance=ExtResource("16_5fjhk")]
+position = Vector2(446, 117)
+
+[node name="StaticBody2D10" parent="." unique_id=639240633 instance=ExtResource("16_5fjhk")]
+position = Vector2(445, 248)
+
+[node name="StaticBody2D11" parent="." unique_id=1839404411 instance=ExtResource("16_5fjhk")]
+position = Vector2(449, 372)

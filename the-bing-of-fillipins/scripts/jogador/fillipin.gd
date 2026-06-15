@@ -51,9 +51,10 @@ func _physics_process(delta: float) -> void:
 				
 				
 				if objeto_colidido is TileMapLayer:
-					
-					var posicao_tile = objeto_colidido.local_to_map(colisao.get_position() - colisao.get_normal())
-					var dados_tile = objeto_colidido.get_cell_tile_data(posicao_tile)
+					var ponto_colisao = colisao.get_position() - (colisao.get_normal() * 2)
+					var posicao_tile = objeto_colidido.to_local(ponto_colisao)
+					var coordenada = objeto_colidido.local_to_map(posicao_tile)
+					var dados_tile = objeto_colidido.get_cell_tile_data(coordenada)
 					
 					if dados_tile:
 						

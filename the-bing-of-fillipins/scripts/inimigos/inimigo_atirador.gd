@@ -4,6 +4,7 @@ var vida=7
 @onready var marker = $Marker2D
 @onready var ray = $RayCast2D
 
+
 var player = null
 
 func _ready():
@@ -28,6 +29,7 @@ func pode_ver_player() -> bool:
 	return not ray.is_colliding() or ray.get_collider().is_in_group("player")
 
 func atirar():
+	
 	var nova_bala = bala_scene.instantiate()
 	nova_bala.global_position = marker.global_position
 	

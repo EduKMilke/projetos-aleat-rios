@@ -1,0 +1,20 @@
+[gd_scene format=3 uid="uid://dq0pclyfgw08c"]
+
+[ext_resource type="Script" uid="uid://b3it3s1ysbdre" path="res://scripts/tiro_dano_player/tiro_quase_segue_lentidao.gd" id="1_4wwca"]
+[ext_resource type="Texture2D" uid="uid://jghe8rcy817c" path="res://assets/Inimigos/Bola de cola.png" id="2_4wwca"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_0evgd"]
+radius = 13.152946
+
+[node name="Area2D" type="Area2D" unique_id=388835305]
+script = ExtResource("1_4wwca")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=697561258]
+shape = SubResource("CircleShape2D_0evgd")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1367908537]
+position = Vector2(-7.450581e-09, 2)
+scale = Vector2(1.253125, 1.1475)
+texture = ExtResource("2_4wwca")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]

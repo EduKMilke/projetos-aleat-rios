@@ -14,6 +14,7 @@
 [ext_resource type="PackedScene" uid="uid://k61wpmff3sjj" path="res://obj/inimigos/bola.tscn" id="13_80upc"]
 [ext_resource type="TileSet" uid="uid://nhms6ggth0u0" path="res://assets/meu chaozinho legal.tres" id="13_ntfi7"]
 [ext_resource type="PackedScene" uid="uid://c28cprteop4kg" path="res://obj/inimigos/i_laser.tscn" id="14_qs8gc"]
+[ext_resource type="PackedScene" uid="uid://blvhby6st2ucc" path="res://obj/inimigos/espinho.tscn" id="15_qs8gc"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_r6ng0"]
 size = Vector2(888, 499)
@@ -134,14 +135,89 @@ position = Vector2(437.00003, 497)
 scale = Vector2(60, 2)
 
 [node name="CharacterBody2D" parent="." unique_id=1349508895 instance=ExtResource("13_80upc")]
-position = Vector2(188.00003, 278.00003)
+position = Vector2(218, 246)
 rotation = 3.1415927
 scale = Vector2(1.9104365, -1.7673997)
 
 [node name="StaticBody2D5" parent="." unique_id=1541603604 instance=ExtResource("14_qs8gc")]
-position = Vector2(447, 249)
+position = Vector2(450, 243)
 
 [node name="CharacterBody2D2" parent="." unique_id=1958496291 instance=ExtResource("13_80upc")]
-position = Vector2(664, 267.00003)
+position = Vector2(684, 241)
 rotation = 3.1415927
 scale = Vector2(1.9104365, -1.7673997)
+
+[node name="Area2D" parent="." unique_id=458550998 instance=ExtResource("15_qs8gc")]
+position = Vector2(388, 246)
+
+[node name="Area2D2" parent="." unique_id=1895550909 instance=ExtResource("15_qs8gc")]
+position = Vector2(388, 269)
+
+[node name="Area2D3" parent="." unique_id=1577092859 instance=ExtResource("15_qs8gc")]
+position = Vector2(388, 291)
+
+[node name="Area2D4" parent="." unique_id=675354 instance=ExtResource("15_qs8gc")]
+position = Vector2(409, 291)
+
+[node name="Area2D5" parent="." unique_id=852984840 instance=ExtResource("15_qs8gc")]
+position = Vector2(429, 291)
+
+[node name="Area2D6" parent="." unique_id=1695789164 instance=ExtResource("15_qs8gc")]
+position = Vector2(429, 291)
+
+[node name="Area2D7" parent="." unique_id=726933871 instance=ExtResource("15_qs8gc")]
+position = Vector2(449, 291)
+
+[node name="Area2D8" parent="." unique_id=1264361207 instance=ExtResource("15_qs8gc")]
+position = Vector2(469, 291)
+
+[node name="Area2D9" parent="." unique_id=1121599492 instance=ExtResource("15_qs8gc")]
+position = Vector2(488, 291)
+
+[node name="Area2D10" parent="." unique_id=590186542 instance=ExtResource("15_qs8gc")]
+position = Vector2(507, 291)
+
+[node name="Area2D11" parent="." unique_id=1372939334 instance=ExtResource("15_qs8gc")]
+position = Vector2(526, 291)
+
+[node name="Area2D12" parent="." unique_id=1202851847 instance=ExtResource("15_qs8gc")]
+position = Vector2(526, 272)
+
+[node name="Area2D13" parent="." unique_id=490396731 instance=ExtResource("15_qs8gc")]
+position = Vector2(527, 252)
+
+[node name="Area2D14" parent="." unique_id=1485660427 instance=ExtResource("15_qs8gc")]
+position = Vector2(527, 228)
+
+[node name="Area2D15" parent="." unique_id=1606241582 instance=ExtResource("15_qs8gc")]
+position = Vector2(526, 208)
+
+[node name="Area2D16" parent="." unique_id=399457723 instance=ExtResource("15_qs8gc")]
+position = Vector2(526, 186)
+
+[node name="Area2D17" parent="." unique_id=1244211432 instance=ExtResource("15_qs8gc")]
+position = Vector2(502, 188)
+
+[node name="Area2D18" parent="." unique_id=1950472641 instance=ExtResource("15_qs8gc")]
+position = Vector2(480, 187)
+
+[node name="Area2D19" parent="." unique_id=2057398027 instance=ExtResource("15_qs8gc")]
+position = Vector2(463, 187)
+
+[node name="Area2D20" parent="." unique_id=277056595 instance=ExtResource("15_qs8gc")]
+position = Vector2(449, 187)
+
+[node name="Area2D21" parent="." unique_id=1481333364 instance=ExtResource("15_qs8gc")]
+position = Vector2(428, 186)
+
+[node name="Area2D22" parent="." unique_id=1304349407 instance=ExtResource("15_qs8gc")]
+position = Vector2(407, 185)
+
+[node name="Area2D23" parent="." unique_id=1513352824 instance=ExtResource("15_qs8gc")]
+position = Vector2(386, 184)
+
+[node name="Area2D24" parent="." unique_id=1883517858 instance=ExtResource("15_qs8gc")]
+position = Vector2(386, 206)
+
+[node name="Area2D25" parent="." unique_id=1574374641 instance=ExtResource("15_qs8gc")]
+position = Vector2(388, 225)

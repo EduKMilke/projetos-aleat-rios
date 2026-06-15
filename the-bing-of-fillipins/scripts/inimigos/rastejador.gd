@@ -2,7 +2,7 @@ extends CharacterBody2D
 
 var player = null
 var spd = 5000 
-var vida = 7
+var vida = 10
 var knockback = Vector2.ZERO
 
 func _ready() -> void:

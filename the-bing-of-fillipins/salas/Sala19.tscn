@@ -14,7 +14,8 @@
 [ext_resource type="TileSet" uid="uid://nhms6ggth0u0" path="res://assets/meu chaozinho legal.tres" id="12_3w3gc"]
 [ext_resource type="PackedScene" uid="uid://bpcapmmhvrfr5" path="res://obj/inimigos/Caixa de som.tscn" id="13_b0m00"]
 [ext_resource type="PackedScene" uid="uid://c28cprteop4kg" path="res://obj/inimigos/i_laser.tscn" id="14_6wxf3"]
-[ext_resource type="PackedScene" uid="uid://cnttwji41phqx" path="res://obj/inimigos/seguidor.tscn" id="15_2e3cr"]
+[ext_resource type="PackedScene" uid="uid://cjgrqir1tjk5l" path="res://obj/inimigos/Inimigos de cola/Cola_quente.tscn" id="15_fambd"]
+[ext_resource type="PackedScene" uid="uid://bcuosw5em1kgc" path="res://obj/Obstaculos/Mesa.tscn" id="16_5yxsn"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_r6ng0"]
 size = Vector2(888, 499)
@@ -143,8 +144,26 @@ position = Vector2(144, 78)
 [node name="StaticBody2D7" parent="." unique_id=1758411363 instance=ExtResource("14_6wxf3")]
 position = Vector2(728, 71)
 
-[node name="Area2D" parent="." unique_id=938252076 instance=ExtResource("15_2e3cr")]
-position = Vector2(89, 427)
+[node name="Tiro" parent="." unique_id=1517365363 instance=ExtResource("15_fambd")]
+position = Vector2(66, 430)
 
-[node name="Area2D2" parent="." unique_id=1732632724 instance=ExtResource("15_2e3cr")]
-position = Vector2(796, 437)
+[node name="Tiro2" parent="." unique_id=1990058299 instance=ExtResource("15_fambd")]
+position = Vector2(821, 431)
+
+[node name="StaticBody2D8" parent="." unique_id=161964912 instance=ExtResource("16_5yxsn")]
+position = Vector2(588, 235)
+
+[node name="StaticBody2D10" parent="." unique_id=545200196 instance=ExtResource("16_5yxsn")]
+position = Vector2(584, 119)
+
+[node name="StaticBody2D11" parent="." unique_id=594822615 instance=ExtResource("16_5yxsn")]
+position = Vector2(310, 118)
+
+[node name="StaticBody2D12" parent="." unique_id=1248873350 instance=ExtResource("16_5yxsn")]
+position = Vector2(310, 363)
+
+[node name="StaticBody2D13" parent="." unique_id=2086736352 instance=ExtResource("16_5yxsn")]
+position = Vector2(589, 356)
+
+[node name="StaticBody2D9" parent="." unique_id=1753320027 instance=ExtResource("16_5yxsn")]
+position = Vector2(304, 241)

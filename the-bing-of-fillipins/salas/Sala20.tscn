@@ -19,6 +19,7 @@
 [ext_resource type="PackedScene" uid="uid://xy3kwhvt5wum" path="res://obj/inimigos/bebedouro.tscn" id="17_hfkhn"]
 [ext_resource type="PackedScene" uid="uid://k61wpmff3sjj" path="res://obj/inimigos/bola.tscn" id="18_toav5"]
 [ext_resource type="PackedScene" uid="uid://dodd2sd6blmtx" path="res://obj/inimigos/atirador.tscn" id="19_72rcl"]
+[ext_resource type="PackedScene" uid="uid://b16b4sgtepp6s" path="res://obj/Obstaculos/livro.tscn" id="20_hfkhn"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_r6ng0"]
 size = Vector2(888, 499)
@@ -158,3 +159,24 @@ position = Vector2(78, 402)
 
 [node name="Tiro2" parent="." unique_id=1249761181 instance=ExtResource("19_72rcl")]
 position = Vector2(838, 29)
+
+[node name="StaticBody2D7" parent="." unique_id=849521119 instance=ExtResource("20_hfkhn")]
+position = Vector2(759, 460)
+
+[node name="StaticBody2D8" parent="." unique_id=1028725233 instance=ExtResource("20_hfkhn")]
+position = Vector2(758, 425)
+
+[node name="StaticBody2D9" parent="." unique_id=1475698225 instance=ExtResource("20_hfkhn")]
+position = Vector2(758, 390)
+
+[node name="StaticBody2D10" parent="." unique_id=184193214 instance=ExtResource("20_hfkhn")]
+position = Vector2(758, 359)
+
+[node name="StaticBody2D11" parent="." unique_id=893070786 instance=ExtResource("20_hfkhn")]
+position = Vector2(790, 358)
+
+[node name="StaticBody2D12" parent="." unique_id=1404334983 instance=ExtResource("20_hfkhn")]
+position = Vector2(824, 358)
+
+[node name="StaticBody2D13" parent="." unique_id=1779036770 instance=ExtResource("20_hfkhn")]
+position = Vector2(857, 358)

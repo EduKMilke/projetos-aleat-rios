@@ -15,5 +15,5 @@ func _on_body_entered(body: Node2D) -> void:
 	if body.is_in_group("player"):
 		Item.play()
 		Global.inteligencia+=0.3
-		Interface.exibir_item("Óculos", "Todos sabem que óculos te deixam mais inteligênte")
+		Interface.exibir_item("Óculos", "Todos sabem que óculos te deixam mais inteligente")
 		queue_free()

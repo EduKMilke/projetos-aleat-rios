@@ -55,13 +55,13 @@ var perguntas = [
 	"resposta": "Maria"},
 	{"texto": "Segundo nome de Dom Pedro II ?",
 	"resposta": "Alcântra"},
-	{"texto": "Quantos cavalos de potência(cv ou hp) tem um ser humano médio em um pico de esforço de curta duração aproximadamente?(dica 1,.)",
+	{"texto": "Quantos cavalos de potência (cv ou hp) tem um ser humano médio em um pico de esforço de curta duração aproximadamente?(dica 1,.)",
 	"resposta": "1,2"},
 	{"texto": "quantos microsievert uma banana emite de radiação",
 	"resposta": "0,1"},
 	{"texto": "complete a frase: eu sou ....",
 	"resposta": "fera"},
-	{"texto": "Em uma Igreja tinha 25 velas 2 quebraram e uma derreteu,um ladrão levou 5 outro levou 7 quantas velas sobraram?",
+	{"texto": "Em uma Igreja tinha 25 velas 2 quebraram e uma derreteu, um ladrão levou 5 outro levou 7 quantas velas sobraram?",
 	"resposta": "34"}
 ]
 var pergunta_atual = {}

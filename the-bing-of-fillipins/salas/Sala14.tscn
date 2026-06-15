@@ -15,6 +15,7 @@
 [ext_resource type="PackedScene" uid="uid://dqjgn1i8tj4yf" path="res://obj/inimigos/rastejador.tscn" id="13_ljlo2"]
 [ext_resource type="PackedScene" uid="uid://blvhby6st2ucc" path="res://obj/inimigos/espinho.tscn" id="14_uhp0d"]
 [ext_resource type="PackedScene" uid="uid://dodd2sd6blmtx" path="res://obj/inimigos/atirador.tscn" id="15_m67to"]
+[ext_resource type="PackedScene" uid="uid://b16b4sgtepp6s" path="res://obj/Obstaculos/livro.tscn" id="16_uhp0d"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_r6ng0"]
 size = Vector2(888, 499)
@@ -157,3 +158,15 @@ position = Vector2(445, 155)
 
 [node name="Area2D2" parent="." unique_id=1102673359 instance=ExtResource("14_uhp0d")]
 position = Vector2(227, 257)
+
+[node name="StaticBody2D5" parent="." unique_id=849521119 instance=ExtResource("16_uhp0d")]
+position = Vector2(24, 24)
+
+[node name="StaticBody2D7" parent="." unique_id=1453219050 instance=ExtResource("16_uhp0d")]
+position = Vector2(25, 455)
+
+[node name="StaticBody2D8" parent="." unique_id=36863554 instance=ExtResource("16_uhp0d")]
+position = Vector2(855, 18)
+
+[node name="StaticBody2D9" parent="." unique_id=685696073 instance=ExtResource("16_uhp0d")]
+position = Vector2(858, 462)

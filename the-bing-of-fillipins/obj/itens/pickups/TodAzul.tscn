@@ -1,0 +1,42 @@
+[gd_scene format=3 uid="uid://baedhu7y604h8"]
+
+[ext_resource type="Script" uid="uid://bfyh5jhcmufn2" path="res://assets/Pickups/tod_azul.gd" id="1_j8xj6"]
+[ext_resource type="Texture2D" uid="uid://dwvnrkr68qu04" path="res://assets/Pickups/TodAzulPick.png" id="2_2o1gb"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_iy5vs"]
+atlas = ExtResource("2_2o1gb")
+region = Rect2(0, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_06kfx"]
+atlas = ExtResource("2_2o1gb")
+region = Rect2(0, 32, 32, 32)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_nejv5"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_iy5vs")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_06kfx")
+}],
+"loop": true,
+"name": &"default",
+"speed": 2.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_d6s7i"]
+size = Vector2(21, 27)
+
+[node name="TodAzul" type="Area2D" unique_id=547999459]
+script = ExtResource("1_j8xj6")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=508523263]
+sprite_frames = SubResource("SpriteFrames_nejv5")
+autoplay = "default"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1275050880]
+position = Vector2(0.5, 1.5)
+shape = SubResource("RectangleShape2D_d6s7i")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]

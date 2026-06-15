@@ -21,7 +21,17 @@ var salas:Array[PackedScene]=[
 	preload("res://salas/Sala17.tscn"),
 	preload("res://salas/Sala18.tscn"),
 	preload("res://salas/Sala19.tscn"),
-	preload("res://salas/Sala20.tscn")
+	preload("res://salas/Sala20.tscn"),
+	preload("res://salas/Sala21.tscn"),
+	preload("res://salas/Sala22.tscn"),
+	preload("res://salas/Sala23.tscn"),
+	preload("res://salas/Sala24.tscn"),
+	preload("res://salas/Sala25.tscn"),
+	preload("res://salas/Sala26.tscn"),
+	preload("res://salas/Sala27.tscn"),
+	preload("res://salas/Sala28.tscn"),
+	preload("res://salas/Sala29.tscn"),
+	preload("res://salas/Sala30.tscn")
 ]
 var salaboss:Array[PackedScene]=[
 	preload("res://salas/bosses/boss1.tscn"),

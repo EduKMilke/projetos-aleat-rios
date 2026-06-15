@@ -3,7 +3,7 @@ extends Area2D
 var player = null
 var spd = 150
 var vida = 0
-var vid_max = 16
+var vid_max = 12
 var avoidance_force = 1000 
 var podiv = 0 
 var knockback = Vector2.ZERO

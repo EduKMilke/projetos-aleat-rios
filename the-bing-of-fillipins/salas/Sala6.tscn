@@ -13,6 +13,8 @@
 [ext_resource type="Texture2D" uid="uid://bu273y7unsty" path="res://assets/Chão/Chão que não é de hospital.png" id="11_7o3r3"]
 [ext_resource type="PackedScene" uid="uid://355w0voe1kcr" path="res://obj/inimigos/grampeador.tscn" id="12_cdefg"]
 [ext_resource type="PackedScene" uid="uid://xy3kwhvt5wum" path="res://obj/inimigos/bebedouro.tscn" id="13_8sdbg"]
+[ext_resource type="PackedScene" uid="uid://bcuosw5em1kgc" path="res://obj/Obstaculos/Mesa.tscn" id="14_ejc2y"]
+[ext_resource type="PackedScene" uid="uid://b16b4sgtepp6s" path="res://obj/Obstaculos/livro.tscn" id="15_6pvqt"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_847p5"]
 size = Vector2(887, 496)
@@ -167,3 +169,27 @@ scale = Vector2(60, 2)
 
 [node name="Tiro" parent="." unique_id=1517365363 instance=ExtResource("13_8sdbg")]
 position = Vector2(439, 244)
+
+[node name="StaticBody2D9" parent="." unique_id=161964912 instance=ExtResource("14_ejc2y")]
+position = Vector2(30, 30)
+
+[node name="StaticBody2D10" parent="." unique_id=722550185 instance=ExtResource("14_ejc2y")]
+position = Vector2(854, 449)
+
+[node name="StaticBody2D11" parent="." unique_id=838048058 instance=ExtResource("14_ejc2y")]
+position = Vector2(712, 119)
+
+[node name="StaticBody2D12" parent="." unique_id=1088197048 instance=ExtResource("14_ejc2y")]
+position = Vector2(211, 336)
+
+[node name="StaticBody2D" parent="StaticBody2D12" unique_id=849521119 instance=ExtResource("15_6pvqt")]
+position = Vector2(136, -152)
+
+[node name="StaticBody2D2" parent="StaticBody2D12" unique_id=831679197 instance=ExtResource("15_6pvqt")]
+position = Vector2(324, -152)
+
+[node name="StaticBody2D3" parent="StaticBody2D12" unique_id=787413213 instance=ExtResource("15_6pvqt")]
+position = Vector2(322, -19)
+
+[node name="StaticBody2D4" parent="StaticBody2D12" unique_id=1407845033 instance=ExtResource("15_6pvqt")]
+position = Vector2(138, -21)

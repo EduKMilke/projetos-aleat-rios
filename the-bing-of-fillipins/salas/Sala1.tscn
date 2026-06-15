@@ -14,6 +14,7 @@
 [ext_resource type="Texture2D" uid="uid://bu273y7unsty" path="res://assets/Chão/Chão que não é de hospital.png" id="12_0qpes"]
 [ext_resource type="PackedScene" uid="uid://bcuosw5em1kgc" path="res://obj/Obstaculos/Mesa.tscn" id="13_h0xup"]
 [ext_resource type="PackedScene" uid="uid://xy3kwhvt5wum" path="res://obj/inimigos/bebedouro.tscn" id="14_wnxvq"]
+[ext_resource type="PackedScene" uid="uid://b16b4sgtepp6s" path="res://obj/Obstaculos/livro.tscn" id="15_geopy"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_847p5"]
 size = Vector2(887, 496)
@@ -215,3 +216,33 @@ position = Vector2(859, 451)
 [node name="StaticBody2D8" parent="." unique_id=190928831 instance=ExtResource("7_v54sx")]
 position = Vector2(437.00003, 497)
 scale = Vector2(60, 2)
+
+[node name="StaticBody2D9" parent="." unique_id=849521119 instance=ExtResource("15_geopy")]
+position = Vector2(29, 26)
+
+[node name="StaticBody2D12" parent="." unique_id=2089554092 instance=ExtResource("15_geopy")]
+position = Vector2(27, 66)
+
+[node name="StaticBody2D18" parent="." unique_id=366605484 instance=ExtResource("15_geopy")]
+position = Vector2(475, 293)
+
+[node name="StaticBody2D17" parent="." unique_id=1530360152 instance=ExtResource("15_geopy")]
+position = Vector2(471, 205)
+
+[node name="StaticBody2D16" parent="." unique_id=1622155911 instance=ExtResource("15_geopy")]
+position = Vector2(381, 208)
+
+[node name="StaticBody2D15" parent="." unique_id=1888337215 instance=ExtResource("15_geopy")]
+position = Vector2(381, 291)
+
+[node name="StaticBody2D13" parent="." unique_id=967736229 instance=ExtResource("15_geopy")]
+position = Vector2(822, 22)
+
+[node name="StaticBody2D14" parent="." unique_id=670474770 instance=ExtResource("15_geopy")]
+position = Vector2(862, 58)
+
+[node name="StaticBody2D11" parent="." unique_id=398498379 instance=ExtResource("15_geopy")]
+position = Vector2(71, 25)
+
+[node name="StaticBody2D10" parent="." unique_id=128287583 instance=ExtResource("15_geopy")]
+position = Vector2(861, 22)

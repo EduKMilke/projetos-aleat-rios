@@ -17,6 +17,6 @@ func _on_body_entered(body: Node2D) -> void:
 		Item.play()
 		Global.dano_ti+=1
 		Global.vida_maxv-=1
-		Global.plaspd -=100
+		Global.plaspd -=50
 		Interface.exibir_item("Placa Mãe Queimada", "Uma limpadinha resolve")
 		queue_free()

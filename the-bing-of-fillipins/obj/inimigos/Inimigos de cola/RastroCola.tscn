@@ -1,0 +1,61 @@
+[gd_scene format=3 uid="uid://bhoh3jrh7pvq5"]
+
+[ext_resource type="Script" uid="uid://3gld2711li6q" path="res://scripts/inimigos/rastro_cola.gd" id="1_eb50t"]
+[ext_resource type="Texture2D" uid="uid://kuss0q1kk04e" path="res://assets/Inimigos/Poça de cola.png" id="2_hbxfh"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_rruo8"]
+size = Vector2(26, 24)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_4pxmv"]
+atlas = ExtResource("2_hbxfh")
+region = Rect2(0, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_vrxam"]
+atlas = ExtResource("2_hbxfh")
+region = Rect2(32, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_tw52j"]
+atlas = ExtResource("2_hbxfh")
+region = Rect2(0, 32, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_aovj0"]
+atlas = ExtResource("2_hbxfh")
+region = Rect2(32, 32, 32, 32)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_77uuo"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_4pxmv")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_vrxam")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_tw52j")
+}],
+"loop": true,
+"name": &"Spawn",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_aovj0")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[node name="RastroCola" type="Area2D" unique_id=1302260681]
+script = ExtResource("1_eb50t")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=461904754]
+position = Vector2(0, 1)
+shape = SubResource("RectangleShape2D_rruo8")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=305487838]
+sprite_frames = SubResource("SpriteFrames_77uuo")
+frame_progress = 0.51049197
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]

@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://c0vhihfpseyq"
-path="res://.godot/imported/Cola.png-37b48a8f16caf45a934fa71962c590c6.ctex"
+uid="uid://dwvnrkr68qu04"
+path="res://.godot/imported/TodAzulPick.png-f02633c221ae63b73f85b9e9728e3080.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/Inimigos/Cola.png"
-dest_files=["res://.godot/imported/Cola.png-37b48a8f16caf45a934fa71962c590c6.ctex"]
+source_file="res://assets/Pickups/TodAzulPick.png"
+dest_files=["res://.godot/imported/TodAzulPick.png-f02633c221ae63b73f85b9e9728e3080.ctex"]
 
 [params]
 

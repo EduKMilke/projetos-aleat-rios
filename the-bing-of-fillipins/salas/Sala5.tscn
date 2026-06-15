@@ -13,6 +13,7 @@
 [ext_resource type="Texture2D" uid="uid://bu273y7unsty" path="res://assets/Chão/Chão que não é de hospital.png" id="11_ouav2"]
 [ext_resource type="PackedScene" uid="uid://bcuosw5em1kgc" path="res://obj/Obstaculos/Mesa.tscn" id="12_86b0g"]
 [ext_resource type="PackedScene" uid="uid://blvhby6st2ucc" path="res://obj/inimigos/espinho.tscn" id="13_0v836"]
+[ext_resource type="PackedScene" uid="uid://b16b4sgtepp6s" path="res://obj/Obstaculos/livro.tscn" id="14_0io8m"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_847p5"]
 size = Vector2(887, 496)
@@ -248,3 +249,9 @@ position = Vector2(500, 249)
 [node name="StaticBody2D8" parent="." unique_id=897863891 instance=ExtResource("6_fxna7")]
 position = Vector2(437.00003, 497)
 scale = Vector2(60, 2)
+
+[node name="StaticBody2D9" parent="." unique_id=849521119 instance=ExtResource("14_0io8m")]
+position = Vector2(74, 60)
+
+[node name="StaticBody2D10" parent="." unique_id=1348624988 instance=ExtResource("14_0io8m")]
+position = Vector2(810, 412)

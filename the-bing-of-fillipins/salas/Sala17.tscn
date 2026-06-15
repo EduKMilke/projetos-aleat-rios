@@ -15,6 +15,7 @@
 [ext_resource type="PackedScene" uid="uid://bpcapmmhvrfr5" path="res://obj/inimigos/Caixa de som.tscn" id="13_3q70a"]
 [ext_resource type="PackedScene" uid="uid://c28cprteop4kg" path="res://obj/inimigos/i_laser.tscn" id="14_74rpx"]
 [ext_resource type="PackedScene" uid="uid://cnttwji41phqx" path="res://obj/inimigos/seguidor.tscn" id="15_8xnir"]
+[ext_resource type="PackedScene" uid="uid://b16b4sgtepp6s" path="res://obj/Obstaculos/livro.tscn" id="16_px1di"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_r6ng0"]
 size = Vector2(888, 499)
@@ -148,3 +149,27 @@ position = Vector2(89, 427)
 
 [node name="Area2D2" parent="." unique_id=1732632724 instance=ExtResource("15_8xnir")]
 position = Vector2(796, 437)
+
+[node name="StaticBody2D8" parent="." unique_id=849521119 instance=ExtResource("16_px1di")]
+position = Vector2(302, 242)
+
+[node name="StaticBody2D9" parent="." unique_id=1176901766 instance=ExtResource("16_px1di")]
+position = Vector2(447, 112)
+
+[node name="StaticBody2D10" parent="." unique_id=336005648 instance=ExtResource("16_px1di")]
+position = Vector2(583, 243)
+
+[node name="StaticBody2D11" parent="." unique_id=1421184093 instance=ExtResource("16_px1di")]
+position = Vector2(437, 377)
+
+[node name="StaticBody2D12" parent="." unique_id=1252717584 instance=ExtResource("16_px1di")]
+position = Vector2(300, 117)
+
+[node name="StaticBody2D13" parent="." unique_id=1739761476 instance=ExtResource("16_px1di")]
+position = Vector2(583, 116)
+
+[node name="StaticBody2D14" parent="." unique_id=768703533 instance=ExtResource("16_px1di")]
+position = Vector2(583, 365)
+
+[node name="StaticBody2D15" parent="." unique_id=1575568925 instance=ExtResource("16_px1di")]
+position = Vector2(303, 368)

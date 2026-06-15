@@ -3,7 +3,7 @@ extends StaticBody2D
 var player = null
 var laser_scene = preload("res://obj/inimigos/laser.tscn")
 var pode_atirar = true
-var vida=7
+var vida=10
 @onready var ani = $AnimatedSprite2D
 
 func _process(_delta: float) -> void:
