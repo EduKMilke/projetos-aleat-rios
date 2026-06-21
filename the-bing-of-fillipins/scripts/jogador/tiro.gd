@@ -34,7 +34,6 @@ func _on_area_2d_body_entered(body: Node) -> void:
 
 func _on_area_2d_area_entered(area: Area2D) -> void:
 	if area.is_in_group("inimigo"):
-		
 		area.vida -= Global.dano_ti
 		processar_morte_inimigo(area)
 		queue_free()

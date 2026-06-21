@@ -1,0 +1,20 @@
+[gd_scene format=3 uid="uid://bn13j6pcf4jgv"]
+
+[ext_resource type="Script" uid="uid://2u4rdcwt6bj1" path="res://scripts/tiro_dano_player/tiro_quase_segue_rastro.gd" id="1_wrgtl"]
+[ext_resource type="Texture2D" uid="uid://ct42vjnn1jufl" path="res://assets/Inimigos/Meleca.png" id="2_flmyn"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_0evgd"]
+radius = 13.152946
+
+[node name="Area2D" type="Area2D" unique_id=388835305]
+script = ExtResource("1_wrgtl")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=697561258]
+shape = SubResource("CircleShape2D_0evgd")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1367908537]
+position = Vector2(-0.5000006, -2.000001)
+scale = Vector2(0.825, 0.84000003)
+texture = ExtResource("2_flmyn")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]

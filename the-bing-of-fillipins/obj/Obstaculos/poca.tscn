@@ -1,0 +1,19 @@
+[gd_scene format=3 uid="uid://dr7wsxsc146mf"]
+
+[ext_resource type="Script" uid="uid://by38kyvdk6lg2" path="res://obj/Obstaculos/poca.gd" id="1_3sgrm"]
+[ext_resource type="Texture2D" uid="uid://cre1ewllecbax" path="res://icon.svg" id="1_6dkdt"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_bhunq"]
+radius = 12.165525
+
+[node name="Area2D" type="Area2D" unique_id=49162460]
+script = ExtResource("1_3sgrm")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=179647613]
+shape = SubResource("CircleShape2D_bhunq")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1743511662]
+scale = Vector2(0.17733327, 0.17312445)
+texture = ExtResource("1_6dkdt")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]

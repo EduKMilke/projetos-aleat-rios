@@ -1,0 +1,44 @@
+[gd_scene format=3 uid="uid://dwnvkdp6sb4u7"]
+
+[ext_resource type="Script" uid="uid://c5bsaaiq0i61v" path="res://scripts/boss/bossquimica.gd" id="1_q5cc6"]
+[ext_resource type="Texture2D" uid="uid://cre1ewllecbax" path="res://icon.svg" id="2_t5lla"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_5471y"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_t5lla")
+}],
+"loop": 1,
+"name": &"default",
+"speed": 10.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ugnb8"]
+size = Vector2(182.5, 155)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_bhunq"]
+size = Vector2(159.13417, 141.42903)
+
+[node name="quimica" type="CharacterBody2D" unique_id=1537071826 groups=["inimigo"]]
+scale = Vector2(0.45873213, 0.48080653)
+script = ExtResource("1_q5cc6")
+
+[node name="Sprite2D" type="AnimatedSprite2D" parent="." unique_id=730827656]
+position = Vector2(-1.089961, -1.039918)
+scale = Vector2(1.4135427, 1.2511529)
+sprite_frames = SubResource("SpriteFrames_5471y")
+autoplay = "default"
+frame_progress = 0.7211425
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1019397139]
+shape = SubResource("RectangleShape2D_ugnb8")
+
+[node name="Area2D" type="Area2D" parent="." unique_id=1556890564 groups=["inimigo"]]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=725534785]
+position = Vector2(3.269877, 2.079834)
+scale = Vector2(1.000001, 1)
+shape = SubResource("RectangleShape2D_bhunq")
+
+[connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]
