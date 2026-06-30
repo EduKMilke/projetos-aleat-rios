@@ -10,6 +10,8 @@ var _ibar_vida
 var _progress_bar
 var b = true
 var dire = Vector2.ZERO
+@onready var sprite = $Sprite2D
+
 
 var timer_acao : Timer
 enum Acoes { SEGUIR, ATIRAR, ALTERAR_STATUS }
@@ -24,6 +26,9 @@ func _ready() -> void:
 
 
 func _physics_process(delta: float) -> void:
+	if vida <= 0:
+		morrer()
+		return
 	if player == null:
 		player = get_tree().get_first_node_in_group("player")
 		
@@ -58,9 +63,15 @@ func _escolher_acao_aleatoria() -> void:
 			alterar_status_player()
 
 func criar_tiro() -> void:
+	
 	if tiro:
+		var corale = Color(randf(), randf(), randf(), 1.0)
+		var cor_a = corale
+		sprite.modulate  = cor_a
 		var novo_tiro = tiro.instantiate()
 		novo_tiro.global_position = global_position
+		if "cor" in novo_tiro:
+			novo_tiro.cor = corale 
 		get_tree().current_scene.add_child(novo_tiro)
 
 func alterar_status_player() -> void:
@@ -78,3 +89,8 @@ func morrer():
 func _on_area_2d_body_entered(body: Node2D) -> void:
 	if body.is_in_group("player"):
 		Global.menos_vida()
+
+func tomar_dano(quantidade: int) -> void:
+	vida -= quantidade
+	if _progress_bar:
+		_progress_bar.value = vida

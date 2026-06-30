@@ -1,0 +1,14 @@
+[gd_scene format=3 uid="uid://m5dpgobv3l43"]
+
+[ext_resource type="PackedScene" uid="uid://c0hp8oyglqrlc" path="res://obj/boss/bossesborracha/borracha1.tscn" id="1_7vrof"]
+[ext_resource type="Script" uid="uid://e8jbcl3oxemu" path="res://obj/boss/bossesborracha/bossborracha.gd" id="1_ieabw"]
+[ext_resource type="PackedScene" uid="uid://nfjv2kwn7p8r" path="res://obj/boss/bossesborracha/borracha2.tscn" id="2_ieabw"]
+
+[node name="Node2D" type="Node2D" unique_id=1070519138 groups=["inimigo"]]
+script = ExtResource("1_ieabw")
+
+[node name="b1" parent="." unique_id=1374746610 instance=ExtResource("1_7vrof")]
+position = Vector2(-49, 0)
+
+[node name="b2" parent="." unique_id=1230237664 instance=ExtResource("2_ieabw")]
+position = Vector2(46, 3)

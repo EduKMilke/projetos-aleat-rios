@@ -1,0 +1,20 @@
+[gd_scene format=3 uid="uid://nfjv2kwn7p8r"]
+
+[ext_resource type="Script" uid="uid://dqka5c6s8g7ca" path="res://obj/boss/bossesborracha/borrachas.gd" id="1_phb3g"]
+[ext_resource type="Texture2D" uid="uid://clqq1mqvjkwxc" path="res://assets/Bosses/Borracha_azul_2.png" id="2_phb3g"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_g4v7s"]
+size = Vector2(85, 102)
+
+[node name="CharacterBody2D" type="CharacterBody2D" unique_id=1374746610 groups=["inimigo"]]
+script = ExtResource("1_phb3g")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=548743026 groups=["inimigo"]]
+position = Vector2(-4.915176, 3.8758256)
+rotation = -1.5640905
+scale = Vector2(5.231274, 4.4320235)
+texture = ExtResource("2_phb3g")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1497115947 groups=["inimigo"]]
+position = Vector2(0.5, 1)
+shape = SubResource("RectangleShape2D_g4v7s")

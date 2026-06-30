@@ -19,17 +19,27 @@ func _physics_process(delta: float) -> void:
 	position += direction_vector * Global.tirospd * delta
 
 
-func _on_area_2d_body_entered(body: Node) -> void:
-	if body.is_in_group("inimigo"):
-		
-		body.vida -= Global.dano_ti
-		processar_morte_inimigo(body)
+func _on_area_2d_body_entered(body: Node2D) -> void:
+	if body.has_method("tomar_dano"):
+		body.tomar_dano(Global.dano_ti)
 		queue_free()
-	
+		return
+	elif body.get_parent() and body.get_parent().has_method("tomar_dano"):
+		body.get_parent().tomar_dano(Global.dano_ti)
+		queue_free()
+		return
+
+	if body.is_in_group("inimigo") or body.get_parent().is_in_group("inimigo"):
+		if "vida" in body:
+			body.vida -= Global.dano_ti
+			processar_morte_inimigo(body)
+			queue_free()
+			return
+			
 	if body.is_in_group("obstaculo"):
 		if "vida" in body:
 			body.vida -= 1
-		queue_free() 
+		queue_free()
 
 
 func _on_area_2d_area_entered(area: Area2D) -> void:
